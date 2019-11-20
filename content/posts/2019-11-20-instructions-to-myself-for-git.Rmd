@@ -19,9 +19,11 @@ autoCollapseToc: yes
 math: no
 ---
 
-<!--more-->
+##Git commands I should know
 
-#Git commands I should know
+This post is a collection of commands that I would like to remember and keep track of to help me in building new posts, using Github/RStudio/Terminal/Netlify, and generally make my life easier.
+
+<!--more-->
 
 1. `git add .`
 - use this to add all files in the current directory
