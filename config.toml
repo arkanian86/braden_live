@@ -1,7 +1,7 @@
 baseURL = "https://example.com/"
 languageCode = "en"                                      # website language
 defaultContentLanguage = "en"                            # [en, zh, ...] determines which i18n file to use
-title = "LoveIt Theme"                                   # website title
+title = "Braden Live"                                    # website title
 theme = "LoveIt"
 enableGitInfo = false                                    # whether to use git commit log to generate lastmod record
 hasCJKLanguage = false                                   # whether to include chinese/japanese/korean
@@ -9,7 +9,7 @@ paginate = 12                                            # default amount of pos
 enableEmoji = true                                       # whether to use emoji code
 enableRobotsTXT = true                                   # whether to use robots.txt
 googleAnalytics = ""                                     # [UA-XXXXXXXX-X] google analytics code
-disqusShortname = "dillonzq"                             # Disqus shortname to use Disqus in posts
+disqusShortname = ""                             # Disqus shortname to use Disqus in posts
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
                                                          # copyright description used only for seo schema
 
@@ -56,12 +56,6 @@ staticDir = ["static", "../assets/others"]               # static directories
     name = "About"
     url = "about"
     weight = 4
-
-  [[menu.main]]
-    identifier = "zh"
-    name = '<i class="fas fa-language fa-fw"></i>'
-    url = "https://hugo-loveit-zh.netlify.com"
-    weight = 5
 
 [params]
   version = "5.x"                                        # LoveIt theme version
@@ -117,9 +111,9 @@ staticDir = ["static", "../assets/others"]               # static directories
     email = ""
 
   [params.social]                                        # Social Info in home page
-    GitHub = "arkanian86"
     Linkedin = "in/Braden-Schrock"
     Twitter = "braden_live"
+    #GitHub = "arkanian86"
     #Instagram = "xxxx"
     #Email = "xxxx"
     #Facebook = "xxxx"
@@ -179,8 +173,8 @@ staticDir = ["static", "../assets/others"]               # static directories
     enable = true
     Twitter = true
     Facebook = true
-    Reddit = true
-    #Linkedin = true
+    #Reddit = true
+    Linkedin = true
     #Pinterest = true
     #HackerNews = true
     #Mix = true
