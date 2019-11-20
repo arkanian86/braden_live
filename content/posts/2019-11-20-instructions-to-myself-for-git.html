@@ -1,0 +1,64 @@
+---
+title: Instructions to myself for git
+author: Braden
+date: '2019-11-20'
+slug: instructions-to-myself-for-git
+categories: []
+tags:
+  - notes
+lastmod: '2019-11-20T14:13:09-06:00'
+description: ''
+show_in_homepage: yes
+show_description: no
+license: ''
+featured_image: ''
+featured_image_preview: ''
+comment: yes
+toc: no
+autoCollapseToc: yes
+math: no
+---
+
+
+
+<!--more-->
+<div id="git-commands-i-should-know" class="section level1">
+<h1>Git commands I should know</h1>
+<ol style="list-style-type: decimal">
+<li><code>git add .</code></li>
+</ol>
+<ul>
+<li>use this to add all files in the current directory</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><code>git add netlify.toml</code></li>
+</ol>
+<ul>
+<li>use this to update the <code>netlify.toml</code> file</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><code>git commit -m &quot;some comments&quot;</code></li>
+</ol>
+<ul>
+<li>names the commit I think?</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li><code>git push origin master</code></li>
+</ol>
+<ul>
+<li>pushes the files to the remote directory</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li><code>git push -f origin master</code></li>
+</ol>
+<ul>
+<li>if I made changes remotely (i.e. on Github directly) this will overwrite all of them</li>
+</ul>
+</div>
+<div id="blogdown-commands-i-should-know-for-new-content" class="section level1">
+<h1>Blogdown commands I should know for new content</h1>
+<ol style="list-style-type: decimal">
+<li><code>blogdown::build_site()</code></li>
+<li><code>blogdown::serve_site()</code></li>
+</ol>
+</div>

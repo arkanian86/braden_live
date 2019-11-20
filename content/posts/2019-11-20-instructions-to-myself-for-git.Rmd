@@ -33,3 +33,8 @@ math: no
 - pushes the files to the remote directory
 5. `git push -f origin master`
 - if I made changes remotely (i.e. on Github directly) this will overwrite all of them
+
+#Blogdown commands I should know for new content
+
+1. `blogdown::build_site()`
+2. `blogdown::serve_site()`
