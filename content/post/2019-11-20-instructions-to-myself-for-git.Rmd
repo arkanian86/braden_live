@@ -1,0 +1,35 @@
+---
+title: Instructions to myself for git
+author: Braden
+date: '2019-11-20'
+slug: instructions-to-myself-for-git
+categories: []
+tags:
+  - notes
+lastmod: '2019-11-20T14:13:09-06:00'
+description: ''
+show_in_homepage: yes
+show_description: no
+license: ''
+featured_image: ''
+featured_image_preview: ''
+comment: yes
+toc: no
+autoCollapseToc: yes
+math: no
+---
+
+<!--more-->
+
+#Git commands I should know
+
+1. `git add .`
+- use this to add all files in the current directory
+2. `git add netlify.toml`
+- use this to update the `netlify.toml` file
+3. `git commit -m "some comments"`
+- names the commit I think?
+4. `git push origin master`
+- pushes the files to the remote directory
+5. `git push -f origin master`
+- if I made changes remotely (i.e. on Github directly) this will overwrite all of them
