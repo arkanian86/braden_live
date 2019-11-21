@@ -1,12 +1,12 @@
 ---
 title: 'Negotiation Analysis: Fall 2019 Weekend Plans'
 author: Braden
-date: '2019-11-21'
+date: '2019-10-24'
 slug: negotiation-analysis-fall-2019-weekend-plans
 categories:
   - Kellogg papers
 tags: []
-lastmod: '2019-11-21T13:14:39-06:00'
+lastmod: '2019-10-24T13:14:39-06:00'
 description: ''
 show_in_homepage: yes
 show_description: no
@@ -22,13 +22,16 @@ math: no
 library(kableExtra)
 library(tidyverse)
 ```
+
+This fall, I wanted to be more intentional with how I spent my time and how my family spent time together on weekends.
+
 <!--more-->
 
 ###Executive Summary
 
 This fall, I wanted to be more intentional with how I spent my time and how my family spent time together on weekends. Knowing the burden of trying to make plans at the last minute while juggling a heavy Kellogg course load, I decided to attempt to plan out every weekend for the next three months, through the end of the fall quarter. When I brought this idea up to my wife, Bethany, she agreed.  
 
-After I prepared extensively, we conducted our negotiation on September 29th. I had identified about a half-dozen issues that were important to me, and an additional half-dozen that I expected would be important to Bethany, shown in Exhibit 1 as yellow and green, respectively. We conducted the negotiation at our kitchen table. We approached the discussion starting off with our big priorities (we both were very open about what we wanted). Because there were 11 weekends in the fall (October 4th to December 13th), we started our negotiations concentrating on the first few weekends and then moved linearly down the calendar.  
+After I prepared extensively, we conducted our negotiation on September 29th. I had identified about a half-dozen issues that were important to me, and an additional half-dozen that I expected would be important to Bethany, shown in Exhibit 1. We conducted the negotiation at our kitchen table. We approached the discussion starting off with our big priorities (we both were very open about what we wanted). Because there were 11 weekends in the fall (October 4th to December 13th), we started our negotiations concentrating on the first few weekends and then moved linearly down the calendar.  
 
 Ultimately, we came away with an outcome that we were both happy with, and which did not result in either of us walking away from the table or feeling like we left value on the table. We were able to achieve what we believed to be a pareto-efficient outcome. Along the way, we discovered new information about each other’s priorities that allowed us both to get more value than we had initially expected. Finally, our honest and open approach (necessary in any long-term relationship) facilitated information-seeking and concession-giving. Although this tactic would not be appropriate in every setting, it was the best one for us here. In sum, there were three major factors that led to the negotiated outcome:  
 
@@ -78,7 +81,7 @@ Since none of these issues were quantifiable in terms of a dollar amount or anot
 
 <center>
 
-![Exhibit 3](/posts/2019-11-21-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-3.png){width=80%}
+![](/posts/2019-11-21-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-3.png){width=80%}
 
 </center>
 
@@ -92,7 +95,7 @@ Using the scoring system, I created multiple equivalent simultaneous offer (MESO
 
 <center>
 
-![Exhibit 2](/posts/2019-11-21-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-2.png){width=80%}
+![](/posts/2019-11-21-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-2.png){width=80%}
 
 </center>
 
