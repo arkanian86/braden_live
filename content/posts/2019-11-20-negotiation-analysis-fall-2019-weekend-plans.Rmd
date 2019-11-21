@@ -78,7 +78,11 @@ issues_descriptions
 
 Since none of these issues were quantifiable in terms of a dollar amount or another comparable metric, I found it helpful to create a scoring system, shown in **Exhibit 3:** 
 
+<center>
 
+![Exhibit 3](posts/2019-11-20-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-3.png){width=80%}
+
+</center>
 
 This scoring system helped me determine the priority of issues to me, Bethany’s likely priorities, and a way to 
 
@@ -92,9 +96,7 @@ Using the scoring system, I created multiple equivalent simultaneous offer (MESO
 
 <center>
 
-
-
-![](posts/2019-11-20-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-3.png)
+![Exhibit 2](/posts/2019-11-20-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-2.png){width=80%}
 
 </center>
 
