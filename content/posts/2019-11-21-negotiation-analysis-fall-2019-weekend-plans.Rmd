@@ -70,21 +70,19 @@ Descriptions <- c("Pheasant hunting in Wisconsin with my dog",
 issues_descriptions <- cbind(Issues, Descriptions) %>%
   kable()
 
-issues_descriptions
-
 ```
+
+`r issues_descriptions`
 
 Since none of these issues were quantifiable in terms of a dollar amount or another comparable metric, I found it helpful to create a scoring system, shown in **Exhibit 3:** 
 
 <center>
 
-![](/posts/2019-11-21-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-3.png)
+![Exhibit 3](/posts/2019-11-21-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-3.png){width=80%}
 
 </center>
 
-This scoring system helped me determine the priority of issues to me, Bethany’s likely priorities, and a way to 
-
-offer MESOs. Ultimately, prior planning resulted in a satisfactory outcome for both parties- in previous similar negotiations with no planning, not all issues were addressed and both parties felt unhappy.  
+This scoring system helped me determine the priority of issues to me, Bethany’s likely priorities, and a way to offer MESOs. Ultimately, prior planning resulted in a satisfactory outcome for both parties- in previous similar negotiations with no planning, not all issues were addressed and both parties felt unhappy.  
 
 To create the scoring system, I distributed 100 points on each issue across the 11 weekends (yellow shaded cells), then weighted each issue according to its importance to me (green shaded cells). This led me to several conclusions: hunting and hunting training were the most important to me, and the first four weekends would be the most valuable to me for these issues (blue shaded cells).
 
@@ -94,7 +92,7 @@ Using the scoring system, I created multiple equivalent simultaneous offer (MESO
 
 <center>
 
-
+![Exhibit 2](/posts/2019-11-21-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-2.png){width=80%}
 
 </center>
 
