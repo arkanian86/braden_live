@@ -91,7 +91,11 @@ The scoring system also helped me to quantify Bethany’s most likely priorities
 Using the scoring system, I created multiple equivalent simultaneous offer (MESO) packages that would help me to both confirm or deny my expectations of Bethany’s priorities as well as identify ways that we could move towards pareto-efficiency (if the MESOs led to me discovering an issue that Bethany was indifferent about). **Exhibit 2** shows the MESOs I offered towards the beginning of the negotiation:  
 
 <center>
-![Exhibit 2](C:/Users/brade/Documents/braden_live/static/images/negotiations-exhibit-2.png){width=80%}
+
+
+
+![](posts/2019-11-20-negotiation-analysis-fall-2019-weekend-plans_files/negotiations-exhibit-3.png)
+
 </center>
 
 
