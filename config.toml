@@ -111,7 +111,7 @@ staticDir = ["static", "../assets/others"]               # static directories
     email = ""
 
   [params.social]                                        # Social Info in home page
-    Linkedin = "in/Braden-Schrock"
+    Linkedin = "Braden-Schrock"
     Twitter = "braden_live"
     #GitHub = "arkanian86"
     #Instagram = "xxxx"
