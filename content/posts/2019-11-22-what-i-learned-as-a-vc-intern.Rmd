@@ -1,28 +1,28 @@
 ---
-title: What I Learned As A VC Intern
-author: Braden
+title: "What I Learned As A VC Intern"
+author: "Braden"
 date: '2019-12-04'
-slug: what-i-learned-as-a-vc-intern
-categories:
-  - Kellogg papers
-tags:
-  - VC
-  - AI
-  - entrepreneurship
-  - Tensility Venture Partners
-  - Kellogg
-  - teams
-lastmod: '2019-11-22T13:10:20-06:00'
+output: pdf_document
+categories: Kellogg papers
 description: ''
-show_in_homepage: yes
-show_description: no
-license: ''
 featured_image: ''
 featured_image_preview: ''
-comment: yes
-toc: no
-autoCollapseToc: yes
+lastmod: '2019-11-22T13:10:20-06:00'
+license: ''
 math: no
+comment: yes
+show_description: no
+show_in_homepage: yes
+slug: what-i-learned-as-a-vc-intern
+tags:
+- VC
+- AI
+- entrepreneurship
+- Tensility Venture Partners
+- Kellogg
+- teams
+autoCollapseToc: yes
+toc: no
 ---
 
 For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http://www.tensilityvc.com/) in downtown Chicago. Here's what I learned.
@@ -32,23 +32,55 @@ For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http:
 For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http://www.tensilityvc.com/) in downtown Chicago. Here's what I learned.
 
 ###About Tensility
+
 Tensility Venture Partners has two general partners, Armando Pauker and Wayne Boulais. Their experience spans over 20 years of venture investing, beginning at Apex Venture Partners and then two funds at Tensility. The firm has the following focus:
 
 >Tensility Venture Partners is a seed-stage venture capital firm that partners with mission-drive founders of early-stage enterprise AI startups, with a focus on software for cybersecurity and digital health, as well as novel, vertical-focused applications for artificial intelligence.
 
+I found this focus to be especially valuable for me, since I had summer internship experience at a company called [Narrative Science](www.narrativescience.com), which is a B2B company whose products depend on AI and Natural Language Generation (NLG). Several of Tensility's portfolio companies also work in the NLG space, including [Agolo](www.agolo.com) and [Stabilitas.](www.stabilitas.io)
+
 ###My role
 
-As the third member of the team, they were extremely accommodating to me. They treated me as the third part of 
+Armando and Wayne were extremely accommodating to me coming in as an intern. They treated me as the third member of the team, and attempted to schedule any new company pitches on the two days a week that I was in the office with them. As a result of this, I was able to attend 40+ pitches from technology startups focused on a wide range of industries.
 
+My second day in the office also happened to be the annual meeting for Tensility's limited partners - so I was able to meet a number of LPs including those who acted as advisors to the GPs and with whom I would work closely on the upcoming due diligences.
+
+Finally, I was able to attend several board meeings (remotely) that occurred during my time at Tensility. It was a great opportunity to better understand the complicated VC/founder relationship and the particular value-add that Armando and Wayne bring to the table.
 
 ###Projects I worked on
 
+My day-to-day responsibilities were to listen to pitch presentations, take notes, and then share my opinion afterwards. Beyond these basic tasks, I focused on three main projects (in chronological order):
 
-###Key meetings I attended
+1. Conducting due diligence on [Stabilitas](www.stabilitas.io)
+2. Updating the Tensility website/creating content
+3. Conducting due diligence on [ConverseNow](www.conversenow.ai)
 
+####Stabilitas due diligence
+Stabilitas is the trusted platform for critical event intelligence, helping businesses manage enterprise risk to their assets across the globe. The start of my internship coincided with the beginning of the diligence process on Stabilitas, so Armando and Wayne asked me to lead the effort. This was especially lucky for me, as the two founders of Stabilitas are both military veterans like myself as well as recent MBA graduates. I immediately had a great connection with them.
+
+After securing access to a data vault set up by the CEO, I checked off a list of documents that we needed to complete the diligence. Tensility uses an approach similar to Steve Kaplan's [OUTSIDE IMPACTS](https://review.chicagobooth.edu/entrepreneurship/2019/article/right-questions-ask-startup-success#.XdhFGIVGASA.link) framework in order to systematize the evaluation of sometimes-opaque venture investing decisions.
+
+![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/outside-impacts.png){width=40%}
+
+Since I learned this framework in previous Kellogg coursework, the diligence process at Tensility felt very familiar.
+
+In the process of writing the investment memo, I conducted market research to understand the potential opportunity and risks, and I also created financial models to attempt to estimate the IRR and cash-on-cash returns various scenarios. Ultimately, the GPs and I consulted with Tensility's advisors and decided to invest.
+
+####Website update/content creation
+
+Coming into the internship, I had some strong opinions about the Tensility website as it stood. The site was not a good reflection on a firm that invested at the cutting edge of technology - AI. It was poorly formatted and had unflattering stock art.
+
+Luckily, the GPs were on the same page as me on this, and were intending to make some changes themselves. Evaluating this from a user's perspective (i.e. a potential inboudn entrepreneur considering approaching Tensility for funding), I revamped the site to be cleaner and more up to date. This coincided with a deliberate effort to create content for the firm's new [Twitter account](www.twitter.com/tensilityvc) and existing [LinkedIn page](www.linkedin.com/company/tensility-venture-partners/), so I also ended up writing several blog posts.
+
+####ConverseNow due diligence
+
+In the last few weeks of my internship, I began working on due diligence for another firm called ConverseNow. ConverseNow's technology uses voice recognition to aid in the phone and drive-thru ordering process, reducing costs and creating upsell opportunities for quick-service restaurant (QSR) owners and franchisees. Using the same framework as before, I was able to make significant progress in the diligence before my internship unfortunately came to an end.
 
 ###Key new knowledge gained
 
+* talking to customer/personal references was the most revealing and valuable
+* utter ambiguity of market sizing/financial scenarios
+* pattern recognition is of utmost importance
 
 ###Any issues that arose
 
