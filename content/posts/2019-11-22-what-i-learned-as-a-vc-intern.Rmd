@@ -1,0 +1,64 @@
+---
+title: What I Learned As A VC Intern
+author: Braden
+date: '2019-12-04'
+slug: what-i-learned-as-a-vc-intern
+categories:
+  - Kellogg papers
+tags:
+  - VC
+  - AI
+  - entrepreneurship
+  - Tensility Venture Partners
+  - Kellogg
+  - teams
+lastmod: '2019-11-22T13:10:20-06:00'
+description: ''
+show_in_homepage: yes
+show_description: no
+license: ''
+featured_image: ''
+featured_image_preview: ''
+comment: yes
+toc: no
+autoCollapseToc: yes
+math: no
+---
+
+For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http://www.tensilityvc.com/) in downtown Chicago. Here's what I learned.
+
+<!--more-->
+
+For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http://www.tensilityvc.com/) in downtown Chicago. Here's what I learned.
+
+###About Tensility
+Tensility Venture Partners has two general partners, Armando Pauker and Wayne Boulais. Their experience spans over 20 years of venture investing, beginning at Apex Venture Partners and then two funds at Tensility. The firm has the following focus:
+
+>Tensility Venture Partners is a seed-stage venture capital firm that partners with mission-drive founders of early-stage enterprise AI startups, with a focus on software for cybersecurity and digital health, as well as novel, vertical-focused applications for artificial intelligence.
+
+###My role
+
+As the third member of the team, they were extremely accommodating to me. They treated me as the third part of 
+
+
+###Projects I worked on
+
+
+###Key meetings I attended
+
+
+###Key new knowledge gained
+
+
+###Any issues that arose
+
+
+###Suggestions for future TVP interns
+
+
+
+
+
+
+
+
