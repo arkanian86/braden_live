@@ -22,7 +22,7 @@ tags:
 - Kellogg
 - teams
 autoCollapseToc: yes
-toc: no
+toc: yes
 ---
 
 For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http://www.tensilityvc.com/) in downtown Chicago. Here's what I learned.
