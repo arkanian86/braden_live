@@ -36,7 +36,7 @@ For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http:
 
 Tensility Venture Partners has two general partners, Armando Pauker and Wayne Boulais. Their experience spans over 20 years of venture investing, beginning at Apex Venture Partners and then two funds at Tensility. The firm has the following focus:
 
->Tensility Venture Partners is a seed-stage venture capital firm that partners with mission-drive founders of early-stage enterprise AI startups, with a focus on software for cybersecurity and digital health, as well as novel, vertical-focused applications for artificial intelligence.
+> Tensility Venture Partners is a seed-stage venture capital firm that partners with mission-drive founders of early-stage enterprise AI startups, with a focus on software for cybersecurity and digital health, as well as novel, vertical-focused applications for artificial intelligence.
 
 I found this focus to be especially valuable for me, since I had summer internship experience at a company called [Narrative Science](www.narrativescience.com), which is a B2B company whose products depend on AI and Natural Language Generation (NLG). Several of Tensility's portfolio companies also work in the NLG space, including [Agolo](www.agolo.com) and [Stabilitas.](www.stabilitas.io)
 
@@ -46,7 +46,7 @@ Armando and Wayne were extremely accommodating to me coming in as an intern. The
 
 My second day in the office also happened to be the annual meeting for Tensility's limited partners - so I was able to meet a number of LPs including those who acted as advisors to the GPs and with whom I would work closely on the upcoming due diligences.
 
-Finally, I was able to attend several board meeings (remotely) that occurred during my time at Tensility. It was a great opportunity to better understand the complicated VC/founder relationship and the particular value-add that Armando and Wayne bring to the table.
+Finally, I was able to attend several board meetings (remotely) that occurred during my time at Tensility. It was a great opportunity to better understand the complicated VC/founder relationship and the particular value-add that Armando and Wayne bring to the table.
 
 ###Projects I worked on
 
@@ -57,6 +57,9 @@ My day-to-day responsibilities were to listen to pitch presentations, take notes
 3. Conducting due diligence on [ConverseNow](www.conversenow.ai)
 
 ####Stabilitas due diligence
+
+![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/stabilitas 11042019.png){width=80%}
+
 Stabilitas is the trusted platform for critical event intelligence, helping businesses manage enterprise risk to their assets across the globe. The start of my internship coincided with the beginning of the diligence process on Stabilitas, so Armando and Wayne asked me to lead the effort. This was especially lucky for me, as the two founders of Stabilitas are both military veterans like myself as well as recent MBA graduates. I immediately had a great connection with them.
 
 After securing access to a data vault set up by the CEO, I checked off a list of documents that we needed to complete the diligence. Tensility uses an approach similar to Steve Kaplan's [OUTSIDE IMPACTS](https://review.chicagobooth.edu/entrepreneurship/2019/article/right-questions-ask-startup-success#.XdhFGIVGASA.link) framework in order to systematize the evaluation of sometimes-opaque venture investing decisions.
@@ -69,25 +72,26 @@ In the process of writing the investment memo, I conducted market research to un
 
 ####Website update/content creation
 
-Coming into the internship, I had some strong opinions about the Tensility website as it stood. The site was not a good reflection on a firm that invested at the cutting edge of technology - AI. It was poorly formatted and had unflattering stock art.
+Coming into the internship, I had some strong opinions about the Tensility website as it stood. The site was not a good reflection on a firm that invested at the cutting edge of technology - AI. It was not ideally formatted and had some unflattering stock art.
 
-Luckily, the GPs were on the same page as me on this, and were intending to make some changes themselves. Evaluating this from a user's perspective (i.e. a potential inboudn entrepreneur considering approaching Tensility for funding), I revamped the site to be cleaner and more up to date. This coincided with a deliberate effort to create content for the firm's new [Twitter account](www.twitter.com/tensilityvc) and existing [LinkedIn page](www.linkedin.com/company/tensility-venture-partners/), so I also ended up writing several blog posts.
+Luckily, the GPs were on the same page as me on this, and were intending to make some changes themselves. Evaluating this from a user's perspective (i.e. a potential inbound entrepreneur considering approaching Tensility for funding), I revamped the site to be cleaner and more up to date. This coincided with a deliberate effort to create content for the firm's new [Twitter account](www.twitter.com/tensilityvc) and existing [LinkedIn page](www.linkedin.com/company/tensility-venture-partners/), so I also ended up writing several blog posts.
 
 ####ConverseNow due diligence
 
 In the last few weeks of my internship, I began working on due diligence for another firm called ConverseNow. ConverseNow's technology uses voice recognition to aid in the phone and drive-thru ordering process, reducing costs and creating upsell opportunities for quick-service restaurant (QSR) owners and franchisees. Using the same framework as before, I was able to make significant progress in the diligence before my internship unfortunately came to an end.
 
 ###Key new knowledge gained
-
-* talking to customer/personal references was the most revealing and valuable
-* utter ambiguity of market sizing/financial scenarios
-* pattern recognition is of utmost importance
+* **Talking to customer/personal references was the most revealing and valuable.** For the diligence process on Stabilitas, I talked to 5-6 references on the two founders as well as two of their biggest customers. This yielded the most insight into the potential of the company. It really drove home the fact that so much of VC is qualitative rather than quantitative - VC is a business surprisingly focused on people, at least when operating in the early seed stage.
+* **Utter ambiguity of market sizing/financial scenarios.** In line with the previous point, there were more question marks than known data points when attempting to game out market sizing (bottoms-up and top-down) and potential financial outcomes for the investment. Many companies operate in new spaces for which no comparables exist, or operate across several markets - making it difficult to estimate the total market. In the seed stage, these quantitative assessment methods are really more of a "check the box" binary assessment determining if the investment should be made or not, rather than a prediction of reality.
+* **Pattern recognition is of utmost importance.** The two previous points ladder up to this: that *good* pattern recognition is what ultimately makes a good venture capitalist. The fact that there are so many variables, and that so many of them are unknowns, means that patterns can be very hard to discern. The long time horizon of seed investments also means a long gap between input and output, making it harder to attribute successful or unsuccessful exits to particular conditions at the time of investment. There are some heuristics that can make this process easier, but not many.
 
 ###Any issues that arose
 
+There were none - Armando and Wayne were incredibly supportive people to work for, and I would recommend Tensility to any future Kelloggite looking to improve their pattern recognition and better understand venture capital.
 
 ###Suggestions for future TVP interns
 
+Be prepared to spend your days in the Tensility office in back-to-back pitch meetings, mostly via teleconference. Invest in some decently-soled shoes as both GPs prefer standing desks for these meetings! In all seriousness, the majority of your time will be spent in pitch meetings, so be ready to work on your other assignments outside of the two days in the office.
 
 
 
