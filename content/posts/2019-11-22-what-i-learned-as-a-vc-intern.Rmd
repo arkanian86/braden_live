@@ -3,7 +3,8 @@ title: "What I Learned As A VC Intern"
 author: "Braden"
 date: '2019-12-04'
 output: pdf_document
-categories: Kellogg papers
+categories: 
+  - Kellogg papers
 description: ''
 featured_image: ''
 featured_image_preview: ''
