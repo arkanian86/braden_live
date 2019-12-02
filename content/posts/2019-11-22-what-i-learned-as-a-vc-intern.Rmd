@@ -34,6 +34,8 @@ For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http:
 
 ###About Tensility
 
+![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/Tensility-Logo-BLK.png){width=40%}
+
 Tensility Venture Partners has two general partners, Armando Pauker and Wayne Boulais. Their experience spans over 20 years of venture investing, beginning at Apex Venture Partners and then two funds at Tensility. The firm has the following focus:
 
 > Tensility Venture Partners is a seed-stage venture capital firm that partners with mission-drive founders of early-stage enterprise AI startups, with a focus on software for cybersecurity and digital health, as well as novel, vertical-focused applications for artificial intelligence.
@@ -58,7 +60,7 @@ My day-to-day responsibilities were to listen to pitch presentations, take notes
 
 ####Stabilitas due diligence
 
-![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/stabilitas 11042019.png){width=80%}
+![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/stabilitas 11042019.png){width=40%}
 
 Stabilitas is the trusted platform for critical event intelligence, helping businesses manage enterprise risk to their assets across the globe. The start of my internship coincided with the beginning of the diligence process on Stabilitas, so Armando and Wayne asked me to lead the effort. This was especially lucky for me, as the two founders of Stabilitas are both military veterans like myself as well as recent MBA graduates. I immediately had a great connection with them.
 
@@ -72,9 +74,15 @@ In the process of writing the investment memo, I conducted market research to un
 
 ####Website update/content creation
 
-Coming into the internship, I had some strong opinions about the Tensility website as it stood. The site was not a good reflection on a firm that invested at the cutting edge of technology - AI. It was not ideally formatted and had some unflattering stock art.
+Coming into the internship, I had some strong opinions about the Tensility website as it stood. The site was not a good reflection on a firm that invested at the cutting edge of technology - AI. It was not ideally formatted and had some unflattering stock art:
 
-Luckily, the GPs were on the same page as me on this, and were intending to make some changes themselves. Evaluating this from a user's perspective (i.e. a potential inbound entrepreneur considering approaching Tensility for funding), I revamped the site to be cleaner and more up to date. This coincided with a deliberate effort to create content for the firm's new [Twitter account](www.twitter.com/tensilityvc) and existing [LinkedIn page](www.linkedin.com/company/tensility-venture-partners/), so I also ended up writing several blog posts.
+![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/old-tensility-website.png){width=40%}
+
+Luckily, the GPs were on the same page as me on this, and were intending to make some changes themselves. Evaluating this from a user's perspective (i.e. a potential inbound entrepreneur considering approaching Tensility for funding), I revamped the site to be cleaner and more up to date:
+
+![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/new-tensility-website.png){width=40%}
+
+This coincided with a deliberate effort to create content for the firm's new [Twitter account](www.twitter.com/tensilityvc) and existing [LinkedIn page](www.linkedin.com/company/tensility-venture-partners/), so I also ended up writing several blog posts.
 
 ####ConverseNow due diligence
 
