@@ -34,7 +34,7 @@ For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http:
 
 ###About Tensility
 
-![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/Tensility-Logo-BLK.png){width=40%}
+![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/Tensility-Logo-RGB-Green.png){width=40%}
 
 Tensility Venture Partners has two general partners, Armando Pauker and Wayne Boulais. Their experience spans over 20 years of venture investing, beginning at Apex Venture Partners and then two funds at Tensility. The firm has the following focus:
 
@@ -56,7 +56,7 @@ My day-to-day responsibilities were to listen to pitch presentations, take notes
 
 1. Conducting due diligence on [Stabilitas](www.stabilitas.io)
 2. Updating the Tensility website/creating content
-3. Conducting due diligence on [ConverseNow](www.conversenow.ai)
+3. Conducting due diligence on another startup
 
 ####Stabilitas due diligence
 
@@ -84,9 +84,9 @@ Luckily, the GPs were on the same page as me on this, and were intending to make
 
 This coincided with a deliberate effort to create content for the firm's new [Twitter account](www.twitter.com/tensilityvc) and existing [LinkedIn page](www.linkedin.com/company/tensility-venture-partners/), so I also ended up writing several blog posts.
 
-####ConverseNow due diligence
+####Second due diligence
 
-In the last few weeks of my internship, I began working on due diligence for another firm called ConverseNow. ConverseNow's technology uses voice recognition to aid in the phone and drive-thru ordering process, reducing costs and creating upsell opportunities for quick-service restaurant (QSR) owners and franchisees. Using the same framework as before, I was able to make significant progress in the diligence before my internship unfortunately came to an end.
+In the last few weeks of my internship, I began completing due diligence on another startup. The company uses AI voice recognition to aid in the phone and drive-thru ordering process, reducing costs and creating upsell opportunities for quick-service restaurant (QSR) owners and franchisees. Using the same framework as before, I was able to make significant progress in the diligence before my internship unfortunately came to an end.
 
 ###Key new knowledge gained
 * **Talking to customer/personal references was the most revealing and valuable.** For the diligence process on Stabilitas, I talked to 5-6 references on the two founders as well as two of their biggest customers. This yielded the most insight into the potential of the company. It really drove home the fact that so much of VC is qualitative rather than quantitative - VC is a business surprisingly focused on people, at least when operating in the early seed stage.
