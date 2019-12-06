@@ -5,7 +5,7 @@ date: '2019-12-04'
 output: pdf_document
 categories: 
   - Kellogg papers
-description: ''
+description: "For 10 weeks this fall, I worked part-time at Tensility Venture Partners in downtown Chicago. Here's what I learned."
 featured_image: ''
 featured_image_preview: ''
 lastmod: '2019-11-22T13:10:20-06:00'
