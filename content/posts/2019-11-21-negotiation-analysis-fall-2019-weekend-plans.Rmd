@@ -5,7 +5,10 @@ date: '2019-10-24'
 slug: negotiation-analysis-fall-2019-weekend-plans
 categories:
   - Kellogg papers
-tags: []
+tags:
+  - kellogg
+  - negotiation
+  - family
 lastmod: '2019-10-24T13:14:39-06:00'
 description: 'This fall, I wanted to be more intentional with how I spent my time and how my family spent time together on weekends.'
 show_in_homepage: yes
@@ -22,12 +25,6 @@ math: no
 library(kableExtra)
 library(tidyverse)
 ```
-
-This fall, I wanted to be more intentional with how I spent my time and how my family spent time together on weekends.
-
-<!--more-->
-
-###Executive Summary
 
 This fall, I wanted to be more intentional with how I spent my time and how my family spent time together on weekends. Knowing the burden of trying to make plans at the last minute while juggling a heavy Kellogg course load, I decided to attempt to plan out every weekend for the next three months, through the end of the fall quarter. When I brought this idea up to my wife, Bethany, she agreed.  
 

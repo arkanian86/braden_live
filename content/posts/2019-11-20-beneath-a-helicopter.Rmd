@@ -26,16 +26,10 @@ math: no
 In the Navy, I was an Explosive Ordnance Disposal (EOD) officer. One of the things we did as EOD technicians is called helicopter casting.  
 
 <center>
-![asdfasdf](/posts/2019-11-20-beneath-a-helicopter_files/helo.jpg)
+![](/posts/2019-11-20-beneath-a-helicopter_files/helo.jpg)
 
 *A U.S. Navy EOD technician jumps into the Arabian Gulf from an MH-60S helicopter*
 </center>
-!["is this text working"](/posts/2019-11-20-beneath-a-helicopter_files/cybertruck-on-stage.jpg){width=80%}
-
-![this is some text!](/posts/2019-11-20-beneath-a-helicopter_files/negotiations-exhibit-2.png){width=400px}
-
-<img src="/posts/2019-11-20-beneath-a-helicopter_files/negotiations-exhibit-2.png" alt="final image" width="400"/>
-
 
 Helicopter casting is where 5-6 of us would jump out of a helicopter traveling at about 10 knots, 10 feet above the surface of the ocean. We'd jump into the water and do some work like planting a charge on a floating naval mine. Then, when we were finished, the helicopter would turn around and come pick us up.  
 
