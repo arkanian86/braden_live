@@ -42,6 +42,21 @@ name = "Tags"
 url = "/tags"
 weight = 4
 
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 5
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/braden-schrock"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://www.twitter.com/braden_live"
+
 [[params.social]]
 name = "Github"
 icon = "github"
@@ -54,3 +69,4 @@ url = "/index.xml"
 
 [taxonomies]
    tag = "tags"
+   category = "categories"
