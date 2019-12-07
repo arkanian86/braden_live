@@ -1637,4 +1637,41 @@ Untracked files:[0K
 no changes added to commit[0K
 [0K
 C:\Users\brade\Documents\braden_live>[0K[?25hg[0Ki[0Kt[0K[42G[?25lC:\Users\brade\Documents\braden_live>git a[0K[?25hd[0Kd[0K[46G[?25lC:\Users\brade\Documents\braden_live>git add -[0K[?25hA[0K]0;  - git  add -A[?25l
-[0K[?25h
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/A5D4DF1D/sources/prop/9CBAF1D6.[0K[?25l
+The file will have its original line endings in your working directory[0K
+warning: LF will be replaced by CRLF in .Rproj.user/A5D4DF1D/sources/prop/CA404C4.[0K
+The file will have its original line endings in your working directory[0K
+warning: LF will be replaced by CRLF in .Rproj.user/A5D4DF1D/sources/s-BB2AFD36/98757790.[0K
+The file will have its original line endings in your working directory[0K
+warning: LF will be replaced by CRLF in .Rproj.user/A5D4DF1D/sources/s-BB2AFD36/26082CAD-contents.[0K
+The file will have its original line endings in your working directory[0K
+warning: LF will be replaced by CRLF in .Rproj.user/A5D4DF1D/sources/s-BB2AFD36/2962247D.[0K
+The file will have its original line endings in your working directory[0K
+warning: LF will be replaced by CRLF in .Rproj.user/A5D4DF1D/sources/s-BB2AFD36/2962247D-contents.[0K
+The file will have its original line endings in your working directory[0K
+[0K[?25h]0; [?25l
+C:\Users\brade\Documents\braden_live>[0K[?25hgit add -A[0K[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignore and netlify.toml to root directory"[0K[?25h[103G[102G[101G[100G[98G[97G[96G[95G[94G[93G[92G[91G[90G[89G[88G[87G[86G[85G[84G[82G[81G[80G[79G[78G[77G[76G[75G[74G[73G[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignore andnetlify.toml to root directory"[0K[72G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignore annetlify.toml to root directory"[0K[71G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignore anetlify.toml to root directory"[0K[70G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignore netlify.toml to root directory"[0K[69G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignorenetlify.toml to root directory"[0K[68G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignornetlify.toml to root directory"[0K[67G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignonetlify.toml to root directory"[0K[66G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignnetlify.toml to root directory"[0K[65G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitignetlify.toml to root directory"[0K[64G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitinetlify.toml to root directory"[0K[63G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gitnetlify.toml to root directory"[0K[62G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added ginetlify.toml to root directory"[0K[61G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added gnetlify.toml to root directory"[0K[60G[?25h[?25lC:\Users\brade\Documents\braden_live>git commit -m "added netlify.toml to root directory"[0K[59G[?25h]0;  - git  commit -m "added netlify.toml to root directory"[?25l
+[0K[?25h[change-theme c05b6ec] added netlify.toml to root directory[0K[?25l
+ 8 files changed, 112 insertions(+), 5 deletions(-)[0K
+ create mode 100644 .Rproj.user/A5D4DF1D/sources/s-BB2AFD36/26082CAD-contents[0K
+ create mode 100644 .Rproj.user/A5D4DF1D/sources/s-BB2AFD36/2962247D[0K
+ create mode 100644 .Rproj.user/A5D4DF1D/sources/s-BB2AFD36/2962247D-contents[0K
+ create mode 100644 netlify.toml[0K
+[0K[?25h]0; [?25l
+C:\Users\brade\Documents\braden_live>[0K[?25hg[0Ki[0Kt[0K[42G[?25lC:\Users\brade\Documents\braden_live>git p[0K[?25hu[0Ks[0K[?25lC:\Users\brade\Documents\braden_live>git pu[0K[?25h[?25lC:\Users\brade\Documents\braden_live>git p[0K[?25h[?25lC:\Users\brade\Documents\braden_live>git[0K[42G[?25h[41G[?25lC:\Users\brade\Documents\braden_live>g[0K[?25h[?25lC:\Users\brade\Documents\braden_live>[0K[?25hg[0Ki[0Kt[0K[42G[?25lC:\Users\brade\Documents\braden_live>git p[0K[?25hu[0Ks[0Kh[0K[47G[?25lC:\Users\brade\Documents\braden_live>git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[54G[?25lC:\Users\brade\Documents\braden_live>git push origin c[0K[?25hh[0Ka[0Kn[0Kg[0Ke[0K-[0Kt[0Kh[0Ke[0Km[0Ke[0K]0;  - git  push origin change-theme[?25l
+[0K[?25hEnumerating objects: 24, done.[0K[?25l
+Counting objects: 100% (24/24), done.[0K
+Delta compression using up to 8 threads[0K
+Compressing objects: 100% (13/13), done.[0K
+Writing objects: 100% (13/13), 2.22 KiB | 569.00 KiB/s, done.[0K
+Total 13 (delta 6), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[0K[?25l
+[0K[?25hTo https://github.com/arkanian86/braden_live[0K[?25l
+   5229fba..c05b6ec  change-theme -> change-theme[0K
+[0K[?25h]0; [?25l
+C:\Users\brade\Documents\braden_live>[0K[?25hg[0K[?25lC:\Users\brade\Documents\braden_live>[0K[?25hg[0Ki[0Kt[0K[42G[?25lC:\Users\brade\Documents\braden_live>git a[0K[?25hd[0Kd[0K[46G[?25lC:\Users\brade\Documents\braden_live>git add -[0K[?25hA[0K]0;  - git  add -A[?25l
+[0K[?25h]0; error: open(".Rproj.user/A5D4DF1D/console06/23A268B4"): Permission denied[0K[?25l
+error: unable to index file '.Rproj.user/A5D4DF1D/console06/23A268B4'[0K
+fatal: updating files failed[0K
+[0K
+C:\Users\brade\Documents\braden_live>[0K[?25hg[0Ki[0Kt[0K[42G[?25lC:\Users\brade\Documents\braden_live>git a[0K[?25hd[0Kd[0K[46G[?25lC:\Users\brade\Documents\braden_live>git add -[0K[?25hA[0K
