@@ -5,3 +5,6 @@
 blogdown
 public
 .Rproj
+public/
+Thumbs.db
+Blogdown
