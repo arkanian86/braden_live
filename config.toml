@@ -1,20 +1,21 @@
-baseURL = "https://vigorous-curie-5890bb.netlify.com/"
+baseURL = "http://bradenlive.com/"
 languageCode = "en-us"
-title = "Ezhil"
+title = "BradenLive"
 theme = "ezhil"
 paginate = 5
+enableEmoji = true #I added this
 
-copyright = "© Copyright notice"
+copyright = "© 2019 | Braden Schrock"
 
 pygmentsstyle = "solarized-dark"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-googleAnalytics = "UA-123-45"
-disqusShortname = "ezhil-demo"
+googleAnalytics = "UA-136283593-4"
+disqusShortname = "bradenlive"
 
 [params]
-	subtitle = "Clean and minimal personal [blog theme for Hugo](https://github.com/vividvilla/ezhil)"
+	subtitle = "Things I write live here"
 	disableDisqusTypes = ["page"]
 	featherIconsCDN = true
 	mode = "auto" # "dark", "auto", "light"
@@ -42,10 +43,25 @@ name = "Tags"
 url = "/tags"
 weight = 4
 
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 5
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/braden-schrock"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://www.twitter.com/braden_live"
+
 [[params.social]]
 name = "Github"
 icon = "github"
-url = "https://github.com/vividvilla/ezhil"
+url = "https://github.com/arkanian86"
 
 [[params.social]]
 name = "RSS"
@@ -54,3 +70,4 @@ url = "/index.xml"
 
 [taxonomies]
    tag = "tags"
+   category = "categories"
