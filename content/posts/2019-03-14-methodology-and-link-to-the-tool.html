@@ -1,15 +1,18 @@
 ---
-title: "DECS 922 Final Project (and link to BidVis)"
-author: "Braden Schrock"
+title: "Kellogg Course Closing Costs: Driving Factors"
+author: Braden
 date: '2019-03-18'
-output:
-  html_document:
-    df_print: paged
-  pdf_document: default
-categories: []
-slug: methodology-and-link-to-bidvis
-tags: []
-bibliography: []
+lastmod: '2019-03-18T13:00:00-06:00'
+description: 'An analysis of course bidding statistics as a project for a Kellogg Data Exploration class.'
+slug: bidding-statistics-analysis
+categories:
+  - Products
+  - Kellogg papers
+tags:
+  - kellogg
+  - data science
+  - R
+draft: no
 ---
 
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
@@ -28,7 +31,7 @@ bibliography: []
 <p>For DECS 922 “Data Exploration” with Professor Robert McDonald, I was asked to complete a final project in lieu of a final exam. At the time this assignment was given to us, the entire student body was struggling to decide how to allocate their bid points for the Spring 2019 quarter. One issue that many students have complained about is the fact that the TCE scores are managed in a separate system from the bid stats system, leaving no easy way to use both datasets to make informed decisions.</p>
 <p>I thought this was a perfect opportunity to use what I learned in DECS 922 to make all our lives easier. The end result is the <a href="https://bradenlive.shinyapps.io/bid_tce_vis_tool/">Bidding and TCE Visualization Tool, or BidVis:</a></p>
 <p align="center">
-<img src="/bid-tce-tool.png" alt="BidVis screenshot" style="width:80.0%" />
+<img src="/posts/2019-03-14-methodology-and-link-to-the-tool_files/bidvis_screenshot.png" style="width:80.0%" />
 </p>
 <p>BidVis is currently password protected, but the password will be posted in Slack. Let me know if you think of a better name for it. Also, please feel free to <a href="mailto:braden.schrock@kellogg.northwestern.edu">send me an email</a> with any comments or critiques!</p>
 <p>Some interesting points I learned from the data are below, along with my steps to prepare the data for use.</p>
@@ -47,7 +50,7 @@ bibliography: []
 </div>
 <div id="clean" class="section level2">
 <h2>Cleaning the Data</h2>
-<p>The source of all data is Kellogg’s <a href="https://www.kellogg.northwestern.edu/course-planning/">Course Planning Tool</a>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> The first step is to download the files, and then join them together by matching rows on the <code>CourseTitle</code>, <code>Term</code>, <code>Faculty</code>, <code>Area</code>, <code>Campus</code>, and <code>Meeting Pattern</code> columns.</p>
+<p>The source of all data is Kellogg’s <a href="https://www.kellogg.northwestern.edu/course-planning/">Course Planning Tool</a>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> The first step is to download the files, and then join them together by matching rows on the <code>CourseTitle</code>, <code>Term</code>, <code>Faculty</code>, <code>Area</code>, <code>Campus</code>, and <code>Meeting Pattern</code> columns.</p>
 <pre class="r"><code>tce &lt;- import(&#39;ctec full.csv&#39;)
 bids &lt;- import(&#39;BidStats full.csv&#39;)
 

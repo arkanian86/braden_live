@@ -1,18 +1,21 @@
 ---
-title: "DECS 922 Final Project (and link to BidVis)"
-author: "Braden Schrock"
+title: "Kellogg Course Closing Costs: Driving Factors"
+author: Braden
 date: '2019-03-18'
-output:
-  html_document:
-    df_print: paged
-  pdf_document: default
-categories: []
-slug: methodology-and-link-to-bidvis
-tags: []
-bibliography: []
+lastmod: '2019-03-18T13:00:00-06:00'
+description: 'An analysis of course bidding statistics as a project for a Kellogg Data Exploration class.'
+slug: bidding-statistics-analysis
+categories:
+  - Products
+  - Kellogg papers
+tags:
+  - kellogg
+  - data science
+  - R
+draft: no
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(kableExtra)
   options(kableExtra.auto_format = FALSE)
@@ -43,7 +46,7 @@ For DECS 922 "Data Exploration" with Professor Robert McDonald, I was asked to c
 I thought this was a perfect opportunity to use what I learned in DECS 922 to make all our lives easier.  The end result is the [Bidding and TCE Visualization Tool, or BidVis:](https://bradenlive.shinyapps.io/bid_tce_vis_tool/)
 
 <p align="center">
-![BidVis screenshot](/bid-tce-tool.png){width=80%}
+![](/posts/2019-03-14-methodology-and-link-to-the-tool_files/bidvis_screenshot.png){width=80%}
 </p>
 
 BidVis is currently password protected, but the password will be posted in Slack.  Let me know if you think of a better name for it.  Also, please feel free to [send me an email](mailto:braden.schrock@kellogg.northwestern.edu) with any comments or critiques!
