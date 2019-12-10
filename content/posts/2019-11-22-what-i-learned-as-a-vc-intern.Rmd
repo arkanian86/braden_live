@@ -33,7 +33,6 @@ For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http:
 For 10 weeks this fall, I worked part-time at [Tensility Venture Partners](http://www.tensilityvc.com/) in downtown Chicago. Here's what I learned.
 
 ###About Tensility
-
 ![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/Tensility-Logo-RGB-Green.png){width=40%}
 
 Tensility Venture Partners has two general partners, Armando Pauker and Wayne Boulais. Their experience spans over 20 years of venture investing, beginning at Apex Venture Partners and then two funds at Tensility. The firm has the following focus:
@@ -75,6 +74,7 @@ In the process of writing the investment memo, I conducted market research to un
 ####Website update/content creation
 
 Coming into the internship, I had some strong opinions about the Tensility website as it stood. The site was not a good reflection on a firm that invested at the cutting edge of technology - AI. It was not ideally formatted and had some unflattering stock art:
+
 
 ![](/posts/2019-11-22-what-i-learned-as-a-vc-intern_files/old-tensility-website.png){width=40%}
 
