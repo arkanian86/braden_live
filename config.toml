@@ -2,7 +2,7 @@ baseURL = "http://bradenlive.com/"
 languageCode = "en-us"
 title = "BradenLive"
 theme = "ezhil"
-paginate = 5
+paginate = 10
 enableEmoji = true #I added this
 
 copyright = "© 2019 | Braden Schrock"

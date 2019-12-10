@@ -1,0 +1,310 @@
+---
+title: "Kellogg Course Closing Costs: Driving Factors"
+author: Braden
+date: '2019-03-18'
+lastmod: '2019-03-18T13:00:00-06:00'
+description: 'An analysis of course bidding statistics as a project for a Kellogg Data Exploration class.'
+slug: bidding-statistics-analysis
+categories:
+  - Products
+  - Kellogg papers
+tags:
+  - kellogg
+  - data science
+  - R
+draft: no
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra)
+  options(kableExtra.auto_format = FALSE)
+library(tidyverse)
+library(data.table)
+library(dplyr)
+library(rio)
+  install_formats()
+library(ggrepel)
+library(janitor)
+library(lubridate)
+library(broom)
+library(generics)
+library(plotly)
+library(DT)
+library(caret)
+library(rpart)
+library(rattle)
+library(rpart)
+library(car)
+```
+
+
+## Introduction
+
+For DECS 922 "Data Exploration" with Professor Robert McDonald, I was asked to complete a final project in lieu of a final exam.  At the time this assignment was given to us, the entire student body was struggling to decide how to allocate their bid points for the Spring 2019 quarter.  One issue that many students have complained about is the fact that the TCE scores are managed in a separate system from the bid stats system, leaving no easy way to use both datasets to make informed decisions.
+
+I thought this was a perfect opportunity to use what I learned in DECS 922 to make all our lives easier.  The end result is the [Bidding and TCE Visualization Tool, or BidVis:](https://bradenlive.shinyapps.io/bid_tce_vis_tool/)
+
+<p align="center">
+![](/posts/2019-03-14-methodology-and-link-to-the-tool_files/bidvis_screenshot.png){width=80%}
+</p>
+
+BidVis is currently password protected, but the password will be posted in Slack.  Let me know if you think of a better name for it.  Also, please feel free to [send me an email](mailto:braden.schrock@kellogg.northwestern.edu) with any comments or critiques!
+
+Some interesting points I learned from the data are below, along with my steps to prepare the data for use.  
+
+* [Cleaning the Data](#clean)
+* [Preparing the Data for Visualization](#preparing)
+
+In speaking with my classmates and from my own experience, I sought to use the data to answer the following questions:
+
+* [How can I predict closing cost for an upcoming class?](#predict)  
+* [What is the relationship between TCE scores and course closing cost?](#tce)  
+* [Is the "bid point inflation" effect real?](#inflation)
+
+## Cleaning the Data {#clean}
+
+The source of all data is Kellogg's [Course Planning Tool](https://www.kellogg.northwestern.edu/course-planning/).^[Kellogg School of Management, Northwestern University. (2019). Teacher/Course Evaluations. Retrieved from https://www4.kellogg.northwestern.edu/CoursePlanning/CTEC/CTECScreen?] ^[Kellogg School of Management, Northwestern University. (2019). Historical Bidding Statistics. Retrieved from https://www4.kellogg.northwestern.edu/CoursePlanning/BidStats/BidStatsScreen?]  The first step is to download the files, and then join them together by matching rows on the `CourseTitle`, `Term`, `Faculty`, `Area`, `Campus`, and `Meeting Pattern` columns.  
+
+```{r}
+tce <- import('ctec full.csv')
+bids <- import('BidStats full.csv')
+
+## join TCE and bidstats files
+full_data <- left_join(tce, bids, by=c('CourseTitle',
+                                       'Term',
+                                       'CourseSection',
+                                       'Faculty', 
+                                       'Area', 
+                                       'Campus', 
+                                       'Meeting Pattern'))
+
+## remove spaces from all variable names
+names(full_data)<-make.names(names(full_data),unique = TRUE)
+
+## remove all records with no associated bid stats
+incompletes <- full_data %>% filter(is.na(full_data$Closing.Cost))
+full_data <- full_data %>% filter(!is.na(full_data$Closing.Cost))
+```
+
+`r nrow(incompletes)` bidding records that have no matching TCE records associated with them must be removed.  This ensures that no TCE is matched with  incorrect bid stats.  The data is now complete, but needs to be formatted for the visualizations and regressions that are a part of BidVis.
+
+## Preparing the Data for Visualization {#preparing}
+
+Next, I will split the `Term` column into `Year` and `Quarter` to be able to visualize on those variables.  I'll also apply 'levels' to `Term` so that they can be ranked against each other on an x- or y-axis:
+
+```{r}
+## add year and quarter variables
+full_data$Year <- as.numeric(str_extract(full_data$Term, "[0-9]+"))
+full_data$Quarter <- (str_extract(full_data$Term, "[aA-zZ]+"))
+levels(full_data$Quarter) <- c('Winter', 'Spring', 'Summer', 'Fall')
+full_data$Quarter <- as.factor(full_data$Quarter)
+
+## create additional variables to order `Term` by year and quarter
+termlevels <- data.table(Term=as.character(unique(full_data$Term)))
+termlevels$Year <- as.numeric(str_extract(termlevels$Term, "[0-9]+"))
+termlevels$Quarter <- (str_extract(termlevels$Term, "[aA-zZ]+"))
+termlevels$Quarter <- factor(termlevels$Quarter, 
+                             levels=c('Winter', 'Spring', 
+                                      'Summer', 'Fall'))
+termlevels <- arrange(termlevels, Year, Quarter)
+full_data$Term <- factor(full_data$Term, levels=termlevels$Term)
+```
+
+For some of the visualizations to work correctly in the app, there needs to be a column which has a unique value in every row- the `ID` column.  Finally, all remaining `chr` columns must be changed to `factor`, again so that they can be compared to each other on a graph:
+
+```{r}
+## add an ID column to make each record unique
+full_data$ID <- 1:nrow(full_data)
+
+## change all character columns to factors
+full_data[,1] <- as.factor(full_data[,1])
+full_data[,3] <- as.factor(full_data[,3])
+full_data[,4] <- as.factor(full_data[,4])
+full_data[,5] <- as.factor(full_data[,5])
+full_data[,6] <- as.factor(full_data[,6])
+full_data[,7] <- as.factor(full_data[,7])
+full_data[,23] <- as.factor(full_data[,23])
+
+## save the final result to be accessed by the app
+save(full_data, file='full_data.rda')
+```
+
+The data is now ready to be used by BidVis.  Currently, BidVis is not tied into a live feed from the Course Planning Tool data sources, so I will update manually after each bidding round every quarter.
+
+## Predicting a Course's Closing Cost {#predict}
+
+```{r simple inaccurate regression, echo=FALSE}
+## regression function
+eq <- paste0("Closing.Cost ~ ", paste(colnames(full_data[-19]), collapse=' + '))
+reg <- lm(eq, full_data)
+out <- tidy(reg) %>% arrange(-estimate) %>% filter(p.value<=.05)
+
+#reg <- lm(Closing.Cost ~ Quarter + Year + CourseTitle + Faculty, data=full_data)
+#out <- tidy(reg) %>% arrange(-estimate)
+
+is.num <- sapply(out, is.numeric)
+out[is.num] <- lapply(out[is.num], round, 2)
+
+out$term <- gsub('Faculty', '', out$term)
+out$term <- gsub('CourseTitle', '', out$term)
+out$term <- gsub('CourseSection', '', out$term)
+out$term <- gsub('Meeting.Pattern', '', out$term)
+out$term <- gsub('Term', '', out$term)
+
+names(out) <- c('Variable', 'Regression Coefficient', 'Standard Error', 'Statistic', 'p-value')
+sums <- summary(reg)
+
+#predict(reg3, newdata=full_data[106,], interval="prediction")
+```
+
+I ran a regression on the full dataset to see if a predictive model could be developed.  Unfortunately, with a standard linear regression, the R^2^ maxed out at **`r round(sums$r.squared, 3)`** and so cannot be relied upon to make an accurate prediction.  Other models, including recursive regression and random forest models, also proved unfruitful.  The linear regression model coefficients are below; this at least shows the most powerful factors at play that determine a course's closing cost.  They cannot be used to accurately predict a course's closing cost.
+
+<p align="center">
+<font size="2">
+`$Closing Cost = \beta _{0} + \beta _{1}*Quarter + \beta _{2}*Year + \beta _{3}*CourseTitle + \beta _{4}*Faculty + ...$`
+</font>
+</p>
+
+Many of the variables, such as `CourseTitle` and `Faculty`, are not continuous- so there must be a dummy variable created for each unique course or faculty.  The results of the regression are below:
+
+```{r linear regression coefficients table, echo=FALSE}
+datatable(out,
+  options = list(
+  scrollX = TRUE,
+  scrollCollapse = TRUE
+)) %>% formatStyle(columns = colnames(.), fontSize="50%")
+```
+
+## Relationship between TCE scores and Closing Cost {#tce}
+
+Right off the bat, we can see the full dataset shows that as overall TCE score for a course increases, then closing cost increases (slightly):
+
+```{r main Closing Cost by TCE score, echo=FALSE}
+
+full_scatter <- ggplot(full_data, aes(x=Class, y=Closing.Cost)) +
+  geom_point(aes(color=Closing.Cost)) +
+  geom_smooth(method='lm', formula=y~x, se=FALSE, color='orange') +
+  scale_color_gradient(low="#4E2A84", high="#e0ecf4") +
+  guides(color=FALSE) +
+  ylab("Closing Cost") +
+  xlab("Overall TCE Score") +
+  ggtitle("Closing Cost as a Function of Overall TCE Score") +
+    theme(
+    panel.background = element_rect(fill='white'), 
+    panel.grid.major = element_line(linetype=1, color='grey'), 
+    panel.grid.minor = element_line(linetype=1, color='grey'),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank())
+full_scatter
+```
+
+There is significant variation in the relationship between closing cost and overall TCE score when looking at each academic department individually:
+
+```{r Closing Cost by TCE score by area, echo=FALSE}
+area_faceted <- ggplot(full_data, aes(x=Class, y=Closing.Cost)) +
+  geom_point(aes(color=Closing.Cost)) +
+  geom_smooth(method='lm', formula=y~x, se=FALSE, color='orange') +
+  scale_color_gradient(low="#4E2A84", high="#e0ecf4") +
+  guides(color=FALSE) +
+  ylab("Closing Cost") +
+  xlab("Overall TCE Score") +
+  ggtitle("Closing Cost as a Function of Overall TCE Score, by Area") +
+  facet_wrap(~Area) +
+    theme(
+    panel.background = element_rect(fill='white'), 
+    panel.grid.major = element_line(linetype=1, color='grey'), 
+    panel.grid.minor = element_line(linetype=1, color='grey'),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    strip.background =element_rect(fill="white")
+    )
+area_faceted
+```
+
+Interestingly, we can actually see that when looking only at courses that went for a high closing cost, there is an inverse relationship with TCE score:
+
+```{r high closing costs, echo=FALSE}
+cc_faceted <- ggplot(full_data, aes(x=Class, y=Closing.Cost)) +
+  geom_point(aes(color=Closing.Cost)) +
+  geom_smooth(method='lm', formula=y~x, se=FALSE, color='orange') +
+  scale_color_gradient(low="#4E2A84", high="#e0ecf4") +
+  guides(color=FALSE) +
+  ylab("Closing Cost") +
+  xlab("Overall TCE Score") +
+  ggtitle("Closing Cost as a Function of Overall TCE Score, by cohort") +
+  facet_wrap(cut(full_data$Closing.Cost, 3)) +
+    theme(
+    panel.background = element_rect(fill='white'), 
+    panel.grid.major = element_line(linetype=1, color='grey'), 
+    panel.grid.minor = element_line(linetype=1, color='grey'),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    strip.background =element_rect(fill="white")
+    )
+cc_faceted
+```
+
+This could be the effect of students having impossibly high expectations for classes that cost a large amount of bid points.
+
+## The Bid Point Inflation Effect? {#inflation}
+
+There is not strong evidence of classes going for progressively more points each quarter:
+
+```{r points info, echo=FALSE}
+pointsInfo <- full_data  %>% group_by(Term) %>%
+  filter(Closing.Cost>0) %>%
+  mutate(termavgCC=mean(Closing.Cost)) %>%
+  filter(Closing.Cost>1200) %>%
+  mutate(termavgCCexp=mean(Closing.Cost))
+
+ggplot(pointsInfo) +
+  geom_line(aes(x=Term, y=termavgCC), color='#4E2A84', size=1.5, group=1) +
+  geom_point(aes(x=Term, y=termavgCC), shape = 19, size=4, color='#4E2A84') +
+  geom_text(aes(x="Fall 2018", y=750), label='All classes with closing cost > 0', color='#4E2A84', size=4, hjust=1) +
+  geom_line(aes(x=Term, y=termavgCCexp), color='#4E2A84', size=1.5, group=1) +
+  geom_point(aes(x=Term, y=termavgCCexp), shape = 19, size=4, color='#4E2A84') +
+  geom_text(aes(x="Fall 2018", y=1900), label='All classes with closing cost > 1200', color='#4E2A84', size=4, hjust=1) +
+  ylab("Average Closing Cost") +
+  xlab("Quarter") +
+  ggtitle("Average Closing Cost") +
+      theme(
+    panel.background = element_rect(fill='white'),
+    panel.grid.major = element_line(linetype=1, color='grey'),
+    panel.grid.minor = element_line(linetype=1, color='grey'),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    axis.text.x = element_text(size=10, angle=45, hjust=1))
+
+```
+
+This makes sense, as there are a finite amount of points available within the whole student body.  Over time, courses have not gotten significantly more expensive.  In fact, the distribution of closing costs has remained relatively constant every year:
+
+```{r points distribution, echo=FALSE}
+data_nozero <- full_data %>% filter(Closing.Cost>0)
+
+ggplot(data_nozero, aes(x=Closing.Cost)) + 
+    geom_density(data=filter(data_nozero, Year == 2016), color= "#4E2A84", fill = "#4E2A84", alpha = 0.2, size=1.1) +
+    geom_density(data=filter(data_nozero, Year == 2017), color= "#4E2A84", fill = "#4E2A84", alpha = 0.2, size=1.1) +
+    geom_density(data=filter(data_nozero, Year == 2018), color= "#4E2A84", fill = "#4E2A84", alpha = 0.2, size=1.1) +
+    geom_density(data=filter(data_nozero, Year == 2019), color= "#4E2A84", fill = "#4E2A84", alpha = 0.2, size=1.1) +
+    ylab("Density") +
+    xlab("Closing Cost") +
+    ggtitle("Distribution of Closing Cost, by Year (Closing Cost > 0)") +
+      theme(
+    panel.background = element_rect(fill='white'), 
+    panel.grid.major = element_line(linetype=1, color='grey'), 
+    panel.grid.minor = element_line(linetype=1, color='grey'),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank())
+
+```
+
+## Conclusion
+
+I believe there is more insight to be gleaned from this dataset.  Using the BidVis tool, Kellogg students should be more easily able to discover those insights as well as make better choices when allocating their bid points every quarter.  It can never hurt to have more information, and I hope this project bring value to the Kellogg community.
