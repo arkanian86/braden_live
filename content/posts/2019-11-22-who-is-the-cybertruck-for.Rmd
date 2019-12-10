@@ -13,7 +13,7 @@ tags:
   - Elon Musk
   - target market
 lastmod: '2019-11-22T08:15:41-06:00'
-description: ''
+description: 'At first, I thought the Cybertruck rolling onto the stage was a joke.'
 show_in_homepage: yes
 show_description: no
 license: ''
@@ -25,7 +25,13 @@ autoCollapseToc: yes
 math: no
 ---
 
-At first, I thought the Cybertruck rolling onto the stage was a joke...
+```{r}
+library(htmltools)
+library(knitr)
+library(blogdown)
+```
+
+At first, I thought the Cybertruck rolling onto the stage was a joke.
 
 <!--more-->
 
@@ -51,9 +57,12 @@ Why I bought my F-150:
 
 * *Functionality.* Although I don't work in construction, I do tend to take advantage of my truck's bed to haul household goods, groceries, pets, etc. relatively often. No other vehicle class offers the flexibility I have with my truck bed. The Cybertruck offers the same functionality, with a bed length of 6.5 feet - a foot longer than my F-150.  
 * *Price.* I bought my truck below MSRP - around $40,000. That was very affordable for me when considering the amount of functionality I was buying. Surprisingly, the Cybertruck beats this price at it's lowest price point of $39,900. Although I would expect that most people would probably opt for the mid-level version which has all-wheel drive, enhanced performance, and extended range for an extra $10,000, the Cybertruck can compare favorably with an F-150 on price.  
-* *Aesthetics/intangibles.* The F-150 looks tough (or did, at least, in 2011) and uniquely American. Here, the Cybertruck diverges sharply. Rather than taking design cues from the objectively gorgeous Tesla Models S, 3, and X, the Cybertruck looks like it came straight out of the 1982 sci-fi movie Blade Runner:<center>
+* *Aesthetics/intangibles.* The F-150 looks tough (or did, at least, in 2011) and uniquely American. Here, the Cybertruck diverges sharply. Rather than taking design cues from the objectively gorgeous Tesla Models S, 3, and X, the Cybertruck looks like it came straight out of the 1982 sci-fi movie Blade Runner:
+
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Nobody *expects* the Cybertruck <a href="https://t.co/khhYNFaVKs">pic.twitter.com/khhYNFaVKs</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1197768038415659008?ref_src=twsrc%5Etfw">November 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</center>While it technically may look "tough", I would argue that it's not the same tough that most consumers like me are looking for.
+</center>
+While it technically may look "tough", I would argue that it's not the same tough that most consumers like me are looking for.
 
 ***
 
