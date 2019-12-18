@@ -35,15 +35,27 @@ Let's compare those expectations (which were rosy projections for Enron, which h
 
 ###Operating in U.S. Cities
 
-First, EBS was formulated on the idea that customers would be using Enron's own network of fiber, separate from the public internet. This is why Enron expected to be available by city. In today's model of streaming content over the internet, content is available from anywhere (at least, within the U.S.). Since Netflix is available in every U.S. city, and was in 2010, let's instead compare by the percent of U.S. population that EBS/Netflix were available to in 2010. ^[https://www2.census.gov/programs-surveys/popest/datasets/]
+First, EBS was formulated on the idea that customers would be using Enron's own network of fiber, separate from the public internet. This is why Enron expected to be available by city. In today's model of streaming content over the internet, content is available from anywhere (at least, within the U.S.). Since Netflix is available in every U.S. city, and was in 2010, let's instead compare by the percent of U.S. population that EBS/Netflix were available to in 2010. ^[https://github.com/cestastanford/historical-us-city-populations. U.S. Census Bureau and Erik Steiner, Spatial History Project, Center for Spatial and Textual Analysis, Stanford University]
+
 ```{r availability, echo=FALSE, include=FALSE}
-perc_americans <- c(82)
-cities <- fread('data/cc-est2010-alldata.csv')
+# download.file("https://raw.githubusercontent.com/cestastanford/historical-us-city-populations/master/data/1790-2010_MASTER.csv", destfile = "data/pop.csv", method = "curl")
 
-cities2 <- cities %>%
-  select(STNAME, CTYNAME, TOT_POP) %>%
-  arrange(desc(TOT_POP)) 
+pop_data <- fread('data/pop.csv')
 
-rm(cities, cities2)
+top_cities <- pop_data %>%
+  select(ID, CityST, pop_2010=`2010`) %>%
+  arrange(desc(pop_2010)) %>%
+  head(82)
+
+EBS_reach <- summarize(top_cities, people=sum(pop_2010))
   
+US_pop_2010 <- 308745538
+perc_dsl_access <- .95
+NFLX_reach <- data.frame(people=US_pop_2010*perc_dsl_access)
+
+reach <- rbind(EBS_reach, NFLX_reach)
+reach$provider <- c('EBS', 'NFLX')
+
+ggplot(reach) +
+  geom_bar(x=provider, y=people)
 ```
