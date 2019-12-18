@@ -1,0 +1,49 @@
+---
+title: Enron Broadband
+description: Enron predicted that Enron Broadband would be prolific by 2010. How does this compare to where Netflix was at in 2010?
+author: Braden
+date: '2019-12-17'
+slug: enron-broadband
+categories:
+  - Business Strategy
+tags:
+  - Enron
+  - Netflix
+  - streaming
+draft: yes
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+library(data.table)
+library(tidyverse)
+```
+
+![](/posts/2019-12-17-enron-broadband_files/Enron-E.png){width=40%}
+
+I read [The Smartest Guys in the Room (TSGITR)](https://www.amazon.com/Smartest-Guys-Room-Amazing-Scandalous/dp/1591840538) by [Bethany McLean](https://en.wikipedia.org/wiki/Bethany_McLean) and [Peter Elkind](https://www.propublica.org/people/peter-elkind) over the past week. As a prospective Kellogg finance major, I figured it was the least I could do to learn about this infamous company, and what went wrong.
+
+This was a fascinating read, covering in great detail the accounting and corporate finance methods that Enron used to essentially borrow from it's own future. Enron started as a natural gas pipeline company, but in the course of mad expansion into new markets found itself **in 1998** pitching a new business called **"Enron Broadband Services (EBS)"** which would bring streaming video to the average American's living-room TV set.
+
+EBS was in motion a full **9 years** before [Netflix announced](https://en.wikipedia.org/wiki/Timeline_of_Netflix) it would launch a streaming video service!
+
+Volumes could be written on [why EBS failed](https://www.quora.com/Why-did-Enrons-bandwidth-trading-business-fail/answer/Stan-Hanks?share=1&srid=XFje). I will not do so here. I just want to address the expectations that Enron executives had for EBS and compare that to Netflix. On page 295 of TSGITR, the authors note the following:
+
+> To book the profits it needed, Enron had to assume that *by the year 2010* the company's content business would be operating in *82 cities,* that *32 percent* of the households in those markets would be using DSL lines, that *70 percent* of DSL customers using video-on-demand would subscribe to the Enron-Blockbuster service--and that Enron would control *50 percent* of the video-on-demand market.
+
+Let's compare those expectations (which were rosy projections for Enron, which had to assume massive success in order to meet its promises to Wall Street) with the reality of Netflix.
+
+
+###Operating in U.S. Cities
+
+First, EBS was formulated on the idea that customers would be using Enron's own network of fiber, separate from the public internet. This is why Enron expected to be available by city. In today's model of streaming content over the internet, content is available from anywhere (at least, within the U.S.). Since Netflix is available in every U.S. city, and was in 2010, let's instead compare by the percent of U.S. population that EBS/Netflix were available to in 2010. ^[https://www2.census.gov/programs-surveys/popest/datasets/]
+```{r availability, echo=FALSE, include=FALSE}
+perc_americans <- c(82)
+cities <- fread('data/cc-est2010-alldata.csv')
+
+cities2 <- cities %>%
+  select(STNAME, CTYNAME, TOT_POP) %>%
+  arrange(desc(TOT_POP)) 
+
+rm(cities, cities2)
+  
+```
