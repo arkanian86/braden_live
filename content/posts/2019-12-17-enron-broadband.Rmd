@@ -10,7 +10,7 @@ tags:
   - Enron
   - Netflix
   - streaming
-draft: yes
+draft: no
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
