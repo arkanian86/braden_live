@@ -1,0 +1,165 @@
+---
+title: Enron Broadband
+description: Enron predicted that Enron Broadband would be prolific by 2010. How does this compare to where Netflix was at in 2010?
+author: Braden
+date: '2019-12-17'
+slug: enron-broadband
+categories:
+  - Business Strategy
+tags:
+  - Enron
+  - Netflix
+  - streaming
+draft: no
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+library(data.table)
+library(tidyverse)
+library(reshape2)
+library(scales)
+
+theme_bradenlive <- function(){
+ theme_minimal()
+}
+
+theme_new <- function(base_size = 18,
+                      base_family = "",
+                      base_line_size = base_size / 170,
+                      base_rect_size = base_size / 170){
+  theme_minimal(base_size = base_size, 
+                base_family = base_family,
+                base_line_size = base_line_size) %+replace%
+    theme(
+      plot.title = element_text(
+        color = "#AA0000", 
+        face = "bold",
+        hjust = 0),
+      axis.title = element_text(
+        color = rgb(105, 105, 105, maxColorValue = 255),
+        size = rel(0.75)),
+      axis.text = element_text(
+        color = rgb(105, 105, 105, maxColorValue = 255),
+        size = rel(0.5)),
+      panel.grid.major = element_line(
+        rgb(105, 105, 105, maxColorValue = 255),
+        linetype = "dotted"),   
+      panel.grid.minor = element_line(
+        rgb(105, 105, 105, maxColorValue = 255),
+        linetype = "dotted", 
+        size = rel(4)),   
+      
+      complete = TRUE
+    )
+}
+```
+
+![](/posts/2019-12-17-enron-broadband_files/Enron-E.png){width=40%}
+
+I read [The Smartest Guys in the Room](https://www.amazon.com/Smartest-Guys-Room-Amazing-Scandalous/dp/1591840538) by [Bethany McLean](https://en.wikipedia.org/wiki/Bethany_McLean) and [Peter Elkind](https://www.propublica.org/people/peter-elkind) over the past week. As a prospective Kellogg finance major, I figured it was the least I could do to learn about this infamous company, and what went wrong.
+
+This was a fascinating read, covering in great detail the accounting and corporate finance methods that Enron used to essentially borrow from it's own future. Enron started as a natural gas pipeline company, but in the course of mad expansion into new markets found itself **in 1998** pitching a new business called **Enron Broadband Services** (EBS) which would bring streaming video to the average American's living-room TV set.
+
+EBS was in motion a full **9 years** before [Netflix announced](https://en.wikipedia.org/wiki/Timeline_of_Netflix) it would launch a streaming video service!
+
+Volumes could be written on [why EBS failed](https://www.quora.com/Why-did-Enrons-bandwidth-trading-business-fail/answer/Stan-Hanks?share=1&srid=XFje). I will not do so here. I just want to address the expectations that Enron executives had for EBS and compare that to Netflix. On page 295 of TSGITR, the authors note the following:
+
+> To book the profits it needed, Enron had to assume that *by the year 2010* the company's content business would be operating in *82 cities,* that *32 percent* of the households in those markets would be using DSL lines, that *70 percent* of DSL customers using video-on-demand would subscribe to the Enron-Blockbuster service--and that Enron would control *50 percent* of the video-on-demand market.
+
+Let's compare those expectations (which were rosy projections for Enron, which had to assume massive success in order to meet its promises to Wall Street) with the reality of Netflix.
+
+
+###Operating in U.S. cities: the wrong model
+
+EBS was formulated on the idea that customers would be using Enron's own network of fiber, distinct from the public internet. This is why Enron expected to be available in 82 cities by 2010. Clearly, Netflix exceeded Enron's rosiest projections for streaming video - In today's model of streaming content over the internet, content is available from anywhere (at least, within the U.S.). In 2010, Netflix was available across the U.S. and was poised to expand to Canada.
+
+EBS unfortunately was the wrong business model- instead of utilities like EBS providing content via their proprietary fiber networks, streaming video is a service a layer above the internet service provider layer.
+
+###Market projections
+
+```{r availability, echo=FALSE}
+# download.file("https://raw.githubusercontent.com/cestastanford/historical-us-city-populations/master/data/1790-2010_MASTER.csv", destfile = "data/pop.csv", method = "curl")
+
+pop_data <- fread('data/pop.csv')
+
+top_cities <- pop_data %>%
+  select(ID, CityST, pop_2010=`2010`) %>%
+  arrange(desc(pop_2010)) %>%
+  head(82)
+
+# EBS_reach <- summarize(top_cities, people=sum(pop_2010))
+
+EBS_markets <- summarize(top_cities, TAM=sum(pop_2010), SAM=.32*TAM, SOM=.70*SAM)
+  
+
+# NFLX_reach <- data.frame(people=US_pop_2010*perc_dsl_access)
+# 
+# reach <- rbind(NFLX_reach, EBS_reach)
+# reach$provider <- c('NFLX', 'EBS')
+# 
+# reach_plot <- ggplot(reach, aes(x=provider, y=people)) +
+#   geom_bar(stat='identity', fill='#AA0000') +
+#   coord_flip() +
+#   theme_new()
+
+# NFLX_subs_2010 <- 20010000
+# NFLX_subs_streaming <- NFLX_subs_2010*.70
+
+US_pop_2010 <- data.frame(pop=308745538)
+perc_dsl_access <- .95
+
+NFLX_markets <- summarize(US_pop_2010, TAM=sum(pop), SAM=perc_dsl_access*TAM, SOM=20010000)
+
+provider_markets <- rbind(EBS_markets, NFLX_markets)
+provider_markets$provider <- c('EBS', 'NFLX') 
+provider_markets <- provider_markets %>%
+  select(provider, everything())
+
+provider_markets <- provider_markets %>%
+  melt(id.vars="provider")
+
+provider_markets$variable <- factor(provider_markets$variable, levels=c("VoD_subs", "SOM", "SAM", "TAM"))
+provider_markets$provider <- factor(provider_markets$provider, levels=c("NFLX", "EBS"))
+
+
+p <- ggplot(provider_markets, aes(x=variable,
+                             y=value,
+                             fill=provider,
+                             label=round(value / 1e6, 1), "M")) +
+  geom_col(position = "dodge") +
+  geom_text(position = position_dodge(width = .9),
+            hjust = -.1) +
+  coord_flip() +
+  theme_new() + scale_fill_manual(values=c("#0084C7","#708088")) +
+  labs(title = "EBS predicted a smaller market, but larger share") +
+  
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.title= element_blank(),
+    legend.position = c(.75, .15),
+    axis.text.x = element_blank()
+    ) +
+  guides(fill = guide_legend(reverse=TRUE, title = "Subscribers (M)")) +
+  scale_x_discrete(labels = c("Obtainable", "Serviceable", "Total")) +
+  scale_y_continuous(expand = c(0,0), limits=c(0, 370000000))
+
+```
+
+Enron estimated that in the 82 cities in which EBS would be available, 32% of households would be using DSL. In reality, in 2010 Netflix was available across the country (population of `r format(US_pop_2010, big.mark=",")`), and DSL penetration was about `r paste0(perc_dsl_access*100, '%')`. Let's compare the number of Americans that Enron expected to reach with the reality of Netflix in 2010:^[https://github.com/cestastanford/historical-us-city-populations. U.S. Census Bureau and Erik Steiner, Spatial History Project, Center for Spatial and Textual Analysis, Stanford University] ^[https://www.geek.com/gadgets/netflix-gains-7-7m-subscribers-in-2010-thanks-to-streaming-only-plan-1354915/] ^[https://techcrunch.com/2010/07/21/netflix-users/] ^[https://www.pewresearch.org/internet/2010/06/03/the-state-of-online-video/]
+
+
+```{r, echo=FALSE}
+p
+```
+
+In 2010, Netflix had just over 20M streaming subscribers. EBS expected to have 12.5M streaming subscribers by then. While these numbers are relatively similar, EBS expected to have 12.5M subscribers out of a total 17.9M Americans with DSL - **70%** of the serviceable market! Netflix, on the other hand, achieved a much lower penetration, holding 20M out of a total of 293M Americans with DSL - only **6.8%** of the serviceable market.
+
+Ultimately, EBS was doomed from the beginning as it relied upon the wrong business model. If, however, EBS somehow got around that obstacle, it is likely that it would have had much lower penetration. If the penetration of EBS resembled that of what Netflix achieved in reality, then EBS would have had only around **1.2M** subscribers - nowhere near what they needed to make their quarterly numbers and satisfy Wall Street's insatiable demand for earnings growth.
+
+
+
+
+
+
+
