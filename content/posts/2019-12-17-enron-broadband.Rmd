@@ -16,11 +16,46 @@ draft: yes
 ```{r setup, include=FALSE, echo=FALSE}
 library(data.table)
 library(tidyverse)
+library(reshape2)
+
+theme_bradenlive <- function(){
+ theme_minimal()
+}
+
+theme_new <- function(base_size = 18,
+                      base_family = "",
+                      base_line_size = base_size / 170,
+                      base_rect_size = base_size / 170){
+  theme_minimal(base_size = base_size, 
+                base_family = base_family,
+                base_line_size = base_line_size) %+replace%
+    theme(
+      plot.title = element_text(
+        color = "#AA0000", 
+        face = "bold",
+        hjust = 0),
+      axis.title = element_text(
+        color = rgb(105, 105, 105, maxColorValue = 255),
+        size = rel(0.75)),
+      axis.text = element_text(
+        color = rgb(105, 105, 105, maxColorValue = 255),
+        size = rel(0.5)),
+      panel.grid.major = element_line(
+        rgb(105, 105, 105, maxColorValue = 255),
+        linetype = "dotted"),   
+      panel.grid.minor = element_line(
+        rgb(105, 105, 105, maxColorValue = 255),
+        linetype = "dotted", 
+        size = rel(4)),   
+      
+      complete = TRUE
+    )
+}
 ```
 
 ![](/posts/2019-12-17-enron-broadband_files/Enron-E.png){width=40%}
 
-I read [The Smartest Guys in the Room (TSGITR)](https://www.amazon.com/Smartest-Guys-Room-Amazing-Scandalous/dp/1591840538) by [Bethany McLean](https://en.wikipedia.org/wiki/Bethany_McLean) and [Peter Elkind](https://www.propublica.org/people/peter-elkind) over the past week. As a prospective Kellogg finance major, I figured it was the least I could do to learn about this infamous company, and what went wrong.
+I read [The Smartest Guys in the Room](https://www.amazon.com/Smartest-Guys-Room-Amazing-Scandalous/dp/1591840538) by [Bethany McLean](https://en.wikipedia.org/wiki/Bethany_McLean) and [Peter Elkind](https://www.propublica.org/people/peter-elkind) over the past week. As a prospective Kellogg finance major, I figured it was the least I could do to learn about this infamous company, and what went wrong.
 
 This was a fascinating read, covering in great detail the accounting and corporate finance methods that Enron used to essentially borrow from it's own future. Enron started as a natural gas pipeline company, but in the course of mad expansion into new markets found itself **in 1998** pitching a new business called **"Enron Broadband Services (EBS)"** which would bring streaming video to the average American's living-room TV set.
 
@@ -33,11 +68,15 @@ Volumes could be written on [why EBS failed](https://www.quora.com/Why-did-Enron
 Let's compare those expectations (which were rosy projections for Enron, which had to assume massive success in order to meet its promises to Wall Street) with the reality of Netflix.
 
 
-###Operating in U.S. Cities
+###Operating in U.S. cities: the wrong model
 
-First, EBS was formulated on the idea that customers would be using Enron's own network of fiber, separate from the public internet. This is why Enron expected to be available by city. In today's model of streaming content over the internet, content is available from anywhere (at least, within the U.S.). Since Netflix is available in every U.S. city, and was in 2010, let's instead compare by the percent of U.S. population that EBS/Netflix were available to in 2010. ^[https://github.com/cestastanford/historical-us-city-populations. U.S. Census Bureau and Erik Steiner, Spatial History Project, Center for Spatial and Textual Analysis, Stanford University]
+EBS was formulated on the idea that customers would be using Enron's own network of fiber, distinct from the public internet. This is why Enron expected to be available in 82 cities by 2010. Clearly, Netflix exceeded Enron's rosiest projections for streaming video - In today's model of streaming content over the internet, content is available from anywhere (at least, within the U.S.). In 2010, Netflix was available across the U.S. and was poised to expand to Canada.
 
-```{r availability, echo=FALSE, include=FALSE}
+EBS unfortunately was the wrong business model- instead of utilities like EBS providing content via their proprietary fiber networks, streaming video is a service a layer above the internet service provider layer.
+
+###Market projections
+
+```{r availability, echo=FALSE}
 # download.file("https://raw.githubusercontent.com/cestastanford/historical-us-city-populations/master/data/1790-2010_MASTER.csv", destfile = "data/pop.csv", method = "curl")
 
 pop_data <- fread('data/pop.csv')
@@ -47,15 +86,55 @@ top_cities <- pop_data %>%
   arrange(desc(pop_2010)) %>%
   head(82)
 
-EBS_reach <- summarize(top_cities, people=sum(pop_2010))
+# EBS_reach <- summarize(top_cities, people=sum(pop_2010))
+
+EBS_markets <- summarize(top_cities, TAM=sum(pop_2010), SAM=.32*TAM, SOM=.70*SAM, VoD_subs=SOM/.50)
   
-US_pop_2010 <- 308745538
+
+# NFLX_reach <- data.frame(people=US_pop_2010*perc_dsl_access)
+# 
+# reach <- rbind(NFLX_reach, EBS_reach)
+# reach$provider <- c('NFLX', 'EBS')
+# 
+# reach_plot <- ggplot(reach, aes(x=provider, y=people)) +
+#   geom_bar(stat='identity', fill='#AA0000') +
+#   coord_flip() +
+#   theme_new()
+
+# NFLX_subs_2010 <- 20010000
+# NFLX_subs_streaming <- NFLX_subs_2010*.70
+
+US_pop_2010 <- data.frame(pop=308745538)
 perc_dsl_access <- .95
-NFLX_reach <- data.frame(people=US_pop_2010*perc_dsl_access)
 
-reach <- rbind(EBS_reach, NFLX_reach)
-reach$provider <- c('EBS', 'NFLX')
+NFLX_markets <- summarize(US_pop_2010, TAM=sum(pop), SAM=perc_dsl_access*TAM, SOM=20010000, VoD_subs=SAM*.32)
 
-ggplot(reach) +
-  geom_bar(x=provider, y=people)
+provider_markets <- rbind(EBS_markets, NFLX_markets)
+provider_markets$provider <- c('EBS', 'NFLX') 
+provider_markets <- provider_markets %>%
+  select(provider, everything())
+
+provider_markets <- provider_markets %>%
+  melt(id.vars="provider")
+
+ggplot(provider_markets, aes(variable, value)) + 
+  geom_bar(stat='identity', aes(fill = provider), width=.4, position=position_dodge(width=.5)) +
+  coord_flip() +
+  theme_new()
+
 ```
+
+Enron estimated that in the 82 cities in which EBS would be available, 32% of households would be using DSL. In reality, in 2010 Netflix was available across the country, and DSL penetration was about `r paste0(perc_dsl_access*100, '%')`. Let's compare the number of Americans that Enron expected to reach with the reality of Netflix in 2010:^[https://github.com/cestastanford/historical-us-city-populations. U.S. Census Bureau and Erik Steiner, Spatial History Project, Center for Spatial and Textual Analysis, Stanford University]
+
+```{r, echo=FALSE}
+reach_plot
+```
+
+
+The U.S. population in 2010 was `r format(US_pop_2010, big.mark=",")`, so Netflix
+
+
+
+https://www.geek.com/gadgets/netflix-gains-7-7m-subscribers-in-2010-thanks-to-streaming-only-plan-1354915/
+https://techcrunch.com/2010/07/21/netflix-users/
+https://www.pewresearch.org/internet/2010/06/03/the-state-of-online-video/
