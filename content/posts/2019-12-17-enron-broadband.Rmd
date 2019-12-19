@@ -117,17 +117,27 @@ provider_markets <- provider_markets %>%
 provider_markets <- provider_markets %>%
   melt(id.vars="provider")
 
+provider_markets$variable <- factor(provider_markets$variable, levels=c("VoD_subs", "SOM", "SAM", "TAM"))
+
 ggplot(provider_markets, aes(variable, value)) + 
-  geom_bar(stat='identity', aes(fill = provider), width=.4, position=position_dodge(width=.5)) +
+  geom_bar(stat='identity', aes(fill = provider), width=.75, position="dodge") +
   coord_flip() +
-  theme_new()
+  theme_new() + scale_fill_manual(values=c("#0084C7","#708088")) +
+  ggtitle("Netflix better predicted the market") +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y= element_blank(),
+    legend.title = element_blank()
+    )
 
 ```
 
 Enron estimated that in the 82 cities in which EBS would be available, 32% of households would be using DSL. In reality, in 2010 Netflix was available across the country, and DSL penetration was about `r paste0(perc_dsl_access*100, '%')`. Let's compare the number of Americans that Enron expected to reach with the reality of Netflix in 2010:^[https://github.com/cestastanford/historical-us-city-populations. U.S. Census Bureau and Erik Steiner, Spatial History Project, Center for Spatial and Textual Analysis, Stanford University]
 
 ```{r, echo=FALSE}
-reach_plot
+
 ```
 
 
