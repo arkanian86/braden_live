@@ -22,7 +22,7 @@ This summer, I interned at an AI startup called [Narrative Science](www.narrativ
 
 In the fall, while taking classes at Kellogg, I interned at [Tensility Venture Partners](www.tensilityvc.com), a seed-stage VC firm focused on enterprise applications of AI. I had the opportunity to sit through more than 50 founders pitching their AI startups. We viewed products as truly AI if the product was not only predictive, but prescriptive - giving actionable information to achieve a specific outcome.
 
-Throughout these internships as well as in my classes at Kellogg, I've never found a good definition of what AI is. Machine learning models can be prescriptive; for example, [next product to buy algorithms](https://www.researchgate.net/publication/227704541_Next-product-to-buy_models_for_cross-selling_applications) can tell a marketer when and which marketing email to send to customers in order to maximize purchases. But machine learning is just statistics - it's not intelligent as humans would recognize it.
+Throughout these internships and in my classes at Kellogg, I've never found a good definition of AI. Machine learning models can be prescriptive; for example, [next product to buy algorithms](https://www.researchgate.net/publication/227704541_Next-product-to-buy_models_for_cross-selling_applications) can tell a marketer when and which marketing email to send to customers in order to maximize purchases. But machine learning is just statistics - it's not intelligent as humans would recognize it.
 
 [![https://xkcd.com/1838](/posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/machine_learning_2x.png){width=40%}](https://xkcd.com/1838/)
 
@@ -34,7 +34,14 @@ but this leaves me wanting more as well. Recent heralded advances in supposed AI
 
 ***
 
-Reading Francois Chollet's latest paper, *The Measure of Intelligence* gave me a much better understanding of how to evaluate AI.
+Reading Francois Chollet's latest paper, *The Measure of Intelligence* gave me a much better understanding of how to evaluate AI. Chollet proposes an actionable definition for AI as well as a way to measure it. His goal is
+
+> to point out the implicit assumptions our field has been working from, correct some of its most salient biases, and provide an actionable formal definition and measurement benchmark for human-like general intelligence, leveraging modern insight from developmental cognitive psychology.
+
+The paper is organized into three sections: first, Chollet provides context and history around intelligence and AI, how both have been classically defined, and how this has impacted research into AI. Second, he proposes a new definition for AI. Finally, he provides a new dataset that can be used to benchmark AI against a formal definition of AI. I found all three sections to be extraordinarily useful in understanding AI and how to best think about it. What follows is my main takeaways from the paper.
+
+###Context and history
+
 
 
 
