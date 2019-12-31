@@ -42,7 +42,14 @@ The paper is organized into three sections: first, Chollet provides context and 
 
 ###Context and history
 
+Traditionally, the fields of cognitive science and psychology has struggled to define intelligence. There have been two diverging visions for defining intelligence:
 
+1. The mind is a "relatively static assembly of special purpose mechanisms developed by evolution, only capable of learning what it is programmed to acquire"
+2. The mind is a "general purpose 'blank slate' capable of turning abitrary experience into knowledge and skills, and that could be directed at any problem."
+
+In terms of human evolution, I tend to lean towards the latter view. How could a mind evolve into a collection of special purpose mechanisms? How did it know ahead of time what mechanisms to prioritize unless it first started as a blank slate?
+
+Regardless, this dichotomy brings into focus some of the central issues at play in defining AI, and in  pushing forward AI research. The interplay between "crystallized skills" (i.e., mechanisms developed by evolution in humans or in some manner hard-coded into AI algorithms) and ability to learn new skills are key in understanding and defining AI. 
 
 
 
