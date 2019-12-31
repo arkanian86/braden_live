@@ -13,11 +13,11 @@ tags:
   - Chollet
 draft: no
 twitter:
-  card:
-  site:
-  title:
-  description:
-  image: 'posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/ARC-screenshot.png'
+  card: "summary"
+  site: "@braden_live"
+  title: What is AI and how do we measure it? 2
+  description: 'Francois Chollet's latest paper, "The Measure of Intelligence," provides a great understanding of how to define intelligence - and potentially how to measure it. 2'
+  image: 'https://www.bradenlive.com/posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/ARC-screenshot.png'
 ---
 
 This summer, I interned at an AI startup called [Narrative Science](www.narrativescience.com), working on a product called [Lexio](www.narrativescience.com/lexio) as a product manager. Lexio connects to a customer's Salesforce data and uses natural language generation (NLG) to write stories about the data - for example, replacing the status update a sales rep might send their boss at the end of every week. I knew the product was AI because it replaced work that a human was doing.
