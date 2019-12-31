@@ -17,7 +17,7 @@ twitter:
   site:
   title:
   description:
-  image: '/posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/ARC-screenshot.png'
+  image: 'posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/ARC-screenshot.png'
 ---
 
 This summer, I interned at an AI startup called [Narrative Science](www.narrativescience.com), working on a product called [Lexio](www.narrativescience.com/lexio) as a product manager. Lexio connects to a customer's Salesforce data and uses natural language generation (NLG) to write stories about the data - for example, replacing the status update a sales rep might send their boss at the end of every week. I knew the product was AI because it replaced work that a human was doing.
