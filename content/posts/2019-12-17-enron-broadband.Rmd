@@ -12,9 +12,9 @@ tags:
   - streaming
 draft: no
 twitter:
-  card: summaryasdf
+  card: "summary"
   site: '@braden_live'
-  title: Special Title for the Cardasdfasdf
+  title: Enron Broadband
   description: Special Description for the card max. 200 charactersasdfasdfadsf
   image: 'https://www.bradenlive.com/posts/2019-12-17-enron-broadband_files/Enron-E.png'
 

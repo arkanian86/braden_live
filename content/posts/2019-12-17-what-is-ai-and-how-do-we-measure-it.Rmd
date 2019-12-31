@@ -2,7 +2,7 @@
 title: What is AI and how do we measure it?
 description: Francois Chollet's latest paper, "The Measure of Intelligence," provides a great understanding of how to define intelligence - and potentially how to measure it.
 author: Braden
-date: '2020-01-01'
+date: '2019-12-30'
 slug: what-is-ai
 categories:
   - Paper reviews
@@ -15,8 +15,8 @@ draft: no
 twitter:
   card: "summary"
   site: "@braden_live"
-  title: What is AI and how do we measure it? 2
-  description: 'Francois Chollet's latest paper, "The Measure of Intelligence," provides a great understanding of how to define intelligence - and potentially how to measure it. 2'
+  title: What is AI and how do we measure it?
+  description: Francois Chollet's latest paper, "The Measure of Intelligence," provides a great understanding of how to define intelligence -- and potentially how to measure it.
   image: 'https://www.bradenlive.com/posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/ARC-screenshot.png'
 ---
 
