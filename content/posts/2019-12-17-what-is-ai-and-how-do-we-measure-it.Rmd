@@ -26,7 +26,7 @@ Throughout these internships and in my classes at Kellogg, I've never found a go
 
 [![https://xkcd.com/1838](/posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/machine_learning_2x.png){width=40%}](https://xkcd.com/1838/)
 
-The [Oxford Dictionary](https://www.google.com/search?q=define%3A+artificial+intelligence&oq=define%3A+artificial+intelligence&aqs=chrome..69i57j69i58.4225j0j7&sourceid=chrome&ie=UTF-8) defines AI as **(change this to a more reputable AI source)**
+The [Oxford Dictionary](https://www.google.com/search?q=define%3A+artificial+intelligence&oq=define%3A+artificial+intelligence&aqs=chrome..69i57j69i58.4225j0j7&sourceid=chrome&ie=UTF-8) defines AI as
 
 > the theory and development of computer systems able to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.
 
@@ -44,13 +44,31 @@ The paper is organized into three sections: first, Chollet provides context and 
 
 Traditionally, the fields of cognitive science and psychology has struggled to define intelligence. There have been two diverging visions for defining intelligence:
 
-1. The mind is a "relatively static assembly of special purpose mechanisms developed by evolution, only capable of learning what it is programmed to acquire"
-2. The mind is a "general purpose 'blank slate' capable of turning abitrary experience into knowledge and skills, and that could be directed at any problem."
+1. The mind is a "**relatively static assembly of special purpose mechanisms** developed by evolution, only capable of learning what it is programmed to acquire"
+2. The mind is a "**general purpose 'blank slate'** capable of turning abitrary experience into knowledge and skills, and that could be directed at any problem."
 
 In terms of human evolution, I tend to lean towards the latter view. How could a mind evolve into a collection of special purpose mechanisms? How did it know ahead of time what mechanisms to prioritize unless it first started as a blank slate?
 
-Regardless, this dichotomy brings into focus some of the central issues at play in defining AI, and in  pushing forward AI research. The interplay between "crystallized skills" (i.e., mechanisms developed by evolution in humans or in some manner hard-coded into AI algorithms) and ability to learn new skills are key in understanding and defining AI. 
+At a very high level, it appears that much of the so-called progress in AI recently has been in favor of the former. AI algorithms are specially built to accomplish very specific tasks, but struggle when presented with a new task even if that new task is very similar--for example, some computer vision applications have trouble recognizing images that have been [turned sideways](https://www.brown.edu/news/2018-07-30/same-different). Other well-known examples of AI that out-perform humans in certain tasks but exhibit no recognizable intelligence include applications in games like [Chess (Deep Blue)](https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)), [Go (AlphaGo)](https://en.wikipedia.org/wiki/AlphaGo), or [DotA2 (OpenAI Five).](https://en.wikipedia.org/wiki/OpenAI_Five)
 
+Conversely, the rise of machine learning models, where AI "learns" its skills via the training data, can be viewed through the blank-slate lens.
+
+Regardless, this dichotomy brings into focus some of the central issues at play in defining AI, and in pushing forward AI research. The interplay between "crystallized skills" (i.e., mechanisms developed by evolution in humans or in some manner hard-coded into AI algorithms) and ability to learn new skills are key in understanding and defining AI, and has been the fundamental difficulty in AI since its inception.
+
+Finally, these competing visions also present difficulties when it comes to evaluating intelligence. We can either:
+
+1. measure skills (the static assembly of special-purpose mechanisms vision)
+2. measure broad abilities (the blank-slate vision)
+
+Chollet describes the various methods that are currently used to evaulate AI, which include human review, white-box analysis, peer confrontation, and benchmarks. Flaws exist in each method; furthermore, models are not comparable to each other without an accepted overarching definition of intelligence.
+
+###A new definition for AI
+
+The difficulties of definining intelligence, and thus proving progress towards it, are perfectly captured by Scott Alexander at [Slate Star Codex](https://slatestarcodex.com/2019/02/28/meaningful/). Two children debate the intelligence of an AI algorithm...then two chemists debate the intelligence of the children, then two angels debate the intelligence of the human chemists. Finally, God chimes in regarding the author of the story:
+
+>God sits in the highest heaven, alone.
+>
+>“Wow!” He thinks to Himself, “that cellular automaton sure is producing some pretty patterns today. I wonder what it will do next!”
 
 
 
