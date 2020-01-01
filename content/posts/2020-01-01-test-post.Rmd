@@ -1,0 +1,21 @@
+---
+title: test post
+description: test description
+author: Braden
+date: '2020-01-01'
+slug: test-post
+categories:
+  - Business Strategy
+tags:
+  - auto industry
+  - data science
+draft: yes
+twitter:
+  card: "summary"
+  site: "@braden_live"
+  title: test twitter
+  description: test twitter
+  image: 'https://www.bradenlive.com/posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/ARC-screenshot.png'
+---
+
+This is a test.
