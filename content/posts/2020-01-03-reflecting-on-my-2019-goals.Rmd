@@ -36,7 +36,7 @@ library(ggplot2)
 library(ggridges)
 
 type <- c('daily', 'daily', 'habit', 'habit', 'habit', 'seasonal', 'seasonal', 'year-long', 'year-long', 'year-long', 'year-long', 'year-long')
-status <- c('complete', 'incomplete', 'push', 'push', 'incomplete', 'complete', 'complete', 'complete', 'complete', 'push', 'push', 'incomplete')
+status <- factor(c('complete', 'incomplete', 'push', 'push', 'incomplete', 'complete', 'complete', 'complete', 'complete', 'push', 'push', 'incomplete'), levels = c('complete', 'push', 'incomplete'))
 
 results <- data.frame(type, status)
 
@@ -45,7 +45,7 @@ results <- data.frame(type, status)
 
 # this works ------------------------------------
 ggplot(results, aes(x = status)) +
-  geom_dotplot(aes(fill = type), binwidth = .2) +
+  geom_dotplot(aes(fill = status), binwidth = .2) +
   facet_grid(vars(type)) +
   theme_minimal() +
   theme(panel.background = element_rect(fill = NA, color = "black"),
@@ -55,7 +55,9 @@ ggplot(results, aes(x = status)) +
         axis.title.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.text.y = element_blank(),
-        legend.position = "none")
+        legend.position = "none",
+        strip.text.y = element_text(angle = 360)) +
+  scale_fill_manual(values=c("#66a182", "#8d96a3", "#d1495b"))
 # ------------------------------------------------
 
 # ggplot(results) +
@@ -75,10 +77,10 @@ ggplot(results, aes(x = status)) +
 #   scale_x_discrete(expand=c(0,1)) +
 #   scale_y_discrete(expand=c(0,1))
 # 
-# ggplot(results, aes(fill=type, values=sum(as.integer(status)) )) +
-#   geom_waffle() +
-#   facet_wrap(status~type) +
-#   coord_equal()
+ggplot(results, aes(fill=type, values=sum(as.integer(status)) )) +
+  geom_waffle() +
+  facet_wrap(status~type) +
+  coord_equal()
 # 
 # ggplot(results) +
 #   geom_dotplot(aes(x=status, y=type), binwidth=.2) +
@@ -87,9 +89,44 @@ ggplot(results, aes(x = status)) +
 # ggplot(results) + 
 #   geom_histogram(aes(x=status), stat = "count") +
 #   facet_grid(status~type)
+
+rows <- 2
+cols <- 2
+
+results %>%
+  arrange(status, type) %>%
+  group_by(status, type) %>%
+  mutate(num = row_number(),
+         x_pos = (num - 1) %/% rows,
+         y_pos = rows - (num - 1) %% rows - 1) %>%
+
+  ggplot(aes(x = x_pos, y = y_pos, fill = status)) +
+  geom_tile(color = "white") +
+  coord_equal(xlim = c(0, cols) - 0.5,
+              ylim = c(0, rows) - 0.5) +
+  facet_grid(vars(type), vars(status)) +
+  theme_light() +
+  theme(panel.grid = element_blank(),
+        panel.spacing = unit(0, "lines"),
+        axis.text = element_blank(),
+        strip.text.y = element_text(angle = 360),
+        axis.title.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank()) +
+  scale_fill_manual(values=c("#66a182", "#8d96a3", "#d1495b"))
 ```
 
-I show my results above.
+I divided 12 goals for the year into four categories based on how often I would have to think about them:
+
+* **Daily:** goals where I would need to complete a task every single day
+* **Habit:** goals where I would need to complete a task a few times every week
+* **Seasonal:** goals that were related to a specific time of the year
+* **Year-long:** long-term goals that might require sporadic effort throughout the year
+
+
 
 
 
