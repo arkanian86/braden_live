@@ -27,3 +27,75 @@ I held this view up until last year, when my wife convinced me to come along wit
 Looking back at what I wrote a year ago has been illuminating. Over the course of 2019, the goals I set were never completely out of mind, but I also never deliberately looked back at my journal to see precisely what I had written or how I had progressed in completing the goals, and my impression from memory was that I was nowhere close to completing any of them. Today, however, I was surprised to find that I actually completed a several of them, and made significant progress on even more.
 
 I encourage everyone to complete an end-of-year reflection, in whatever format works best. 
+
+***
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(ggridges)
+
+type <- c('daily', 'daily', 'habit', 'habit', 'habit', 'seasonal', 'seasonal', 'year-long', 'year-long', 'year-long', 'year-long', 'year-long')
+status <- c('complete', 'incomplete', 'push', 'push', 'incomplete', 'complete', 'complete', 'complete', 'complete', 'push', 'push', 'incomplete')
+
+results <- data.frame(type, status)
+
+# ggplot(results, aes(x = type)) +
+#   geom_bar(aes(fill = status))
+
+# this works ------------------------------------
+ggplot(results, aes(x = status)) +
+  geom_dotplot(aes(fill = type), binwidth = .2) +
+  facet_grid(vars(type)) +
+  theme_minimal() +
+  theme(panel.background = element_rect(fill = NA, color = "black"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.spacing = unit(0, "lines"),
+        axis.title.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.y = element_blank(),
+        legend.position = "none")
+# ------------------------------------------------
+
+# ggplot(results) +
+#   geom_dotplot(aes(x = status, fill = type), binwidth = .2) +
+#   facet_grid(vars(type)) +
+#   theme_minimal()
+# 
+# ggplot(results, aes(x = status, y = type)) +
+#   geom_point() +
+#   facet_grid(type ~ ., switch = "both")
+# 
+# library(waffle)
+# ggplot(results, aes(fill=type, values=as.integer(status) )) +
+#   geom_waffle(color = "white", size=1.125, n_rows = 3, flip = TRUE) +
+#   facet_wrap(status~type) +
+#   coord_equal() +
+#   scale_x_discrete(expand=c(0,1)) +
+#   scale_y_discrete(expand=c(0,1))
+# 
+# ggplot(results, aes(fill=type, values=sum(as.integer(status)) )) +
+#   geom_waffle() +
+#   facet_wrap(status~type) +
+#   coord_equal()
+# 
+# ggplot(results) +
+#   geom_dotplot(aes(x=status, y=type), binwidth=.2) +
+#   facet_grid(vars(type))
+# 
+# ggplot(results) + 
+#   geom_histogram(aes(x=status), stat = "count") +
+#   facet_grid(status~type)
+```
+
+I show my results above.
+
+
+
+
+
+
+
+
+
