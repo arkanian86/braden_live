@@ -1,5 +1,6 @@
 ---
 title: Reflecting on my 2019 goals
+description: At the beginning of 2019, I set a number of goals for myself. Here's how I did.
 author: Braden
 date: '2020-01-03'
 slug: reflecting-on-my-2019-goals
@@ -9,6 +10,8 @@ tags:
   - goals
   - failure
   - metrics
+  - 2019
+  - 2020
   
 draft: no
 
@@ -17,8 +20,10 @@ twitter:
   site: "@braden_live"
   title: Reflecting on my 2019 goals
   description: At the beginning of 2019, I set a number of goals for myself. Here's how I did.
-  image: 'https://www.bradenlive.com/posts/'
+  image: 'https://www.bradenlive.com/posts/2020-01-03-reflecting-on-my-2019-goals_files/coffeeshort.jpg'
 ---
+
+![](/posts/2020-01-03-reflecting-on-my-2019-goals_files/coffeeshort.jpg)
 
 I've never been one for New Year's Resolutions. I always thought the entire process was artificial -- why make resolutions based upon an arbitrary number from the calendar?
 
@@ -28,12 +33,16 @@ Looking back at what I wrote a year ago has been illuminating. Over the course o
 
 I encourage everyone to complete an end-of-year reflection, in whatever format works best. 
 
+
+
 ***
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(kableExtra)
+library(data.table)
+library(DT)
 
 type <- c('daily', 'daily', 'habit', 'habit', 'habit', 'seasonal', 'seasonal', 'year-long', 'year-long', 'year-long', 'year-long', 'year-long')
 status <- factor(c('complete', 'incomplete', 'push', 'push', 'incomplete', 'complete', 'complete', 'complete', 'complete', 'push', 'push', 'incomplete'), levels = c('complete', 'push', 'incomplete'))
@@ -60,7 +69,7 @@ results <- data.frame(type, status)
 rows <- 2
 cols <- 2
 
-results %>%
+p <- results %>%
   arrange(status, type) %>%
   group_by(status, type) %>%
   mutate(num = row_number(),
@@ -88,6 +97,8 @@ results %>%
   scale_fill_manual(values=c("#66a182", "#8d96a3", "#d1495b"))
 ```
 
+###My goals
+
 I divided 12 goals for the year into four categories based on how often I would have to think about them:
 
 * **Daily:** goals where I would need to complete a task every single day
@@ -95,15 +106,17 @@ I divided 12 goals for the year into four categories based on how often I would 
 * **Seasonal:** goals that were related to a specific time of the year
 * **Year-long:** long-term goals that might require sporadic effort throughout the year
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+My results and comments on each are below (:white_check_mark: = completed, :white_circle: = results were a push, :x: = failed to complete the goal):
+
+```{r results and comments, echo=FALSE, message=FALSE, warning=FALSE}
 results_table <- results %>%
   mutate(num = row_number())
 
-emojis <- c(':thumbsup:', ':no_entry_sign:', ':white_circle:', ':white_circle:', ':no_entry_sign:', ':thumbsup:', ':thumbsup:', ':thumbsup:', ':thumbsup:', ':white_circle:', ':white_circle:', ':no_entry_sign:')
+`completed?` <- c(':white_check_mark:', ':x:', ':white_circle:', ':white_circle:', ':x:', ':white_check_mark:', ':white_check_mark:', ':white_check_mark:', ':white_check_mark:', ':white_circle:', ':white_circle:', ':x:')
 
 comments <- c(
   '**Better daily quiet time.** I wanted to have a more consistent and meaningful daily morning time reading Scripture. I set a plan to read the Old Testament once and New Testament twice over the course of the year. Although I missed about five days, I kept up and finished the plan on schedule.',
-  '**Daily meditation.** My plan was to spend some time each day meditating in order to calm my mind from the fast past of business school. I ended up meditating for about five minutes immediately after my quiet time, but this habit ended by March.',
+  '**Daily meditation.** My plan was to spend some time each day meditating in order to calm my mind from the overwhelming pace of business school. I ended up meditating for about five minutes immediately after my quiet time, but this habit ended by March.',
   '**Play guitar more.** In 2018, my time playing live music decreased after our move away from Virginia and the start of business school. I wanted to spend at least an hour a week practicing the guitar and learning songs. My goal was to learn one new song every month by heart. After three songs halfway memorized, this habit fell by the wayside in March as well.',
   "**Read more books.** I was hoping to be more intentional with how I spent my time as well as get to the mounting list of books I wanted to read - the goal was to read one book per month. Although I definitely read more, I didn't do a good job keeping track of my progress.",
   "**Get more fit.** I wanted to break my all time personal records (PRs) in bench press and deadlift (255 and 405 lbs, respectively). I went to the campus gym four days a week at 5:30am, but only managed to break my bench press PR (barely; I hit 260) due to several minor back injuries I sustained while deadlifting. I also performed poorly on the Navy's physical fitness test.",
@@ -113,22 +126,28 @@ comments <- c(
   "**Create something.** I created an app called [BidVis](https://www.bradenlive.com/posts/bidvis/) using R. I also created this website. Finally, I came up with an idea to host a [military veterans panel](https://www.kellogg.northwestern.edu/executive-education/take-action/spark.aspx) for Kellogg Executive MBA students, which ended up being a great success.",
   "**Learn some business skills.** In combination with coursework at Kellogg and my work as a product manager intern at [Narrative Science](www.narrativescience.com), I learned to code in R and SQL, use Jira, and generally work in an Agile softward development environment.",
   "**Make friends at church.** My dual goals here were to join a small group and get involved in Sunday services (most likely playing the drums) at our church, [Renewal](http://www.renewalchicago.com/). We were able to do the first but not the second.",
-  "**Get a tattoo.** I wanted to find an artist in Chicago to get a tattoo I've been considering for the last few years."
+  "**Get a tattoo.** I wanted to find an artist in Chicago to get a tattoo I've been considering for the last few years. However, none that I could find here held a candle to an artist I've followed for several years, [Gemma Pariente](https://www.instagram.com/gemmapariente/). Gemma is located half the year in San Diego and the half in Barcelona -- so I've already booked a session with her for spring 2020 in San Diego."
 )
 
-
-
-
-
-
-
-
-results_table <- cbind(results_table, emojis, comments) %>%
-  select(num, everything(), -status)
-kable(results_table)
+results_table <- cbind(results_table, `completed?`, comments) %>%
+  select(everything(), -status, -num)
+x <- kable(results_table, align = c("l", "c", "l"))
+row_spec(x, 0, align = "c")
 ```
 
+***
 
+###Conclusions
+
+I found the time horizon organization of goals into different bins to be helpful in prioritization. While not mutually exclusive or collectively exhaustive, the bins allowed me to see where I was weak in completing goals:
+
+```{r diagram, echo=FALSE, message=FALSE, warning=FALSE}
+p
+```
+
+I was weakest in habitual goals (completing 0%) and strongest in my seasonal goals (completing 100%). This makes sense, as goals that require daily effort can be much more difficult to stick with than goals that only require sporadic effort.
+
+I completed more of my goals than I thought I had...but this indicated a problem I hadn't thought of. A lack of metrics/way to track progress towards the goals made them seem more insurmountable in my head, and made me unmotivated to tackle the goals. My goals for 2020 (in a forthcoming post) will include quantitative metrics with which I can track progress.
 
 
 
