@@ -109,11 +109,11 @@ comments <- c(
   "**Get more fit.** I wanted to break my all time personal records (PRs) in bench press and deadlift (255 and 405 lbs, respectively). I went to the campus gym four days a week at 5:30am, but only managed to break my bench press PR (barely; I hit 260) due to several minor back injuries I sustained while deadlifting. I also performed poorly on the Navy's physical fitness test.",
   "**Go on spring break.** After being scared away from heading to Cancun due to the spectre of [dead seaweed](https://www.independent.co.uk/news/world/americas/rotting-seaweed-beaches-sargassum-mexico-carribbean-cancun-playa-del-carmen-tulum-a8978756.html) on the beach, we spent a week in Austin, Texas instead and loved it.",
   "**Go turkey and deer/bird hunting.** I spent an entire spring weekend hunting turkey with my brother-in-law on public land in southeastern Wisconsin, but we were unable to close the deal. In the fall, the two of us went pheasant hunting with our dogs and successfully bagged a few birds.",
-  "**Save up for a house downpayment.**",
-  "**Create something.**",
-  "**Learn some business skills.**",
-  "**Make friends at church.**",
-  "**Get a tattoo.**"
+  "**Save up for a house downpayment.** This was an exercise in futility. We don't plan to buy a house until after leaving the Navy a few years from now, and the fact that we're living on the edge of our budget with our current situation in Evanston meant we deprioritized this goal.",
+  "**Create something.** I created an app called [BidVis](https://www.bradenlive.com/posts/bidvis/) using R. I also created this website. Finally, I came up with an idea to host a [military veterans panel](https://www.kellogg.northwestern.edu/executive-education/take-action/spark.aspx) for Kellogg Executive MBA students, which ended up being a great success.",
+  "**Learn some business skills.** In combination with coursework at Kellogg and my work as a product manager intern at [Narrative Science](www.narrativescience.com), I learned to code in R and SQL, use Jira, and generally work in an Agile softward development environment.",
+  "**Make friends at church.** My dual goals here were to join a small group and get involved in Sunday services (most likely playing the drums) at our church, [Renewal](http://www.renewalchicago.com/). We were able to do the first but not the second.",
+  "**Get a tattoo.** I wanted to find an artist in Chicago to get a tattoo I've been considering for the last few years."
 )
 
 
