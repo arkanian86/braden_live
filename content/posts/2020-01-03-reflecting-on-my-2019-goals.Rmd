@@ -33,62 +33,29 @@ I encourage everyone to complete an end-of-year reflection, in whatever format w
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(ggplot2)
-library(ggridges)
+library(kableExtra)
 
 type <- c('daily', 'daily', 'habit', 'habit', 'habit', 'seasonal', 'seasonal', 'year-long', 'year-long', 'year-long', 'year-long', 'year-long')
 status <- factor(c('complete', 'incomplete', 'push', 'push', 'incomplete', 'complete', 'complete', 'complete', 'complete', 'push', 'push', 'incomplete'), levels = c('complete', 'push', 'incomplete'))
 
 results <- data.frame(type, status)
 
-# ggplot(results, aes(x = type)) +
-#   geom_bar(aes(fill = status))
-
 # this works ------------------------------------
-ggplot(results, aes(x = status)) +
-  geom_dotplot(aes(fill = status), binwidth = .2) +
-  facet_grid(vars(type)) +
-  theme_minimal() +
-  theme(panel.background = element_rect(fill = NA, color = "black"),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.spacing = unit(0, "lines"),
-        axis.title.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.text.y = element_blank(),
-        legend.position = "none",
-        strip.text.y = element_text(angle = 360)) +
-  scale_fill_manual(values=c("#66a182", "#8d96a3", "#d1495b"))
-# ------------------------------------------------
-
-# ggplot(results) +
-#   geom_dotplot(aes(x = status, fill = type), binwidth = .2) +
+# ggplot(results, aes(x = status)) +
+#   geom_dotplot(aes(fill = status), binwidth = .2) +
 #   facet_grid(vars(type)) +
-#   theme_minimal()
-# 
-# ggplot(results, aes(x = status, y = type)) +
-#   geom_point() +
-#   facet_grid(type ~ ., switch = "both")
-# 
-# library(waffle)
-# ggplot(results, aes(fill=type, values=as.integer(status) )) +
-#   geom_waffle(color = "white", size=1.125, n_rows = 3, flip = TRUE) +
-#   facet_wrap(status~type) +
-#   coord_equal() +
-#   scale_x_discrete(expand=c(0,1)) +
-#   scale_y_discrete(expand=c(0,1))
-# 
-ggplot(results, aes(fill=type, values=sum(as.integer(status)) )) +
-  geom_waffle() +
-  facet_wrap(status~type) +
-  coord_equal()
-# 
-# ggplot(results) +
-#   geom_dotplot(aes(x=status, y=type), binwidth=.2) +
-#   facet_grid(vars(type))
-# 
-# ggplot(results) + 
-#   geom_histogram(aes(x=status), stat = "count") +
-#   facet_grid(status~type)
+#   theme_minimal() +
+#   theme(panel.background = element_rect(fill = NA, color = "black"),
+#         panel.grid.major = element_blank(),
+#         panel.grid.minor = element_blank(),
+#         panel.spacing = unit(0, "lines"),
+#         axis.title.y = element_blank(),
+#         axis.ticks.y = element_blank(),
+#         axis.text.y = element_blank(),
+#         legend.position = "none",
+#         strip.text.y = element_text(angle = 360)) +
+#   scale_fill_manual(values=c("#66a182", "#8d96a3", "#d1495b"))
+# ------------------------------------------------
 
 rows <- 2
 cols <- 2
@@ -101,21 +68,23 @@ results %>%
          y_pos = rows - (num - 1) %% rows - 1) %>%
 
   ggplot(aes(x = x_pos, y = y_pos, fill = status)) +
-  geom_tile(color = "white") +
+  geom_tile(color = "black", width = .8, height = .8) +
   coord_equal(xlim = c(0, cols) - 0.5,
               ylim = c(0, rows) - 0.5) +
   facet_grid(vars(type), vars(status)) +
-  theme_light() +
-  theme(panel.grid = element_blank(),
+  theme_minimal() +
+  theme(panel.background = element_rect(fill = NA, color = "black"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.spacing = unit(0, "lines"),
-        axis.text = element_blank(),
-        strip.text.y = element_text(angle = 360),
         axis.title.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.text.y = element_blank(),
         axis.title.x = element_blank(),
         axis.ticks.x = element_blank(),
-        axis.text.x = element_blank()) +
+        axis.text.x = element_blank(),
+        legend.position = "none",
+        strip.text.y = element_text(angle = 360)) +
   scale_fill_manual(values=c("#66a182", "#8d96a3", "#d1495b"))
 ```
 
@@ -126,8 +95,38 @@ I divided 12 goals for the year into four categories based on how often I would 
 * **Seasonal:** goals that were related to a specific time of the year
 * **Year-long:** long-term goals that might require sporadic effort throughout the year
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+results_table <- results %>%
+  mutate(num = row_number())
+
+emojis <- c(':thumbsup:', ':no_entry_sign:', ':white_circle:', ':white_circle:', ':no_entry_sign:', ':thumbsup:', ':thumbsup:', ':thumbsup:', ':thumbsup:', ':white_circle:', ':white_circle:', ':no_entry_sign:')
+
+comments <- c(
+  '**Better daily quiet time.** I wanted to have a more consistent and meaningful daily morning time reading Scripture. I set a plan to read the Old Testament once and New Testament twice over the course of the year. Although I missed about five days, I kept up and finished the plan on schedule.',
+  '**Daily meditation.** My plan was to spend some time each day meditating in order to calm my mind from the fast past of business school. I ended up meditating for about five minutes immediately after my quiet time, but this habit ended by March.',
+  '**Play guitar more.** In 2018, my time playing live music decreased after our move away from Virginia and the start of business school. I wanted to spend at least an hour a week practicing the guitar and learning songs. My goal was to learn one new song every month by heart. After three songs halfway memorized, this habit fell by the wayside in March as well.',
+  "**Read more books.** I was hoping to be more intentional with how I spent my time as well as get to the mounting list of books I wanted to read - the goal was to read one book per month. Although I definitely read more, I didn't do a good job keeping track of my progress.",
+  "**Get more fit.** I wanted to break my all time personal records (PRs) in bench press and deadlift (255 and 405 lbs, respectively). I went to the campus gym four days a week at 5:30am, but only managed to break my bench press PR (barely; I hit 260) due to several minor back injuries I sustained while deadlifting. I also performed poorly on the Navy's physical fitness test.",
+  "**Go on spring break.** After being scared away from heading to Cancun due to the spectre of [dead seaweed](https://www.independent.co.uk/news/world/americas/rotting-seaweed-beaches-sargassum-mexico-carribbean-cancun-playa-del-carmen-tulum-a8978756.html) on the beach, we spent a week in Austin, Texas instead and loved it.",
+  "**Go turkey and deer/bird hunting.** I spent an entire spring weekend hunting turkey with my brother-in-law on public land in southeastern Wisconsin, but we were unable to close the deal. In the fall, the two of us went pheasant hunting with our dogs and successfully bagged a few birds.",
+  "**Save up for a house downpayment.**",
+  "**Create something.**",
+  "**Learn some business skills.**",
+  "**Make friends at church.**",
+  "**Get a tattoo.**"
+)
 
 
+
+
+
+
+
+
+results_table <- cbind(results_table, emojis, comments) %>%
+  select(num, everything(), -status)
+kable(results_table)
+```
 
 
 
