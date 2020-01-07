@@ -3,8 +3,14 @@ title: test post for og
 author: 'Braden'
 date: '2020-01-06'
 slug: test-post-for-og
-categories: []
-tags: []
+categories:
+  - Reflection
+tags:
+  - goals
+  - failure
+  - metrics
+  - 2019
+  - 2020
 draft: no
 
 image: 'https://www.easy-oil-painting-techniques.org/images/GrainstacksintheSunlightMorningEffect500.jpg'
