@@ -15,12 +15,14 @@ tags:
   
 draft: no
 
+image: 'https://www.easy-oil-painting-techniques.org/images/GrainstacksintheSunlightMorningEffect500.jpg'
+
 twitter:
   card: "summary"
   site: "@braden_live"
   title: Reflecting on my 2019 goals
   description: At the beginning of 2019, I set a number of goals for myself. Here's how I did.
-  image: 'https://www.bradenlive.com/posts/2020-01-03-reflecting-on-my-2019-goals_files/coffeeshort.jpg'
+  # image: 'https://www.bradenlive.com/posts/2020-01-03-reflecting-on-my-2019-goals_files/coffeeshort.jpg'
 ---
 
 ![](/posts/2020-01-03-reflecting-on-my-2019-goals_files/coffeeshort.jpg)
