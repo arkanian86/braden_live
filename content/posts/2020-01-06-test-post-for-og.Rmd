@@ -13,7 +13,7 @@ tags:
   - 2020
 draft: no
 
-image: 'https://www.easy-oil-painting-techniques.org/images/GrainstacksintheSunlightMorningEffect500.jpg'
+images: 'https://www.bradenlive.com/posts/2019-12-17-what-is-ai-and-how-do-we-measure-it_files/ARC-screenshot.png'
 ---
 
 Hi. This is a test.
