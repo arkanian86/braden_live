@@ -68,6 +68,13 @@ name = "RSS"
 icon = "rss"
 url = "/index.xml"
 
+# I added this param---------
+[[params.logo]]
+name = "logo"
+icon = "logo"
+url = "/images/helo.jpg"
+# ---------------------------
+
 [taxonomies]
    tag = "tags"
    category = "categories"
