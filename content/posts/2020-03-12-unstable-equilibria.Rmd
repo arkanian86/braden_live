@@ -14,15 +14,16 @@ images:
   -
 ---
 
-```{r}
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 library(tidyverse)
 library(bayestestR)
 ```
 
-```{r}
+```{r warning=FALSE}
 # create distributions
-x <- rnorm_perfect(n = 100, mean = 0, sd = 1)
-z <- rnorm_perfect(n = 100, mean = 2, sd = 1)
+x <- distribution_normal(n = 100, mean = 0, sd = 1)
+z <- distribution_normal(n = 100, mean = 2, sd = 1)
 
 # add x distribution to plot
 p <- x %>% 
@@ -33,6 +34,8 @@ p <- x %>%
 
 # add z distribution to plot
 p <- p + geom_line(data = as.data.frame(density(z)), aes(x=x, y=y))
+
+p
 ```
 
 Over the last few weeks, the Coronavirus, more properly known as COVID-19, has been on my mind more than anything else. I follow several tech people on Twitter who were early voices sounding the alarm on COVID-19 - primarily [Balaji Srinivasan](https://twitter.com/balajis) and [Scott Gottlieb](https://twitter.com/ScottGottliebMD). Normally, I'm fairly conservative and skeptical of warnings like these. Fortunately, however, Balaji, Scott, and others convinced me through their in-depth and informative tweets that COVID-19 was going to be a serious crisis in just a matter of a few weeks. My wife and I took a trip to Costco to stock up on non-perishables like peanut butter and toilet paper (the essentials) and were able to avoid the rush that has been increasing as the public has become more fearful and hoarding.
@@ -63,26 +66,26 @@ plot <- ggplot(NULL, aes()) +
   # apply the empty theme
   empty_theme +
   # labels
-  labs(title = "Potential Outcomes",
+  labs(title = "",
        x = "",
        y = "") +
+  
   # create the quadrants
-  geom_segment(aes(x = 10, y = 0, xend = 10, yend = 10)) +
-  geom_segment(aes(x = 0, y = 0, xend = 0, yend = 10)) +
-  geom_segment(aes(x = 0, y = 0, xend = 10, yend = 0)) +
-  geom_segment(aes(x = 0, y = 5, xend = 10, yend = 5)) +
-  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 10)) +
-  geom_segment(aes(x = 0, y = 10, xend = 10, yend = 10)) +
+  geom_rect(aes(xmin=0, xmax=5, ymin=0, ymax=5), color = "black", fill = "#AA0000", alpha = .25) +
+  geom_rect(aes(xmin=5, xmax=10, ymin=0, ymax=5), color = "black", fill = "#AA0000", alpha = .25) +
+  geom_rect(aes(xmin=0, xmax=5, ymin=5, ymax=10), color = "black", fill = "#AA0000", alpha = .25) +
+  geom_rect(aes(xmin=5, xmax=10, ymin=5, ymax=10), color = "black", fill = "#3c8200", alpha = .25) +
+  
   # quadrant labels
   annotate("text", x = -.5, y = 2.5, angle = 90, label = "Don't warn") +
   annotate("text", x = -.5, y = 7.5, angle = 90, label = "Warn") +
-  annotate("text", x = 2.5, y = 10.5, label = "Crisis is avoided") +
-  annotate("text", x = 7.5, y = 10.5, label = "Crisis occurs") +
+  annotate("text", x = 2.5, y = -.5, label = "Crisis is avoided") +
+  annotate("text", x = 7.5, y = -.5, label = "Crisis occurs") +
   # quadrant titles
   annotate("text", x = 2.5, y = 2.5, color = "#AA0000", label = "Dull") +
   annotate("text", x = 2.5, y = 7.5, color = "#AA0000", label = "Gullible") +
-  annotate("text", x = 7.5, y = 2.5, color = "#AA0000", label = "Smart") +
-  annotate("text", x = 7.5, y = 7.5, color = "#AA0000", label = "Selfish")
+  annotate("text", x = 7.5, y = 2.5, color = "#AA0000", label = "Selfish") +
+  annotate("text", x = 7.5, y = 7.5, color = "#3c8200", label = "Smart")
 
 plot
 ```
