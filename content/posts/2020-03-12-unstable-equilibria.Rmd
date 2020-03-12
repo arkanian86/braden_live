@@ -1,0 +1,29 @@
+---
+title: Unstable Equilibria
+author: Braden
+date: '2020-03-12'
+slug: unstable-equilibria
+categories:
+  - Business Strategy
+tags:
+  - coronavirus
+  - covid-19
+draft: yes
+---
+
+```{r}
+library(tidyverse)
+library(bayestestR)
+```
+
+```{r}
+# Generate a perfect sample
+x <- rnorm_perfect(n = 100, mean = 0, sd = 1)
+
+x %>% 
+  density() %>%  # Compute density function
+  as.data.frame() %>% 
+  ggplot(aes(x=x, y=y)) +
+  geom_line()
+
+```
