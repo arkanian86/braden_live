@@ -1,0 +1,43 @@
+---
+title: Boeing and stock buybacks
+author: Braden
+date: '2020-03-19'
+slug: boeing-and-stock-buybacks
+categories:
+  - Business Strategy
+tags:
+  - capital structure
+  - corporate finance
+  - equity
+  - debt
+draft: no
+---
+
+```{r setup}
+library(tidyverse)
+library(tidyquant)
+library(janitor)
+library(googlesheets4)
+```
+
+```{r}
+when <- c("beg", "end")
+
+prices <- tq_get("BA", from="2008-01-01", to = "2020-03-19") %>%
+  select(date, close) %>%
+  mutate(year = year(date)) %>%
+  group_by(year) %>%
+  slice(c(1, n())) %>%
+  ungroup() %>%
+  cbind(., when) %>%
+  pivot_wider(., 
+              id_cols = "year", 
+              names_from = "when", 
+              values_from = c("close")
+              )
+
+sheets_deauth()
+boeing <- read_sheet('https://docs.google.com/spreadsheets/d/16DFYPHO8TwvhRf2zWf8zvX-v7_-gd6iJivYW6uMQdYw/edit?usp=sharing')
+
+boeing <- left_join(boeing, prices, by = "year")
+```
