@@ -71,7 +71,7 @@ plot <- ggplot(NULL, aes()) +
        y = "") +
   
   # create the quadrants
-  geom_rect(aes(xmin=0, xmax=5, ymin=0, ymax=5), color = "black", fill = "#AA0000", alpha = .25) +
+  geom_rect(aes(xmin=0, xmax=5, ymin=0, ymax=5), color = "black", fill = "#3c8200", alpha = .25) +
   geom_rect(aes(xmin=5, xmax=10, ymin=0, ymax=5), color = "black", fill = "#AA0000", alpha = .25) +
   geom_rect(aes(xmin=0, xmax=5, ymin=5, ymax=10), color = "black", fill = "#AA0000", alpha = .25) +
   geom_rect(aes(xmin=5, xmax=10, ymin=5, ymax=10), color = "black", fill = "#3c8200", alpha = .25) +
@@ -81,14 +81,17 @@ plot <- ggplot(NULL, aes()) +
   annotate("text", x = -.5, y = 7.5, angle = 90, label = "Warn") +
   annotate("text", x = 2.5, y = -.5, label = "Crisis is avoided") +
   annotate("text", x = 7.5, y = -.5, label = "Crisis occurs") +
+  
   # quadrant titles
-  annotate("text", x = 2.5, y = 2.5, color = "#AA0000", label = "Dull") +
+  annotate("text", x = 2.5, y = 2.5, color = "#3c8200", label = "Discerning") +
   annotate("text", x = 2.5, y = 7.5, color = "#AA0000", label = "Gullible") +
   annotate("text", x = 7.5, y = 2.5, color = "#AA0000", label = "Selfish") +
   annotate("text", x = 7.5, y = 7.5, color = "#3c8200", label = "Smart")
 
 plot
 ```
+
+If all scenarios are equally likely, I have a 50/50 shot of an optimal outcome.
 
 
 
