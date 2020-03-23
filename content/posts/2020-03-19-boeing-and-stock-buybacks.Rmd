@@ -18,9 +18,10 @@ library(tidyverse)
 library(tidyquant)
 library(janitor)
 library(googlesheets4)
+library(finreportr)
 ```
 
-```{r}
+```{r bring in all the data}
 when <- c("beg", "end")
 
 prices <- tq_get("BA", from="2008-01-01", to = "2020-03-19") %>%
@@ -33,11 +34,64 @@ prices <- tq_get("BA", from="2008-01-01", to = "2020-03-19") %>%
   pivot_wider(., 
               id_cols = "year", 
               names_from = "when", 
-              values_from = c("close")
+              values_from = "close"
               )
 
 sheets_deauth()
 boeing <- read_sheet('https://docs.google.com/spreadsheets/d/16DFYPHO8TwvhRf2zWf8zvX-v7_-gd6iJivYW6uMQdYw/edit?usp=sharing')
 
 boeing <- left_join(boeing, prices, by = "year")
+
 ```
+
+
+```{r}
+boeing <- boeing %>%
+  mutate(fcf = cffo - capex,
+         liabilities = assets - equity,
+         market_cap = (beg+end)/2*shares_common) %>%
+  mutate(date = as.Date(ISOdate(year, 1, 1)))
+```
+
+```{r}
+ggplot(boeing, aes(x=date)) +
+  geom_line(aes(y = market_cap), color = "#AA0000") +
+  geom_line(aes(y = buybacks*10), color = "blue") +
+  scale_y_continuous(sec.axis = sec_axis(~./10, name = "Share Buybacks ($M)")) +
+  labs(y = "Market Cap ($M)",
+       x = "Year")
+```
+
+```{r}
+ggplot(boeing, aes(x=date)) +
+  geom_area(aes(y=fcf), color = "#AA0000", fill = "#AA0000") +
+  geom_area(aes(y=buybacks), color = "blue", fill = "blue")
+```
+
+```{r}
+head(GetIncome("BA", 2015), 20)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
