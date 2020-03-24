@@ -5,7 +5,8 @@ date: '2020-03-24'
 description: I struggled through the last few weeks wrestling with the optimal time warn everyone about COVID-19. I saw four possible outcomes.
 draft: no
 images:
-- ~
+-  /posts/2020-03-12-unstable-equilibria_files/figure-html/unnamed-chunk-3-1.png
+
 slug: unlikely-events
 tags:
 - coronavirus
