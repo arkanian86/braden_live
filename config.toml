@@ -2,7 +2,7 @@ baseURL = "http://bradenlive.com/"
 languageCode = "en-us"
 title = "BradenLive"
 theme = "ezhil"
-paginate = 10
+paginate = 5
 enableEmoji = true #I added this
 
 copyright = "© 2019 | Braden Schrock"
@@ -22,6 +22,9 @@ disqusShortname = "bradenlive"
 	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
 	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+	
+  # Specify favicon (icons/i.png maps to static/icons/i.png). No favicon if not defined.
+  favicon = "icons/myicon.png"
 
 [[menu.main]]
 name = "Home"
@@ -67,6 +70,13 @@ url = "https://github.com/arkanian86"
 name = "RSS"
 icon = "rss"
 url = "/index.xml"
+
+# I added this param---------
+[[params.image]]
+name = "image"
+icon = "image"
+url = "/images/helo.jpg"
+# ---------------------------
 
 [taxonomies]
    tag = "tags"
