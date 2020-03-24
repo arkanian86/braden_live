@@ -172,4 +172,109 @@ ggplot(data) +
   geom_ribbon(data = subset(data, y<=e & x>0), aes(x=x, ymin=0, ymax=y), fill = "purple", alpha = .3) +
   geom_ribbon(data = subset(data, e>y & x>0), aes(x=x, ymin=y, ymax=e), fill = "red", alpha = .3)
 ```
+
 In an increasingly globalized world with interconnected supply chains, interdependencies, and movements of people, I believe this would be prudent. As a culture, we would also need to de-stigmatize those who make dire warnings but turn out to be incorrect. In fact, those who choose to warn early may be wrong many times, but the benefits of listening to them the one time they are right makes them worth listening to.
+
+```{r}
+data <- distribution_normal(n = 100, mean = 0, sd = 1) %>%
+  density() %>%
+  as.data.frame()
+
+original_length <- nrow(data)
+step_size <- diff(data[1:2,1])
+data <- rbind(data, data.frame(x = (step_size * 1:100) + max(data$x), y = 0))
+data$e <- 0
+data$e[seq(100,original_length+99)] <- data$y[seq(1,original_length)]
+
+x_intercept <- -1
+
+ggplot(data) +
+  # geom_line(aes(x=x, y=y), size=1) +
+  # geom_line(aes(x=x, y=e), size=1) +
+  geom_vline(aes(xintercept=x_intercept), size=1) +
+  # geom_hline(aes(yintercept=0), size=1) +
+  geom_ribbon(data = subset(data, x<=x_intercept), aes(x=x, ymin=0, ymax=y), fill = "blue", alpha = .3) +
+  geom_ribbon(data = subset(data, e<y & x<x_intercept), aes(x=x, ymin=0, ymax=e), fill = "light blue", alpha = .5) +
+  geom_ribbon(data = subset(data, y>e & x>x_intercept), aes(x=x, ymin=e, ymax=y), fill = "pink", alpha = .3) +
+  geom_ribbon(data = subset(data, e<y & x>=x_intercept), aes(x=x, ymin=0, ymax=e), fill = "purple", alpha = .3) +
+  geom_ribbon(data = subset(data, y<=e & x>=x_intercept), aes(x=x, ymin=0, ymax=y), fill = "purple", alpha = .3) +
+  geom_ribbon(data = subset(data, e>y & x>=x_intercept), aes(x=x, ymin=y, ymax=e), fill = "red", alpha = .3) +
+  theme(axis.line=element_blank(),
+      axis.text.x=element_blank(),
+      axis.text.y=element_blank(),
+      axis.ticks=element_blank(),
+      axis.title.x=element_blank(),
+      axis.title.y=element_blank(),
+      legend.position="none",
+      # panel.background=element_rect(fill="black"),
+      panel.background=element_blank(),
+      panel.border=element_blank(),
+      panel.grid.major=element_blank(),
+      panel.grid.minor=element_blank(),
+      plot.background=element_blank())
+
+# filter(data, y==e)
+# tail(filter(data,e<=y & x>=x_intercept))
+```
+
+```{r}
+# x <- seq(-4, 4, .01)
+# y <- dnorm(x)
+# xy <- as.data.frame(cbind(x,y))
+# 
+# x <- seq(-2, 6, .01)
+# y2 <- dnorm(x2, mean=2)
+# xy2 <- as.data.frame(cbind(x,y2))
+# 
+# all <- full_join(xy, xy2, by = "x")
+# 
+# 
+# ggplot(all) +
+#   geom_line(aes(x=x,y=y)) +
+#   geom_line(aes(x=x,y=y2))
+# 
+# x_intercept <- 0
+# 
+# ggplot(all) +
+#   # geom_line(aes(x=x, y=y), size=1) +
+#   # geom_line(aes(x=x, y=e), size=1) +
+#   # geom_vline(aes(xintercept=x_intercept), size=1) +
+#   # geom_hline(aes(yintercept=0), size=1) +
+#   geom_ribbon(data = subset(all, x<=x_intercept), aes(x=x, ymin=0, ymax=y), fill = "blue", alpha = .3) +
+#   geom_ribbon(data = subset(all, y2<y & x<x_intercept), aes(x=x, ymin=0, ymax=y2), fill = "light blue", alpha = .5) +
+#   geom_ribbon(data = subset(all, y>y2 & x>x_intercept), aes(x=x, ymin=y2, ymax=y), fill = "pink", alpha = .3) +
+#   geom_ribbon(data = subset(all, y2<y & x>=x_intercept), aes(x=x, ymin=0, ymax=y2), fill = "purple", alpha = .3) +
+#   geom_ribbon(data = subset(all, y<=y2 & x>=x_intercept), aes(x=x, ymin=0, ymax=y), fill = "purple", alpha = .3) +
+#   geom_ribbon(data = subset(all, y2>y & x>=x_intercept), aes(x=x, ymin=y, ymax=y2), fill = "red", alpha = .3) +
+#   theme(axis.line=element_blank(),
+#       axis.text.x=element_blank(),
+#       axis.text.y=element_blank(),
+#       axis.ticks=element_blank(),
+#       axis.title.x=element_blank(),
+#       axis.title.y=element_blank(),
+#       legend.position="none",
+#       # panel.background=element_rect(fill="black"),
+#       panel.background=element_blank(),
+#       panel.border=element_blank(),
+#       panel.grid.major=element_blank(),
+#       panel.grid.minor=element_blank(),
+#       plot.background=element_blank())
+```
+
+
+```{r}
+foo <- as.data.frame(x = seq(1,100))
+foo$y <- 0
+foo <- foo %>%
+  mutate(y = x^2)
+```
+
+
+
+
+
+
+
+
+
+
