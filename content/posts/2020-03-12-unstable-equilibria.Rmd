@@ -264,13 +264,52 @@ ggplot(data) +
 
 
 ```{r}
-foo <- as.data.frame(x = seq(1,100))
-foo$y <- 0
-foo <- foo %>%
-  mutate(y = x + 1)
+foo <- distribution_normal(n = 100, mean = 0, sd = 1) %>%
+  density() %>%
+  as.data.frame()
+
+foo2 <- distribution_normal(n = 100, mean = 2, sd = 2) %>%
+  density() %>%
+  as.data.frame()
+
+all_foo <- cbind(foo, foo2)
+
+colnames(all_foo) <- c('x1', 'y1', 'x2', 'y2')
+
+ggplot(all_foo) +
+  geom_line(aes(x=x1, y=y1)) +
+  geom_line(aes(x=x2,y=y2)) +
+  geom_ribbon(aes(x=0, ymin=y2, ymax=y1))
 ```
 
+```{r}
+sigma <- 1
+mean <- 0
 
+sigma_2 <- 1
+mean_2 <- 1
+
+foo <- data.frame(seq(-10,10,.001))
+
+colnames(foo) <- "x"
+
+foo <- foo %>%
+  mutate(y = 1/(sigma*sqrt(2*pi))*exp(-((x-mean)^2/(2*sigma^2))),
+         y2 = 1/(sigma_2*sqrt(2*pi))*exp(-((x-mean_2)^2/(2*sigma_2^2)))
+         )
+
+ggplot(foo) +
+  geom_vline(aes(xintercept=0), size=1) +
+  geom_line(aes(x=x, y=y)) +
+  geom_line(aes(x=x, y=y2)) +
+  geom_ribbon(data=subset(foo, y>y2 & x <  0), aes(x=x, ymin=y2, ymax=y), fill = "blue", alpha = .3) +
+  geom_ribbon(data = subset(foo, y2<y & x< 0), aes(x=x, ymin=0, ymax=y2), fill = "light blue", alpha = .5) +
+  geom_ribbon(data = subset(foo, y>y2 & x> 0), aes(x=x, ymin=y2, ymax=y), fill = "pink", alpha = .3) +
+  geom_ribbon(data = subset(foo, y2<y & x>=0), aes(x=x, ymin=0, ymax=y2), fill = "purple", alpha = .3) +
+  geom_ribbon(data = subset(foo, y<=y2 & x>0), aes(x=x, ymin=0, ymax=y), fill = "purple", alpha = .3) +
+  geom_ribbon(data = subset(foo, y2>y & x>=x_intercept), aes(x=x, ymin=y, ymax=y2), fill = "red", alpha = .3) +
+  xlim(-5,5)
+```
 
 
 
