@@ -186,17 +186,18 @@ data <- rbind(data, data.frame(x = (step_size * 1:100) + max(data$x), y = 0))
 data$e <- 0
 data$e[seq(100,original_length+99)] <- data$y[seq(1,original_length)]
 
-x_intercept <- -1
+x_intercept <- -.5
 
 ggplot(data) +
   # geom_line(aes(x=x, y=y), size=1) +
   # geom_line(aes(x=x, y=e), size=1) +
   geom_vline(aes(xintercept=x_intercept), size=1) +
+  # geom_vline(aes(xintercept=.6516307)) +
   # geom_hline(aes(yintercept=0), size=1) +
   geom_ribbon(data = subset(data, x<=x_intercept), aes(x=x, ymin=0, ymax=y), fill = "blue", alpha = .3) +
   geom_ribbon(data = subset(data, e<y & x<x_intercept), aes(x=x, ymin=0, ymax=e), fill = "light blue", alpha = .5) +
   geom_ribbon(data = subset(data, y>e & x>x_intercept), aes(x=x, ymin=e, ymax=y), fill = "pink", alpha = .3) +
-  geom_ribbon(data = subset(data, e<y & x>=x_intercept), aes(x=x, ymin=0, ymax=e), fill = "purple", alpha = .3) +
+  geom_ribbon(data = subset(data, e<y & x>=x_intercept | x==data[306,1]), aes(x=x, ymin=0, ymax=e), fill = "purple", alpha = .3) +
   geom_ribbon(data = subset(data, y<=e & x>=x_intercept), aes(x=x, ymin=0, ymax=y), fill = "purple", alpha = .3) +
   geom_ribbon(data = subset(data, e>y & x>=x_intercept), aes(x=x, ymin=y, ymax=e), fill = "red", alpha = .3) +
   theme(axis.line=element_blank(),
@@ -266,7 +267,7 @@ ggplot(data) +
 foo <- as.data.frame(x = seq(1,100))
 foo$y <- 0
 foo <- foo %>%
-  mutate(y = x^2)
+  mutate(y = x + 1)
 ```
 
 
