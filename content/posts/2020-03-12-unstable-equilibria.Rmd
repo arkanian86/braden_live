@@ -6,7 +6,7 @@ description: I struggled through the last few weeks wrestling with the optimal t
 draft: no
 images:
 - ~
-slug: unstable-equilibria
+slug: unlikely-events
 tags:
 - coronavirus
 - covid-19
