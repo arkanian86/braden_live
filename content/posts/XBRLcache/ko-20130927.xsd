@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!--XBRL Document Created with WebFilings-->
+<!-- -->
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.thecoca-colacompany.com/20130927" xmlns:ko="http://www.thecoca-colacompany.com/20130927" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://fasb.org/us-gaap/2013-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2013/elts/us-gaap-2013-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-roles/2013-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2013/elts/us-roles-2013-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-types/2013-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2013/elts/us-types-2013-01-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/arcrole/fact-explanatoryFact" schemaLocation="http://www.xbrl.org/lrr/arcrole/factExplanatory-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/negated" schemaLocation="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/net" schemaLocation="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/country/2013-01-31" schemaLocation="http://xbrl.sec.gov/country/2013/country-2013-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/currency/2012-01-31" schemaLocation="http://xbrl.sec.gov/currency/2012/currency-2012-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/dei/2013-01-31" schemaLocation="http://xbrl.sec.gov/dei/2013/dei-2013-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/exch/2013-01-31" schemaLocation="http://xbrl.sec.gov/exch/2013/exch-2013-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/invest/2013-01-31" schemaLocation="http://xbrl.sec.gov/invest/2013/invest-2013-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/naics/2011-01-31" schemaLocation="http://xbrl.sec.gov/naics/2011/naics-2011-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/sic/2011-01-31" schemaLocation="http://xbrl.sec.gov/sic/2011/sic-2011-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/stpr/2011-01-31" schemaLocation="http://xbrl.sec.gov/stpr/2011/stpr-2011-01-31.xsd" />
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ko-20130927_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ko-20130927_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ko-20130927_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ko-20130927_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:type="simple" />
+      <link:roleType id="AcquisitionsAndDivestitures" roleURI="http://www.thecoca-colacompany.com/role/AcquisitionsAndDivestitures">
+        <link:definition>2102100 - Disclosure - Acquisitions and Divestitures</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AcquisitionsAndDivestituresDetails" roleURI="http://www.thecoca-colacompany.com/role/AcquisitionsAndDivestituresDetails">
+        <link:definition>2402402 - Disclosure - Acquisitions and Divestitures (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AcquisitionsAndDivestituresDetails2" roleURI="http://www.thecoca-colacompany.com/role/AcquisitionsAndDivestituresDetails2">
+        <link:definition>2402403 - Disclosure - Acquisitions and Divestitures (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AcquisitionsAndDivestituresTables" roleURI="http://www.thecoca-colacompany.com/role/AcquisitionsAndDivestituresTables">
+        <link:definition>2302301 - Disclosure - Acquisitions and Divestitures (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ChangesInEquity" roleURI="http://www.thecoca-colacompany.com/role/ChangesInEquity">
+        <link:definition>2109100 - Disclosure - Changes in Equity</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ChangesInEquityDetails" roleURI="http://www.thecoca-colacompany.com/role/ChangesInEquityDetails">
+        <link:definition>2409402 - Disclosure - Changes in Equity (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ChangesInEquityTables" roleURI="http://www.thecoca-colacompany.com/role/ChangesInEquityTables">
+        <link:definition>2309301 - Disclosure - Changes in Equity (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsAndContingencies" roleURI="http://www.thecoca-colacompany.com/role/CommitmentsAndContingencies">
+        <link:definition>2107100 - Disclosure - Commitments and Contingencies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsAndContingenciesDetails" roleURI="http://www.thecoca-colacompany.com/role/CommitmentsAndContingenciesDetails">
+        <link:definition>2407402 - Disclosure - Commitments and Contingencies (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ComprehensiveIncome" roleURI="http://www.thecoca-colacompany.com/role/ComprehensiveIncome">
+        <link:definition>2108100 - Disclosure - Comprehensive Income</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ComprehensiveIncomeDetails" roleURI="http://www.thecoca-colacompany.com/role/ComprehensiveIncomeDetails">
+        <link:definition>2408402 - Disclosure - Comprehensive Income (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ComprehensiveIncomeTables" roleURI="http://www.thecoca-colacompany.com/role/ComprehensiveIncomeTables">
+        <link:definition>2308301 - Disclosure - Comprehensive Income (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CondensedConsolidatedBalanceSheets" roleURI="http://www.thecoca-colacompany.com/role/CondensedConsolidatedBalanceSheets">
+        <link:definition>1003000 - Statement - CONDENSED CONSOLIDATED BALANCE SHEETS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CondensedConsolidatedBalanceSheetsParentheticals" roleURI="http://www.thecoca-colacompany.com/role/CondensedConsolidatedBalanceSheetsParentheticals">
+        <link:definition>1003500 - Statement - CONDENSED CONSOLIDATED BALANCE SHEETS Parentheticals</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CondensedConsolidatedStatementsOfCashFlows" roleURI="http://www.thecoca-colacompany.com/role/CondensedConsolidatedStatementsOfCashFlows">
+        <link:definition>1004000 - Statement - CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CondensedConsolidatedStatementsOfComprehensiveIncome" roleURI="http://www.thecoca-colacompany.com/role/CondensedConsolidatedStatementsOfComprehensiveIncome">
+        <link:definition>1002000 - Statement - CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CondensedConsolidatedStatementsOfIncome" roleURI="http://www.thecoca-colacompany.com/role/CondensedConsolidatedStatementsOfIncome">
+        <link:definition>1001000 - Statement - CONDENSED CONSOLIDATED STATEMENTS OF INCOME</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtAndBorrowingArrangements" roleURI="http://www.thecoca-colacompany.com/role/DebtAndBorrowingArrangements">
+        <link:definition>2106100 - Disclosure - Debt and Borrowing Arrangements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtAndBorrowingArrangementsDetails" roleURI="http://www.thecoca-colacompany.com/role/DebtAndBorrowingArrangementsDetails">
+        <link:definition>2406402 - Disclosure - Debt and Borrowing Arrangements (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DocumentAndEntityInformation" roleURI="http://www.thecoca-colacompany.com/role/DocumentAndEntityInformation">
+        <link:definition>0001000 - Document - Document and Entity Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurements" roleURI="http://www.thecoca-colacompany.com/role/FairValueMeasurements">
+        <link:definition>2114100 - Disclosure - Fair Value Measurements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsDetails" roleURI="http://www.thecoca-colacompany.com/role/FairValueMeasurementsDetails">
+        <link:definition>2414402 - Disclosure - Fair Value Measurements (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsDetails2" roleURI="http://www.thecoca-colacompany.com/role/FairValueMeasurementsDetails2">
+        <link:definition>2414403 - Disclosure - Fair Value Measurements (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsDetails3" roleURI="http://www.thecoca-colacompany.com/role/FairValueMeasurementsDetails3">
+        <link:definition>2414404 - Disclosure - Fair Value Measurements (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsTables" roleURI="http://www.thecoca-colacompany.com/role/FairValueMeasurementsTables">
+        <link:definition>2314301 - Disclosure - Fair Value Measurements (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="HedgingTransactionsAndDerivativeFinancialInstruments" roleURI="http://www.thecoca-colacompany.com/role/HedgingTransactionsAndDerivativeFinancialInstruments">
+        <link:definition>2105100 - Disclosure - Hedging Transactions and Derivative Financial Instruments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="HedgingTransactionsAndDerivativeFinancialInstrumentsDetails" roleURI="http://www.thecoca-colacompany.com/role/HedgingTransactionsAndDerivativeFinancialInstrumentsDetails">
+        <link:definition>2405402 - Disclosure - Hedging Transactions and Derivative Financial Instruments (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="HedgingTransactionsAndDerivativeFinancialInstrumentsDetails2" roleURI="http://www.thecoca-colacompany.com/role/HedgingTransactionsAndDerivativeFinancialInstrumentsDetails2">
+        <link:definition>2405403 - Disclosure - Hedging Transactions and Derivative Financial Instruments (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="HedgingTransactionsAndDerivativeFinancialInstrumentsTables" roleURI="http://www.thecoca-colacompany.com/role/HedgingTransactionsAndDerivativeFinancialInstrumentsTables">
+        <link:definition>2305301 - Disclosure - Hedging Transactions and Derivative Financial Instruments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxes" roleURI="http://www.thecoca-colacompany.com/role/IncomeTaxes">
+        <link:definition>2113100 - Disclosure - Income Taxes</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesDetails" roleURI="http://www.thecoca-colacompany.com/role/IncomeTaxesDetails">
+        <link:definition>2413402 - Disclosure - Income Taxes (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesTables" roleURI="http://www.thecoca-colacompany.com/role/IncomeTaxesTables">
+        <link:definition>2313301 - Disclosure - Income Taxes (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Inventories" roleURI="http://www.thecoca-colacompany.com/role/Inventories">
+        <link:definition>2104100 - Disclosure - Inventories</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesDetails" roleURI="http://www.thecoca-colacompany.com/role/InventoriesDetails">
+        <link:definition>2404402 - Disclosure - Inventories (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesTables" roleURI="http://www.thecoca-colacompany.com/role/InventoriesTables">
+        <link:definition>2304301 - Disclosure - Inventories (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Investments" roleURI="http://www.thecoca-colacompany.com/role/Investments">
+        <link:definition>2103100 - Disclosure - Investments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsDetails" roleURI="http://www.thecoca-colacompany.com/role/InvestmentsDetails">
+        <link:definition>2403402 - Disclosure - Investments (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsDetails2" roleURI="http://www.thecoca-colacompany.com/role/InvestmentsDetails2">
+        <link:definition>2403403 - Disclosure - Investments (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsDetails4" roleURI="http://www.thecoca-colacompany.com/role/InvestmentsDetails4">
+        <link:definition>2403405 - Disclosure - Investments (Details 4)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsDetails5" roleURI="http://www.thecoca-colacompany.com/role/InvestmentsDetails5">
+        <link:definition>2403406 - Disclosure - Investments (Details 5)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsTables" roleURI="http://www.thecoca-colacompany.com/role/InvestmentsTables">
+        <link:definition>2303301 - Disclosure - Investments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OperatingSegments" roleURI="http://www.thecoca-colacompany.com/role/OperatingSegments">
+        <link:definition>2115100 - Disclosure - Operating Segments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OperatingSegmentsDetails" roleURI="http://www.thecoca-colacompany.com/role/OperatingSegmentsDetails">
+        <link:definition>2415402 - Disclosure - Operating Segments (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OperatingSegmentsTables" roleURI="http://www.thecoca-colacompany.com/role/OperatingSegmentsTables">
+        <link:definition>2315301 - Disclosure - Operating Segments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionAndOtherPostretirementBenefitPlans" roleURI="http://www.thecoca-colacompany.com/role/PensionAndOtherPostretirementBenefitPlans">
+        <link:definition>2112100 - Disclosure - Pension and Other Postretirement Benefit Plans</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionAndOtherPostretirementBenefitPlansDetails" roleURI="http://www.thecoca-colacompany.com/role/PensionAndOtherPostretirementBenefitPlansDetails">
+        <link:definition>2412402 - Disclosure - Pension and Other Postretirement Benefit Plans (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionAndOtherPostretirementBenefitPlansTables" roleURI="http://www.thecoca-colacompany.com/role/PensionAndOtherPostretirementBenefitPlansTables">
+        <link:definition>2312301 - Disclosure - Pension and Other Postretirement Benefit Plans (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ProductivityIntegrationAndRestructuringInitiatives" roleURI="http://www.thecoca-colacompany.com/role/ProductivityIntegrationAndRestructuringInitiatives">
+        <link:definition>2111100 - Disclosure - Productivity, Integration and Restructuring Initiatives</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ProductivityIntegrationAndRestructuringInitiativesDetails" roleURI="http://www.thecoca-colacompany.com/role/ProductivityIntegrationAndRestructuringInitiativesDetails">
+        <link:definition>2411402 - Disclosure - Productivity, Integration and Restructuring Initiatives (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ProductivityIntegrationAndRestructuringInitiativesTables" roleURI="http://www.thecoca-colacompany.com/role/ProductivityIntegrationAndRestructuringInitiativesTables">
+        <link:definition>2311301 - Disclosure - Productivity, Integration and Restructuring Initiatives (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SignificantOperatingAndNonoperatingItems" roleURI="http://www.thecoca-colacompany.com/role/SignificantOperatingAndNonoperatingItems">
+        <link:definition>2110100 - Disclosure - Significant Operating and Nonoperating Items</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SignificantOperatingAndNonoperatingItemsDetails" roleURI="http://www.thecoca-colacompany.com/role/SignificantOperatingAndNonoperatingItemsDetails">
+        <link:definition>2410401 - Disclosure - Significant Operating and Nonoperating Items (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfSignificantAccountingPolicies" roleURI="http://www.thecoca-colacompany.com/role/SummaryOfSignificantAccountingPolicies">
+        <link:definition>2101100 - Disclosure - Summary of Significant Accounting Policies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:element id="ko_AccountsPayableAndAccruedExpensesHeldForSale" name="AccountsPayableAndAccruedExpensesHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ko_AccruedIncomeTaxesHeldForSale" name="AccruedIncomeTaxesHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_AcquisitionandDivesturesAbstract" name="AcquisitionandDivesturesAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_AcquisitionsAndDivestitures" name="AcquisitionsAndDivestitures" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_AcquisitionsAndDivestituresDisclosure" name="AcquisitionsAndDivestituresDisclosure" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_AcquisitionsAndInvestmentsPrincipallyBeverageAndBottlingCompaniesAndTrademarks" name="AcquisitionsAndInvestmentsPrincipallyBeverageAndBottlingCompaniesAndTrademarks" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ko_AllowanceForReductionOfAssetsHeldForSale" name="AllowanceForReductionOfAssetsHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_AssetImpairmentChargesLineItems" name="AssetImpairmentChargesLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_AujanBottlingAndDistributionCompanyMember" name="AujanBottlingAndDistributionCompanyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_AujanIndustriesTrademarkOwnerMember" name="AujanIndustriesTrademarkOwnerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_AvailableForSaleSecuritiesAndCostMethodInvestments" name="AvailableForSaleSecuritiesAndCostMethodInvestments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_AvailableForSaleSecuritiesAndHeldToMaturitySecuritiesTextBlock" name="AvailableForSaleSecuritiesAndHeldToMaturitySecuritiesTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_BottlersFranchiseRightsHeldForSale" name="BottlersFranchiseRightsHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_BottlingInvestmentsMember" name="BottlingInvestmentsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_BpwNestleJointVentureMember" name="BpwNestleJointVentureMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_BrazilJuiceExpensesMember" name="BrazilJuiceExpensesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_BrazilianBottlingOperationMember" name="BrazilianBottlingOperationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_BusinessAcquisitionAndInvestmentLineItems" name="BusinessAcquisitionAndInvestmentLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_BusinessAxis" name="BusinessAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_BusinessCombinationDivestituresAndInvestmentsDisclosureTextBlock" name="BusinessCombinationDivestituresAndInvestmentsDisclosureTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_BusinessDomain" name="BusinessDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_CCEAGMember" name="CCEAGMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_CashCashEquivalentsAndShortTermInvestmentsHeldForSale" name="CashCashEquivalentsAndShortTermInvestmentsHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_ChangesInEquityAbstract" name="ChangesInEquityAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ChangesInEquityLineItems" name="ChangesInEquityLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ChangesInEquityRollForward" name="ChangesInEquityRollForward" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ChargeforDeferredRevenueandGrossProfit" name="ChargeforDeferredRevenueandGrossProfit" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ComponentOfOperatingAndNonoperatingOtherCostAndExpenseLineItems" name="ComponentOfOperatingAndNonoperatingOtherCostAndExpenseLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ComponentOfOtherOperatingAndNonoperatingCostAndExpenseTable" name="ComponentOfOtherOperatingAndNonoperatingCostAndExpenseTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ComprehensiveIncome" name="ComprehensiveIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ComprehensiveIncomeLineItems" name="ComprehensiveIncomeLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ComprehensiveIncomeOrLossApportionedBetweenShareownersOfCocaColaCompanyAndNoncontrollingInterestsTextBlock" name="ComprehensiveIncomeOrLossApportionedBetweenShareownersOfCocaColaCompanyAndNoncontrollingInterestsTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ComprehensiveIncomeReclassificationOfDefinedBenefitPlansForNetPriorServiceCreditAndActuarialGainsOrLosses" name="ComprehensiveIncomeReclassificationOfDefinedBenefitPlansForNetPriorServiceCreditAndActuarialGainsOrLosses" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_CondensedConsolidatedBalanceSheetParentheticalAbstract" name="CondensedConsolidatedBalanceSheetParentheticalAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_CondensedConsolidatedStatementOfComprehensiveIncomeAbstract" name="CondensedConsolidatedStatementOfComprehensiveIncomeAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ContractualMaturitiesOfSecuritiesTextBlock" name="ContractualMaturitiesOfSecuritiesTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_CostMethodInvestmentsAbstract" name="CostMethodInvestmentsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_CurrentMaturitiesOfLongTermDebtHeldForSale" name="CurrentMaturitiesOfLongTermDebtHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_DebtAndBorrowingArrangements" name="DebtAndBorrowingArrangements" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_DeconsolidationOfEntitiesImpacts" name="DeconsolidationOfEntitiesImpacts" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_DecreaseOrIncreaseInCarryingValueDueToHedgeAdjustments" name="DecreaseOrIncreaseInCarryingValueDueToHedgeAdjustments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:periodType="instant" />
+  <xsd:element id="ko_DeferredIncomeTaxesHeldForSale" name="DeferredIncomeTaxesHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ko_DerivativeInstrumentsFairValueDesignatedAsHedgingInstrumentsTextBlock" name="DerivativeInstrumentsFairValueDesignatedAsHedgingInstrumentsTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_DerivativeInstrumentsFairValueNotDesignatedAsHedgingInstrumentsTextBlock" name="DerivativeInstrumentsFairValueNotDesignatedAsHedgingInstrumentsTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DescriptionOfAociComponentAxis" name="DescriptionOfAociComponentAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DescriptionOfAociComponentDomain" name="DescriptionOfAociComponentDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_DisclosureOfAssetsAndLiabilitiesHeldForSaleTableTextBlock" name="DisclosureOfAssetsAndLiabilitiesHeldForSaleTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DisposalGroupNotDiscontinuedOperationsAxis" name="DisposalGroupNotDiscontinuedOperationsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DisposalGroupNotDiscontinuedOperationsTable" name="DisposalGroupNotDiscontinuedOperationsTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DisposalGroupNotDiscountinuedOperationsDomain" name="DisposalGroupNotDiscountinuedOperationsDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DivestituresLineItems" name="DivestituresLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DivestituresdeconsolidationsandotherMember" name="DivestituresdeconsolidationsandotherMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_DocumentAndEntityInformationAbstract" name="DocumentAndEntityInformationAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_EffectiveTaxRateQuarterYearToDateEstimate" name="EffectiveTaxRateQuarterYearToDateEstimate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_EquityIncomeLossNetAbstract" name="EquityIncomeLossNetAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_EquityMethodInvestmentProportionateShareOfUnusualOrInfrequentItemsRecordedByInvestees" name="EquityMethodInvestmentProportionateShareOfUnusualOrInfrequentItemsRecordedByInvestees" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_EurasiaAndAfricaMember" name="EurasiaAndAfricaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ExerciseofOptions" name="ExerciseofOptions" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisDisclosureItemsAxis" name="FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisDisclosureItemsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisDisclosureItemsDomain" name="FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisDisclosureItemsDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisFinancialStatementCaptionsLineItems" name="FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisFinancialStatementCaptionsLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisTable" name="FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_FairValueMeasurementNettingAdjustmentMember" name="FairValueMeasurementNettingAdjustmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_FairValueMeasurementsAbstract" name="FairValueMeasurementsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_FairValueMeasurementsDisclosuresTextBlock" name="FairValueMeasurementsDisclosuresTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_FairValueOfTradingSecuritiesIncludedInMarketableSecuritiesCaptionOnBalanceSheet" name="FairValueOfTradingSecuritiesIncludedInMarketableSecuritiesCaptionOnBalanceSheet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_FairValueOfTradingSecuritiesIncludedInOtherAssetsCaptionOnBalanceSheet" name="FairValueOfTradingSecuritiesIncludedInOtherAssetsCaptionOnBalanceSheet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_GoodwillHeldForSale" name="GoodwillHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_HedgingTransactionsAndDerivativeFinancialInstruments" name="HedgingTransactionsAndDerivativeFinancialInstruments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_HighEndOfRangeLittleOrNoDefenseOrIndemnityCostsThatWillNotBeCovered" name="HighEndOfRangeLittleOrNoDefenseOrIndemnityCostsThatWillNotBeCovered" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ImpairedAssetByTypeDomain" name="ImpairedAssetByTypeDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ImpairmentChargeByAssetAxis" name="ImpairmentChargeByAssetAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_IncomeTaxExpenseBenefitAssetImpairments" name="IncomeTaxExpenseBenefitAssetImpairments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_IncomeTaxExpenseBenefitForProductivityAndReinvestmentPrograms" name="IncomeTaxExpenseBenefitForProductivityAndReinvestmentPrograms" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_IncomeTaxExpenseBenefitRelatedToOtherProductivityIntegrationAndRestructuringInitiatives" name="IncomeTaxExpenseBenefitRelatedToOtherProductivityIntegrationAndRestructuringInitiatives" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_IncomeTaxExpenseBenefitUnusualOrInfrequentItemsOtherTaxExpenseBenefitNet" name="IncomeTaxExpenseBenefitUnusualOrInfrequentItemsOtherTaxExpenseBenefitNet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_IncomeTaxExpenseBenefitUnusualOrInfrequentItemsTransactionGainsLosses" name="IncomeTaxExpenseBenefitUnusualOrInfrequentItemsTransactionGainsLosses" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_IncomeTaxExpenseBenefitUnusualOrInfrequentItemsUncertainTaxMatters" name="IncomeTaxExpenseBenefitUnusualOrInfrequentItemsUncertainTaxMatters" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_IncomeTaxes" name="IncomeTaxes" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_InsignificantItemsMember" name="InsignificantItemsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_IntegrationOfGermanBottlingAndDistributionOperationMember" name="IntegrationOfGermanBottlingAndDistributionOperationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_IntegrationofCCEsNorthAmericanOperationsMember" name="IntegrationofCCEsNorthAmericanOperationsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_IntersegmentRevenue" name="IntersegmentRevenue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_Inventories" name="Inventories" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_InvestmentInAujanIndustriesMember" name="InvestmentInAujanIndustriesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_InvestmentsAbstracts" name="InvestmentsAbstracts" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_InvestmentsByBalanceSheetGroupingTextBlock" name="InvestmentsByBalanceSheetGroupingTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_InvestmentsDisclosureTextBlock" name="InvestmentsDisclosureTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_IssuanceOfLongTermDebt" name="IssuanceOfLongTermDebt" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_LegalContingenciesAbstract" name="LegalContingenciesAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_LicenseAgreementWithNestleMember" name="LicenseAgreementWithNestleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_LoansAndNotesPayable" name="LoansAndNotesPayable" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ko_LoansAndNotesPayableHeldForSale" name="LoansAndNotesPayableHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ko_LongTermDebtHeldForSale" name="LongTermDebtHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ko_LossContingenciesRiskInsuranceReserves" name="LossContingenciesRiskInsuranceReserves" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_LossContingencyCountersuitNumberOfPartiesDefendant" name="LossContingencyCountersuitNumberOfPartiesDefendant" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="ko_LossContingencyCountersuitNumberOfPartiesPlaintiff" name="LossContingencyCountersuitNumberOfPartiesPlaintiff" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="ko_LossContingencyDamagesSoughtAmount" name="LossContingencyDamagesSoughtAmount" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_LossContingencyInsurancePolicyPurchased" name="LossContingencyInsurancePolicyPurchased" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ko_LossContingencyInsuranceRecoverablePolicyLimitPercentCovered" name="LossContingencyInsuranceRecoverablePolicyLimitPercentCovered" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element id="ko_LowEndOfRangeLittleOrNoDefenseOrIndemnityCostsThatWillNotBeCovered" name="LowEndOfRangeLittleOrNoDefenseOrIndemnityCostsThatWillNotBeCovered" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_NonrecurringgainLossfairvalueadjustment" name="NonrecurringgainLossfairvalueadjustment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ko_NumberOfOperationalUnitsInvolvedInIntegrationInitiatives" name="NumberOfOperationalUnitsInvolvedInIntegrationInitiatives" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OperatingSegments" name="OperatingSegments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OperatingSegmentsAbstract" name="OperatingSegmentsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OtherComprehensiveIncomeAbstract" name="OtherComprehensiveIncomeAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_OtherComprehensiveIncomeNetUnrealizedGainLossOnAvailableForSaleSecurities" name="OtherComprehensiveIncomeNetUnrealizedGainLossOnAvailableForSaleSecurities" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ko_OtherComprehensiveIncomeReclassificationOfDefinedBenefitPlansNetGainLossAndActuarialChangesRecognizedInNetPeriodicBenefitCostNetOfTax" name="OtherComprehensiveIncomeReclassificationOfDefinedBenefitPlansNetGainLossAndActuarialChangesRecognizedInNetPeriodicBenefitCostNetOfTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OtherDirectCostsMember" name="OtherDirectCostsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OtherFairValueDisclosuresAbstract" name="OtherFairValueDisclosuresAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OtherIncomeLossNetAbstract" name="OtherIncomeLossNetAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_OtherIndefiniteLivedAndFiniteLivedIntangibleAssets" name="OtherIndefiniteLivedAndFiniteLivedIntangibleAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_OtherInfrequentOrUnusualChargesNet" name="OtherInfrequentOrUnusualChargesNet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_OtherIntangibleAssetsHeldForSale" name="OtherIntangibleAssetsHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_OtherLiabilitiesHeldForSale" name="OtherLiabilitiesHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_OtherNonoperatingItemsAbstract" name="OtherNonoperatingItemsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OtherOperatingChargesDisclosureAbstract" name="OtherOperatingChargesDisclosureAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OtherOperatingChargesMember" name="OtherOperatingChargesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OtherOperatingItemsAbstract" name="OtherOperatingItemsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_Othercomprehensiveincomeamortizationofdefinedbenefitplannetpriorservicecostrecognizedinnetperiodicpensioncostandactuarilalossorgaintax" name="Othercomprehensiveincomeamortizationofdefinedbenefitplannetpriorservicecostrecognizedinnetperiodicpensioncostandactuarilalossorgaintax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_OutsideServicesMember" name="OutsideServicesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_PacificMember" name="PacificMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_PensionAndOtherPostretirementBenefitPlans" name="PensionAndOtherPostretirementBenefitPlans" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_PeriodForWhichDefenseAndIndemnityCostsAreInSameRange" name="PeriodForWhichDefenseAndIndemnityCostsAreInSameRange" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_PeriodicBenefitCostPensionAndOtherPostretirementBenefitPlansTextBlock" name="PeriodicBenefitCostPensionAndOtherPostretirementBenefitPlansTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_PhilippinesbottlingoperationsMember" name="PhilippinesbottlingoperationsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_PrepaidExpensesAndOtherAssetsMember" name="PrepaidExpensesAndOtherAssetsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_PrepaidExpensesAndOtherCurrentAssetsHeldForSale" name="PrepaidExpensesAndOtherCurrentAssetsHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_PresentationAndAccountingPoliciesTextBlock" name="PresentationAndAccountingPoliciesTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ProceedsFromDisposalsOfBusinessesEquityMethodOrOtherInvestments" name="ProceedsFromDisposalsOfBusinessesEquityMethodOrOtherInvestments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_ProceedsFromDisposalsOfShortTermInvestments" name="ProceedsFromDisposalsOfShortTermInvestments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ProductivityAndReinvestmentAbstract" name="ProductivityAndReinvestmentAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ProductivityAndReinvestmentCostsTableTextBlock" name="ProductivityAndReinvestmentCostsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ProductivityAndReinvestmentMember" name="ProductivityAndReinvestmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ProductivityIntegrationAndRestructuringInitiatives" name="ProductivityIntegrationAndRestructuringInitiatives" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ProductivityIntegrationAndRestructuringInitiativesAxis" name="ProductivityIntegrationAndRestructuringInitiativesAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ProductivityIntegrationAndRestructuringInitiativesDomain" name="ProductivityIntegrationAndRestructuringInitiativesDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ProductivityinitiativesMember" name="ProductivityinitiativesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_PurchasesOfShortTermInvestments" name="PurchasesOfShortTermInvestments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ko_PutOptionExercisePrice" name="PutOptionExercisePrice" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_RemeasurementAndTranslationLossDueToCurrencyDevaluation" name="RemeasurementAndTranslationLossDueToCurrencyDevaluation" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_RemeasurementChargesOnSubsidiaryAssets" name="RemeasurementChargesOnSubsidiaryAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_RestructuringChargesExceptForProductivityAndReinvestmentProgramMember" name="RestructuringChargesExceptForProductivityAndReinvestmentProgramMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_RestructuringChargesOtherThanProductivityAndProductivityAndReinvestmentsInitiativesMember" name="RestructuringChargesOtherThanProductivityAndProductivityAndReinvestmentsInitiativesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_RevenueforReportableSegments" name="RevenueforReportableSegments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_RiskManagementProgramsAbstract" name="RiskManagementProgramsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_RiskManagementProgramsMember" name="RiskManagementProgramsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_ScheduleOfBusinessAcquisitionsAndInvestmentActivityTable" name="ScheduleOfBusinessAcquisitionsAndInvestmentActivityTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ScheduleOfCashFlowHedgesGainsOrLossesRecognizedInAociAndEarningsTableTextBlock" name="ScheduleOfCashFlowHedgesGainsOrLossesRecognizedInAociAndEarningsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ScheduleOfDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsGainLossInStatementOfFinancialPerformanceTableTextBlock" name="ScheduleOfDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsGainLossInStatementOfFinancialPerformanceTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ScheduleOfFairValueHedgesGainsLossesRecognizedInIncomeLocationTableTextBlock" name="ScheduleOfFairValueHedgesGainsLossesRecognizedInIncomeLocationTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ScheduleOfIncomeTaxExpenseBenefitUnusualOrInfrequentItemsTableTextBlock" name="ScheduleOfIncomeTaxExpenseBenefitUnusualOrInfrequentItemsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_SegmentReportingInformationInvestmentsIncludingEquityMethodInvestments" name="SegmentReportingInformationInvestmentsIncludingEquityMethodInvestments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ko_SegmentReportingSegmentOperatingAssets" name="SegmentReportingSegmentOperatingAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_SignificantOperatingAndNonoperatingItems" name="SignificantOperatingAndNonoperatingItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_SolvencyFundsOfInsuranceCaptive" name="SolvencyFundsOfInsuranceCaptive" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_SummaryOfSignificantAccountingPolicies" name="SummaryOfSignificantAccountingPolicies" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_ThirdPartyNumberOfPendingActiveClaims" name="ThirdPartyNumberOfPendingActiveClaims" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_TotalPrincipalNotesDueApril12018Member" name="TotalPrincipalNotesDueApril12018Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_TotalPrincipalNotesDueApril12023Member" name="TotalPrincipalNotesDueApril12023Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_TotalPrincipalNotesDueAugust152013Member" name="TotalPrincipalNotesDueAugust152013Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_TotalPrincipalNotesDueMarch12015Member" name="TotalPrincipalNotesDueMarch12015Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_TotalPrincipalNotesDueMarch32014Member" name="TotalPrincipalNotesDueMarch32014Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_TotalPrincipalNotesDueMarch52015Member" name="TotalPrincipalNotesDueMarch52015Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ko_TradingSecuritiesDisclosureAbstract" name="TradingSecuritiesDisclosureAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_TradingSecuritiesUnrealizedHoldingGainsLosses" name="TradingSecuritiesUnrealizedHoldingGainsLosses" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ko_UnusualAndorInfrequentItemsAbstract" name="UnusualAndorInfrequentItemsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ko_UnusualOrInfrequentEventCharges" name="UnusualOrInfrequentEventCharges" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ko_UnusualOrInfrequentItemOperating" name="UnusualOrInfrequentItemOperating" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+</xsd:schema>

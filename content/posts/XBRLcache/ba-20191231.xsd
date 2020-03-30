@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!--XBRL Document Created with Wdesk from Workiva-->
+<!-- -->
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.boeing.com/20191231" xmlns:ba="http://www.boeing.com/20191231" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://fasb.org/srt-types/2019-01-31" schemaLocation="http://xbrl.fasb.org/srt/2019/elts/srt-types-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/srt/2019-01-31" schemaLocation="http://xbrl.fasb.org/srt/2019/elts/srt-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-gaap/2019-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-gaap-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-roles/2019-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-roles-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-types/2019-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-types-2019-01-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/arcrole/fact-explanatoryFact" schemaLocation="http://www.xbrl.org/lrr/arcrole/factExplanatory-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/negated" schemaLocation="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/net" schemaLocation="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/country/2017-01-31" schemaLocation="https://xbrl.sec.gov/country/2017/country-2017-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/currency/2019-01-31" schemaLocation="https://xbrl.sec.gov/currency/2019/currency-2019-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/dei/2019-01-31" schemaLocation="https://xbrl.sec.gov/dei/2019/dei-2019-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/exch/2019-01-31" schemaLocation="https://xbrl.sec.gov/exch/2019/exch-2019-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/invest/2013-01-31" schemaLocation="http://xbrl.sec.gov/invest/2013/invest-2013-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/naics/2017-01-31" schemaLocation="http://xbrl.sec.gov/naics/2017/naics-2017-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/sic/2011-01-31" schemaLocation="http://xbrl.sec.gov/sic/2011/sic-2011-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/stpr/2018-01-31" schemaLocation="https://xbrl.sec.gov/stpr/2018/stpr-2018-01-31.xsd" />
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ba-20191231_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ba-20191231_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ba-20191231_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="ba-20191231_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:type="simple" />
+      <link:roleType id="AccountsReceivable" roleURI="http://www.boeing.com/role/AccountsReceivable">
+        <link:definition>2110100 - Disclosure - Accounts Receivable</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AccountsReceivableScheduleOfAccountsReceivableDetails" roleURI="http://www.boeing.com/role/AccountsReceivableScheduleOfAccountsReceivableDetails">
+        <link:definition>2410402 - Disclosure - Accounts Receivable (Schedule Of Accounts Receivable) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AccountsReceivableTables" roleURI="http://www.boeing.com/role/AccountsReceivableTables">
+        <link:definition>2310301 - Disclosure - Accounts Receivable (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AcquisitionsAndJointVenturesAcquisitionsAndJointVentures" roleURI="http://www.boeing.com/role/AcquisitionsAndJointVenturesAcquisitionsAndJointVentures">
+        <link:definition>2106100 - Disclosure - Acquisitions and Joint Ventures Acquisitions and Joint Ventures</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AcquisitionsAndJointVenturesAcquisitionsAndJointVenturesNarrativeDetails" roleURI="http://www.boeing.com/role/AcquisitionsAndJointVenturesAcquisitionsAndJointVenturesNarrativeDetails">
+        <link:definition>2406402 - Disclosure - Acquisitions and Joint Ventures Acquisitions and Joint Ventures (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AcquisitionsAndJointVenturesAcquisitionsAndJointVenturesScheduleOfBusinessAcquisitionsDetails" roleURI="http://www.boeing.com/role/AcquisitionsAndJointVenturesAcquisitionsAndJointVenturesScheduleOfBusinessAcquisitionsDetails">
+        <link:definition>2406403 - Disclosure - Acquisitions and Joint Ventures Acquisitions and Joint Ventures (Schedule of Business Acquisitions) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="AcquisitionsAndJointVenturesAcquisitionsAndJointVenturesTables" roleURI="http://www.boeing.com/role/AcquisitionsAndJointVenturesAcquisitionsAndJointVenturesTables">
+        <link:definition>2306301 - Disclosure - Acquisitions and Joint Ventures Acquisitions and Joint Ventures (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ArrangementsWithOffBalanceSheetRisk" roleURI="http://www.boeing.com/role/ArrangementsWithOffBalanceSheetRisk">
+        <link:definition>2119100 - Disclosure - Arrangements With Off-Balance Sheet Risk</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ArrangementsWithOffBalanceSheetRiskNarrativeDetails" roleURI="http://www.boeing.com/role/ArrangementsWithOffBalanceSheetRiskNarrativeDetails">
+        <link:definition>2419402 - Disclosure - Arrangements With Off-Balance Sheet Risk (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ArrangementsWithOffBalanceSheetRiskScheduleOfArrangementsWithOffBalanceSheetRiskDetails" roleURI="http://www.boeing.com/role/ArrangementsWithOffBalanceSheetRiskScheduleOfArrangementsWithOffBalanceSheetRiskDetails">
+        <link:definition>2419403 - Disclosure - Arrangements With Off-Balance Sheet Risk (Schedule Of Arrangements With Off-Balance Sheet Risk) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ArrangementsWithOffBalanceSheetRiskTables" roleURI="http://www.boeing.com/role/ArrangementsWithOffBalanceSheetRiskTables">
+        <link:definition>2319301 - Disclosure - Arrangements With Off-Balance Sheet Risk (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfCashFlows" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfCashFlows">
+        <link:definition>1004000 - Statement - Consolidated Statements Of Cash Flows</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfComprehensiveIncome" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfComprehensiveIncome">
+        <link:definition>1002000 - Statement - Consolidated Statements of Comprehensive Income</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfComprehensiveIncomeCalc2" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfComprehensiveIncomeCalc2">
+        <link:definition>1002000 - Statement - Consolidated Statements of Comprehensive Income</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfComprehensiveIncomeParenthetical" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfComprehensiveIncomeParenthetical">
+        <link:definition>1002001 - Statement - Consolidated Statements of Comprehensive Income (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfEquity" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfEquity">
+        <link:definition>1005000 - Statement - Consolidated Statements Of Equity</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfEquityParenthetical" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfEquityParenthetical">
+        <link:definition>1005501 - Statement - Consolidated Statements Of Equity (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfFinancialPosition" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfFinancialPosition">
+        <link:definition>1003000 - Statement - Consolidated Statements Of Financial Position</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfFinancialPositionParenthetical" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfFinancialPositionParenthetical">
+        <link:definition>1003501 - Statement - Consolidated Statements Of Financial Position (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfOperations" roleURI="http://www.boeing.com/role/ConsolidatedStatementsOfOperations">
+        <link:definition>1001000 - Statement - Consolidated Statements Of Operations</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ContractsWithCustomersContractsWithCustomers" roleURI="http://www.boeing.com/role/ContractsWithCustomersContractsWithCustomers">
+        <link:definition>2112100 - Disclosure - Contracts with Customers Contracts with Customers</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ContractsWithCustomersContractsWithCustomersNarrativeDetails" roleURI="http://www.boeing.com/role/ContractsWithCustomersContractsWithCustomersNarrativeDetails">
+        <link:definition>2412402 - Disclosure - Contracts with Customers Contracts with Customers (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ContractsWithCustomersContractsWithCustomersScheduleOfUnbilledReceivablesAndClaimsDetails" roleURI="http://www.boeing.com/role/ContractsWithCustomersContractsWithCustomersScheduleOfUnbilledReceivablesAndClaimsDetails">
+        <link:definition>2412403 - Disclosure - Contracts with Customers Contracts with Customers (Schedule of Unbilled Receivables and Claims) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ContractsWithCustomersContractsWithCustomersTables" roleURI="http://www.boeing.com/role/ContractsWithCustomersContractsWithCustomersTables">
+        <link:definition>2312301 - Disclosure - Contracts with Customers Contracts with Customers (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancing" roleURI="http://www.boeing.com/role/CustomerFinancing">
+        <link:definition>2113100 - Disclosure - Customer Financing</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingAllowanceForLossesOnFinancingReceivablesDetails" roleURI="http://www.boeing.com/role/CustomerFinancingAllowanceForLossesOnFinancingReceivablesDetails">
+        <link:definition>2413406 - Disclosure - Customer Financing (Allowance For Losses On Financing Receivables) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingComponentsOfInvestmentInSalesTypeOrFinanceLeasesDetails" roleURI="http://www.boeing.com/role/CustomerFinancingComponentsOfInvestmentInSalesTypeOrFinanceLeasesDetails">
+        <link:definition>2413404 - Disclosure - Customer Financing (Components Of Investment In Sales-Type Or Finance Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingCustomerFinancingAssetImpairmentChargesDetails" roleURI="http://www.boeing.com/role/CustomerFinancingCustomerFinancingAssetImpairmentChargesDetails">
+        <link:definition>2413409 - Disclosure - Customer Financing (Customer Financing Asset Impairment Charges) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingFinancingReceivableBalancesEvaluatedForImpairmentDetails" roleURI="http://www.boeing.com/role/CustomerFinancingFinancingReceivableBalancesEvaluatedForImpairmentDetails">
+        <link:definition>2413405 - Disclosure - Customer Financing (Financing Receivable Balances Evaluated For Impairment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingFinancingReceivableCreditQualityIndicatorsDetails" roleURI="http://www.boeing.com/role/CustomerFinancingFinancingReceivableCreditQualityIndicatorsDetails">
+        <link:definition>2413407 - Disclosure - Customer Financing (Financing Receivable Credit Quality Indicators) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingNarrativeDetails" roleURI="http://www.boeing.com/role/CustomerFinancingNarrativeDetails">
+        <link:definition>2413402 - Disclosure - Customer Financing (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingScheduleOfCustomerFinancingCarryingValuesRelatedToMajorAircraftConcentrationsDetails" roleURI="http://www.boeing.com/role/CustomerFinancingScheduleOfCustomerFinancingCarryingValuesRelatedToMajorAircraftConcentrationsDetails">
+        <link:definition>2413408 - Disclosure - Customer Financing (Schedule of Customer Financing Carrying Values Related to Major Aircraft Concentrations) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingScheduleOfCustomerFinancingDetails" roleURI="http://www.boeing.com/role/CustomerFinancingScheduleOfCustomerFinancingDetails">
+        <link:definition>2413403 - Disclosure - Customer Financing (Schedule Of Customer Financing) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingScheduledReceiptsOnCustomerFinancingDetails" roleURI="http://www.boeing.com/role/CustomerFinancingScheduledReceiptsOnCustomerFinancingDetails">
+        <link:definition>2413410 - Disclosure - Customer Financing (Scheduled Receipts On Customer Financing) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CustomerFinancingTables" roleURI="http://www.boeing.com/role/CustomerFinancingTables">
+        <link:definition>2313301 - Disclosure - Customer Financing (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Debt" roleURI="http://www.boeing.com/role/Debt">
+        <link:definition>2120100 - Disclosure - Debt</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtDebtScheduleOfLongTermDebtInstrumentsDetails" roleURI="http://www.boeing.com/role/DebtDebtScheduleOfLongTermDebtInstrumentsDetails">
+        <link:definition>2420405 - Disclosure - Debt Debt (Schedule of Long-term debt instruments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtNarrativeDetails" roleURI="http://www.boeing.com/role/DebtNarrativeDetails">
+        <link:definition>2420402 - Disclosure - Debt (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtScheduleOfDebtDetails" roleURI="http://www.boeing.com/role/DebtScheduleOfDebtDetails">
+        <link:definition>2420404 - Disclosure - Debt (Schedule Of Debt) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtScheduleOfShortTermDebtAndCurrentPortionOfLongTermDebtDetails" roleURI="http://www.boeing.com/role/DebtScheduleOfShortTermDebtAndCurrentPortionOfLongTermDebtDetails">
+        <link:definition>2420403 - Disclosure - Debt (Schedule Of Short-Term Debt And Current Portion Of Long-Term Debt) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtScheduledPrincipalPaymentsForDebtAndFinanceLeaseObligationsDetails" roleURI="http://www.boeing.com/role/DebtScheduledPrincipalPaymentsForDebtAndFinanceLeaseObligationsDetails">
+        <link:definition>2420406 - Disclosure - Debt (Scheduled Principal Payments For Debt And Finance Lease Obligations) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DebtTables" roleURI="http://www.boeing.com/role/DebtTables">
+        <link:definition>2320301 - Disclosure - Debt (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstruments" roleURI="http://www.boeing.com/role/DerivativeFinancialInstruments">
+        <link:definition>2125100 - Disclosure - Derivative Financial Instruments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsNarrativeDetails" roleURI="http://www.boeing.com/role/DerivativeFinancialInstrumentsNarrativeDetails">
+        <link:definition>2425402 - Disclosure - Derivative Financial Instruments (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsScheduleOfDerivativeInstrumentsGainsLossesInStatementOfFinancialPerformanceDetails" roleURI="http://www.boeing.com/role/DerivativeFinancialInstrumentsScheduleOfDerivativeInstrumentsGainsLossesInStatementOfFinancialPerformanceDetails">
+        <link:definition>2425404 - Disclosure - Derivative Financial Instruments (Schedule Of Derivative Instruments, Gains/(Losses) In Statement Of Financial Performance) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsScheduleOfNotionalAmountsAndFairValuesOfDerivativeInstrumentsDetails" roleURI="http://www.boeing.com/role/DerivativeFinancialInstrumentsScheduleOfNotionalAmountsAndFairValuesOfDerivativeInstrumentsDetails">
+        <link:definition>2425403 - Disclosure - Derivative Financial Instruments (Schedule Of Notional Amounts And Fair Values Of Derivative Instruments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsTables" roleURI="http://www.boeing.com/role/DerivativeFinancialInstrumentsTables">
+        <link:definition>2325301 - Disclosure - Derivative Financial Instruments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DocumentAndEntityInformation" roleURI="http://www.boeing.com/role/DocumentAndEntityInformation">
+        <link:definition>0001000 - Document - Document And Entity Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerShare" roleURI="http://www.boeing.com/role/EarningsPerShare">
+        <link:definition>2108100 - Disclosure - Earnings Per Share</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerSharePolicy" roleURI="http://www.boeing.com/role/EarningsPerSharePolicy">
+        <link:definition>2208201 - Disclosure - Earnings Per Share (Policy)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerShareScheduleOfWeightedAverageNumberOfSharesOutstandingExcludedFromComputationOfDilutedEarningsPerShareDetails" roleURI="http://www.boeing.com/role/EarningsPerShareScheduleOfWeightedAverageNumberOfSharesOutstandingExcludedFromComputationOfDilutedEarningsPerShareDetails">
+        <link:definition>2408404 - Disclosure - Earnings Per Share (Schedule Of Weighted Average Number Of Shares Outstanding Excluded From The Computation Of Diluted Earnings Per Share) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerShareScheduleOfWeightedAverageNumberOfSharesOutstandingUsedToComputeEarningsPerShareDetails" roleURI="http://www.boeing.com/role/EarningsPerShareScheduleOfWeightedAverageNumberOfSharesOutstandingUsedToComputeEarningsPerShareDetails">
+        <link:definition>2408403 - Disclosure - Earnings Per Share (Schedule Of Weighted-Average Number Of Shares Outstanding Used To Compute Earnings Per Share) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsPerShareTables" roleURI="http://www.boeing.com/role/EarningsPerShareTables">
+        <link:definition>2308302 - Disclosure - Earnings Per Share (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurements" roleURI="http://www.boeing.com/role/FairValueMeasurements">
+        <link:definition>2126100 - Disclosure - Fair Value Measurements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsFairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisDetails" roleURI="http://www.boeing.com/role/FairValueMeasurementsFairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisDetails">
+        <link:definition>2426402 - Disclosure - Fair Value Measurements Fair Value, Assets and Liabilities Measured on Recurring Basis (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsFairValueAssetsMeasuredOnNonrecurringBasisUsingUnobservableInputsDetails" roleURI="http://www.boeing.com/role/FairValueMeasurementsFairValueAssetsMeasuredOnNonrecurringBasisUsingUnobservableInputsDetails">
+        <link:definition>2426403 - Disclosure - Fair Value Measurements Fair Value, Assets Measured on Nonrecurring Basis Using Unobservable Inputs (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsFairValueAssetsMeasuredOnNonrecurringBasisValuationTechniquesDetails" roleURI="http://www.boeing.com/role/FairValueMeasurementsFairValueAssetsMeasuredOnNonrecurringBasisValuationTechniquesDetails">
+        <link:definition>2426404 - Disclosure - Fair Value Measurements Fair Value, Assets Measured On Nonrecurring Basis, Valuation Techniques (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsFairValuesAndRelatedCarryingValuesOfFinancialInstrumentsDetails" roleURI="http://www.boeing.com/role/FairValueMeasurementsFairValuesAndRelatedCarryingValuesOfFinancialInstrumentsDetails">
+        <link:definition>2426405 - Disclosure - Fair Value Measurements Fair Values And Related Carrying Values of Financial Instruments (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsTables" roleURI="http://www.boeing.com/role/FairValueMeasurementsTables">
+        <link:definition>2326301 - Disclosure - Fair Value Measurements (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillAndAcquiredIntangibles" roleURI="http://www.boeing.com/role/GoodwillAndAcquiredIntangibles">
+        <link:definition>2107100 - Disclosure - Goodwill And Acquired Intangibles</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillAndAcquiredIntangiblesNarrativeDetails" roleURI="http://www.boeing.com/role/GoodwillAndAcquiredIntangiblesNarrativeDetails">
+        <link:definition>2407402 - Disclosure - Goodwill And Acquired Intangibles (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillAndAcquiredIntangiblesScheduleOfFiniteLivedIntangibleAssetsDetails" roleURI="http://www.boeing.com/role/GoodwillAndAcquiredIntangiblesScheduleOfFiniteLivedIntangibleAssetsDetails">
+        <link:definition>2407404 - Disclosure - Goodwill And Acquired Intangibles (Schedule Of Finite-Lived Intangible Assets) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillAndAcquiredIntangiblesScheduleOfFiniteLivedIntangibleAssetsFutureAmortizationExpenseDetails" roleURI="http://www.boeing.com/role/GoodwillAndAcquiredIntangiblesScheduleOfFiniteLivedIntangibleAssetsFutureAmortizationExpenseDetails">
+        <link:definition>2407405 - Disclosure - Goodwill And Acquired Intangibles (Schedule of Finite-Lived Intangible Assets, Future Amortization Expense) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillAndAcquiredIntangiblesScheduleOfGoodwillByReportableSegmentDetails" roleURI="http://www.boeing.com/role/GoodwillAndAcquiredIntangiblesScheduleOfGoodwillByReportableSegmentDetails">
+        <link:definition>2407403 - Disclosure - Goodwill And Acquired Intangibles (Schedule Of Goodwill By Reportable Segment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="GoodwillAndAcquiredIntangiblesTables" roleURI="http://www.boeing.com/role/GoodwillAndAcquiredIntangiblesTables">
+        <link:definition>2307301 - Disclosure - Goodwill And Acquired Intangibles (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ImpactOfAdoptionOfNewStandardsDetails" roleURI="http://www.boeing.com/role/ImpactOfAdoptionOfNewStandardsDetails">
+        <link:definition>2405402 - Disclosure - Impact of Adoption of New Standards (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ImpactOfAdoptionOfNewStandardsNotes" roleURI="http://www.boeing.com/role/ImpactOfAdoptionOfNewStandardsNotes">
+        <link:definition>2105100 - Disclosure - Impact of Adoption of New Standards (Notes)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ImpactOfAdoptionOfNewStandardsTables" roleURI="http://www.boeing.com/role/ImpactOfAdoptionOfNewStandardsTables">
+        <link:definition>2305301 - Disclosure - Impact of Adoption of New Standards (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxes" roleURI="http://www.boeing.com/role/IncomeTaxes">
+        <link:definition>2109100 - Disclosure - Income Taxes</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesComponentsOfEarningsBeforeIncomeTaxesBetweenDomesticAndForeignJurisdictionsDetails" roleURI="http://www.boeing.com/role/IncomeTaxesComponentsOfEarningsBeforeIncomeTaxesBetweenDomesticAndForeignJurisdictionsDetails">
+        <link:definition>2409403 - Disclosure - Income Taxes (Components of Earnings Before Income Taxes Between Domestic and Foreign Jurisdictions) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesNarrativeDetails" roleURI="http://www.boeing.com/role/IncomeTaxesNarrativeDetails">
+        <link:definition>2409402 - Disclosure - Income Taxes (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesNetDeferredTaxAssetsAndLiabilitiesDetails" roleURI="http://www.boeing.com/role/IncomeTaxesNetDeferredTaxAssetsAndLiabilitiesDetails">
+        <link:definition>2409407 - Disclosure - Income Taxes (Net Deferred Tax Assets and Liabilities) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleOfIncomeTaxExpenseBenefitDetails" roleURI="http://www.boeing.com/role/IncomeTaxesScheduleOfIncomeTaxExpenseBenefitDetails">
+        <link:definition>2409404 - Disclosure - Income Taxes (Schedule Of Income Tax Expense/(Benefit)) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleOfReconciliationOfUSFederalStatutoryTaxRateToOurEffectiveIncomeTaxRateDetails" roleURI="http://www.boeing.com/role/IncomeTaxesScheduleOfReconciliationOfUSFederalStatutoryTaxRateToOurEffectiveIncomeTaxRateDetails">
+        <link:definition>2409405 - Disclosure - Income Taxes (Schedule Of Reconciliation Of U.S. Federal Statutory Tax Rate To Our Effective Income Tax Rate) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleOfReconciliationOfUSFederalStatutoryTaxRateToOurEffectiveIncomeTaxRateDetailsCalc2" roleURI="http://www.boeing.com/role/IncomeTaxesScheduleOfReconciliationOfUSFederalStatutoryTaxRateToOurEffectiveIncomeTaxRateDetailsCalc2">
+        <link:definition>2409405 - Disclosure - Income Taxes (Schedule Of Reconciliation Of U.S. Federal Statutory Tax Rate To Our Effective Income Tax Rate) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesScheduleOfUnrecognizedTaxBenefitsRollForwardDetails" roleURI="http://www.boeing.com/role/IncomeTaxesScheduleOfUnrecognizedTaxBenefitsRollForwardDetails">
+        <link:definition>2409408 - Disclosure - Income Taxes (Schedule of Unrecognized Tax Benefits Roll Forward) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesSignificantComponentsOfDeferredTaxAssetsNetOfDeferredTaxLiabilitiesDetails" roleURI="http://www.boeing.com/role/IncomeTaxesSignificantComponentsOfDeferredTaxAssetsNetOfDeferredTaxLiabilitiesDetails">
+        <link:definition>2409406 - Disclosure - Income Taxes (Significant Components Of Deferred Tax Assets Net Of Deferred Tax Liabilities) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="IncomeTaxesTables" roleURI="http://www.boeing.com/role/IncomeTaxesTables">
+        <link:definition>2309301 - Disclosure - Income Taxes (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Inventories" roleURI="http://www.boeing.com/role/Inventories">
+        <link:definition>2111100 - Disclosure - Inventories</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesInventoryDisclosureTableDetails" roleURI="http://www.boeing.com/role/InventoriesInventoryDisclosureTableDetails">
+        <link:definition>2411403 - Disclosure - Inventories (Inventory Disclosure Table) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesNarrativeDetails" roleURI="http://www.boeing.com/role/InventoriesNarrativeDetails">
+        <link:definition>2411402 - Disclosure - Inventories (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InventoriesTables" roleURI="http://www.boeing.com/role/InventoriesTables">
+        <link:definition>2311301 - Disclosure - Inventories (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Investments" roleURI="http://www.boeing.com/role/Investments">
+        <link:definition>2115100 - Disclosure - Investments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsScheduleOfInvestmentsDetails" roleURI="http://www.boeing.com/role/InvestmentsScheduleOfInvestmentsDetails">
+        <link:definition>2415402 - Disclosure - Investments (Schedule Of Investments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsScheduleOfOwnershipPercentagesAndBalancesOfEquityMethodInvestmentsDetails" roleURI="http://www.boeing.com/role/InvestmentsScheduleOfOwnershipPercentagesAndBalancesOfEquityMethodInvestmentsDetails">
+        <link:definition>2415403 - Disclosure - Investments (Schedule Of Ownership Percentages And Balances Of Equity Method Investments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsTables" roleURI="http://www.boeing.com/role/InvestmentsTables">
+        <link:definition>2315301 - Disclosure - Investments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLeases" roleURI="http://www.boeing.com/role/LeasesLeases">
+        <link:definition>2117100 - Disclosure - Leases Leases</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLeasesNarrativeDetails" roleURI="http://www.boeing.com/role/LeasesLeasesNarrativeDetails">
+        <link:definition>2417402 - Disclosure - Leases Leases (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLeasesTables" roleURI="http://www.boeing.com/role/LeasesLeasesTables">
+        <link:definition>2317301 - Disclosure - Leases Leases (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesScheduleOfMaturitiesOfOperatingLiabilitiesDetails" roleURI="http://www.boeing.com/role/LeasesScheduleOfMaturitiesOfOperatingLiabilitiesDetails">
+        <link:definition>2417404 - Disclosure - Leases Schedule Of Maturities Of Operating Liabilities (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesScheduleOfPaymentsDueUnderOperatingLeasesNetOfSubleaseAmountsAndNonCancellableFutureRentalsDetails" roleURI="http://www.boeing.com/role/LeasesScheduleOfPaymentsDueUnderOperatingLeasesNetOfSubleaseAmountsAndNonCancellableFutureRentalsDetails">
+        <link:definition>2417405 - Disclosure - Leases Schedule of Payments due under operating leases net of sublease amounts and non-cancellable future rentals (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesScheduleOfSupplementalBalanceSheetInformationRelatedToOperatingLeasesDetails" roleURI="http://www.boeing.com/role/LeasesScheduleOfSupplementalBalanceSheetInformationRelatedToOperatingLeasesDetails">
+        <link:definition>2417403 - Disclosure - Leases Schedule Of Supplemental Balance Sheet Information Related To Operating Leases (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LegalProceedings" roleURI="http://www.boeing.com/role/LegalProceedings">
+        <link:definition>2128100 - Disclosure - Legal Proceedings</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LegalProceedingsLegalProceedingsDetails" roleURI="http://www.boeing.com/role/LegalProceedingsLegalProceedingsDetails">
+        <link:definition>2428401 - Disclosure - Legal Proceedings Legal Proceedings (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingencies" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingencies">
+        <link:definition>2118100 - Disclosure - Liabilities, Commitments And Contingencies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesEnvironmentalRemediationPolicies" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesEnvironmentalRemediationPolicies">
+        <link:definition>2218201 - Disclosure - Liabilities, Commitments And Contingencies Environmental Remediation (Policies)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesLiabilitiesCommitmentsAndContingenciesScheduleOf737MaxLiabilityDetails" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesLiabilitiesCommitmentsAndContingenciesScheduleOf737MaxLiabilityDetails">
+        <link:definition>2418405 - Disclosure - Liabilities, Commitments And Contingencies Liabilities, Commitments, and Contingencies (Schedule of 737 MAX Liability) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesNarrativeDetails" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesNarrativeDetails">
+        <link:definition>2418403 - Disclosure - Liabilities, Commitments And Contingencies (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesScheduleOfAccruedLiabilitiesDetails" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesScheduleOfAccruedLiabilitiesDetails">
+        <link:definition>2418404 - Disclosure - Liabilities, Commitments And Contingencies (Schedule Of Accrued Liabilities) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesScheduleOfEnvironmentalRemediationActivityDetails" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesScheduleOfEnvironmentalRemediationActivityDetails">
+        <link:definition>2418406 - Disclosure - Liabilities, Commitments And Contingencies (Schedule Of Environmental Remediation Activity) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesScheduleOfEstimatedPotentialFundingDatesForFinancingCommitmentsDetails" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesScheduleOfEstimatedPotentialFundingDatesForFinancingCommitmentsDetails">
+        <link:definition>2418408 - Disclosure - Liabilities, Commitments And Contingencies (Schedule Of Estimated Potential Funding Dates For Financing Commitments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesScheduleOfProductWarrantyActivityDetails" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesScheduleOfProductWarrantyActivityDetails">
+        <link:definition>2418407 - Disclosure - Liabilities, Commitments And Contingencies (Schedule Of Product Warranty Activity) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LiabilitiesCommitmentsAndContingenciesTables" roleURI="http://www.boeing.com/role/LiabilitiesCommitmentsAndContingenciesTables">
+        <link:definition>2318302 - Disclosure - Liabilities, Commitments And Contingencies (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OtherAssets" roleURI="http://www.boeing.com/role/OtherAssets">
+        <link:definition>2116100 - Disclosure - Other Assets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OtherAssetsDetails" roleURI="http://www.boeing.com/role/OtherAssetsDetails">
+        <link:definition>2416401 - Disclosure - Other Assets (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlans" roleURI="http://www.boeing.com/role/PostretirementPlans">
+        <link:definition>2121100 - Disclosure - Postretirement Plans</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansComponentsOfNetPeriodicBenefitCostDetails" roleURI="http://www.boeing.com/role/PostretirementPlansComponentsOfNetPeriodicBenefitCostDetails">
+        <link:definition>2421403 - Disclosure - Postretirement Plans (Components Of Net Periodic Benefit Cost) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansNarrativeDetails" roleURI="http://www.boeing.com/role/PostretirementPlansNarrativeDetails">
+        <link:definition>2421402 - Disclosure - Postretirement Plans (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansReconciliationOfLevel3AssetsHeldDetails" roleURI="http://www.boeing.com/role/PostretirementPlansReconciliationOfLevel3AssetsHeldDetails">
+        <link:definition>2421411 - Disclosure - Postretirement Plans (Reconciliation Of Level 3 Assets Held) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfActualAllocationsForPensionAssetsAndTargetAllocationsByAssetClassDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfActualAllocationsForPensionAssetsAndTargetAllocationsByAssetClassDetails">
+        <link:definition>2421409 - Disclosure - Postretirement Plans (Schedule Of Actual Allocations For The Pension Assets And Target Allocations By Asset Class) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfAllocationOfPlanAssetsDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfAllocationOfPlanAssetsDetails">
+        <link:definition>2421410 - Disclosure - Postretirement Plans (Schedule Of Allocation of Plan Assets) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfAmountsRecognizedInAccumulatedOtherComprehensiveLossDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfAmountsRecognizedInAccumulatedOtherComprehensiveLossDetails">
+        <link:definition>2421405 - Disclosure - Postretirement Plans (Schedule Of Amounts Recognized In Accumulated Other Comprehensive Loss) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfAssumedHealthCareCostTrendRatesDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfAssumedHealthCareCostTrendRatesDetails">
+        <link:definition>2421408 - Disclosure - Postretirement Plans (Schedule Of Assumed Health Care Cost Trend Rates) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfAssumptionsUsedToCalculateBenefitObligationDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfAssumptionsUsedToCalculateBenefitObligationDetails">
+        <link:definition>2421407 - Disclosure - Postretirement Plans (Schedule Of Assumptions Used To Calculate The Benefit Obligation) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfChangesInBenefitObligationPlanAssetsAndFundedStatusOfBothPensionsAndOpbDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfChangesInBenefitObligationPlanAssetsAndFundedStatusOfBothPensionsAndOpbDetails">
+        <link:definition>2421404 - Disclosure - Postretirement Plans (Schedule Of Changes In The Benefit Obligation, Plan Assets And Funded Status Of Both Pensions And OPB) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfEstimatedFutureBenefitPaymentsDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfEstimatedFutureBenefitPaymentsDetails">
+        <link:definition>2421412 - Disclosure - Postretirement Plans (Schedule Of Estimated Future Benefit Payments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansScheduleOfKeyInformationForAllPlansWithAboInExcessOfPlanAssetsDetails" roleURI="http://www.boeing.com/role/PostretirementPlansScheduleOfKeyInformationForAllPlansWithAboInExcessOfPlanAssetsDetails">
+        <link:definition>2421406 - Disclosure - Postretirement Plans (Schedule Of Key Information For All Plans With ABO In Excess Of Plan Assets) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PostretirementPlansTables" roleURI="http://www.boeing.com/role/PostretirementPlansTables">
+        <link:definition>2321301 - Disclosure - Postretirement Plans (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantAndEquipment" roleURI="http://www.boeing.com/role/PropertyPlantAndEquipment">
+        <link:definition>2114100 - Disclosure - Property, Plant And Equipment</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantAndEquipmentNarrativeDetails" roleURI="http://www.boeing.com/role/PropertyPlantAndEquipmentNarrativeDetails">
+        <link:definition>2414402 - Disclosure - Property, Plant And Equipment (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantAndEquipmentPaymentsDueUnderOperatingAndCapitalLeasesNetOfSubleaseAmountsAndNonCancellableFutureRentalsDetails" roleURI="http://www.boeing.com/role/PropertyPlantAndEquipmentPaymentsDueUnderOperatingAndCapitalLeasesNetOfSubleaseAmountsAndNonCancellableFutureRentalsDetails">
+        <link:definition>2414404 - Disclosure - Property, Plant And Equipment (Payments Due Under Operating And Capital Leases Net Of Sublease Amounts And Non-Cancellable Future Rentals) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantAndEquipmentScheduleOfPropertyPlantAndEquipmentDetails" roleURI="http://www.boeing.com/role/PropertyPlantAndEquipmentScheduleOfPropertyPlantAndEquipmentDetails">
+        <link:definition>2414403 - Disclosure - Property, Plant And Equipment (Schedule Of Property, Plant And Equipment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PropertyPlantAndEquipmentTables" roleURI="http://www.boeing.com/role/PropertyPlantAndEquipmentTables">
+        <link:definition>2314301 - Disclosure - Property, Plant And Equipment (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="QuarterlyFinancialData" roleURI="http://www.boeing.com/role/QuarterlyFinancialData">
+        <link:definition>2130100 - Disclosure - Quarterly Financial Data</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="QuarterlyFinancialDataNarrativeDetails" roleURI="http://www.boeing.com/role/QuarterlyFinancialDataNarrativeDetails">
+        <link:definition>2430402 - Disclosure - Quarterly Financial Data (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="QuarterlyFinancialDataScheduleOfQuarterlyFinancialDataDetails" roleURI="http://www.boeing.com/role/QuarterlyFinancialDataScheduleOfQuarterlyFinancialDataDetails">
+        <link:definition>2430403 - Disclosure - Quarterly Financial Data (Schedule Of Quarterly Financial Data) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="QuarterlyFinancialDataTables" roleURI="http://www.boeing.com/role/QuarterlyFinancialDataTables">
+        <link:definition>2330301 - Disclosure - Quarterly Financial Data (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformation" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformation">
+        <link:definition>2129100 - Disclosure - Segment and Revenue Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationNarrativeDetails" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationNarrativeDetails">
+        <link:definition>2429402 - Disclosure - Segment  and Revenue Information (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationReconciliationOfAssetsFromSegmentToConsolidatedDetails" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationReconciliationOfAssetsFromSegmentToConsolidatedDetails">
+        <link:definition>2429408 - Disclosure - Segment and Revenue Information (Reconciliation of Assets from Segment to Consolidated) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationScheduleOfCapitalExpendituresBySegmentDetails" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationScheduleOfCapitalExpendituresBySegmentDetails">
+        <link:definition>2429406 - Disclosure - Segment and Revenue Information (Schedule Of Capital Expenditures By Segment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationScheduleOfDepreciationAndAmortizationExpenseBySegmentDetails" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationScheduleOfDepreciationAndAmortizationExpenseBySegmentDetails">
+        <link:definition>2429405 - Disclosure - Segment and Revenue Information (Schedule Of Depreciation And Amortization Expense By Segment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationScheduleOfRevenueFromExternalCustomersAttributedToForeignCountriesByGeographicAreaDetails" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationScheduleOfRevenueFromExternalCustomersAttributedToForeignCountriesByGeographicAreaDetails">
+        <link:definition>2429403 - Disclosure - Segment and Revenue Information (Schedule Of Revenue from External Customers Attributed to Foreign Countries by Geographic Area) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationScheduleOfUnallocatedItemsAndEliminationsDetails" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationScheduleOfUnallocatedItemsAndEliminationsDetails">
+        <link:definition>2429407 - Disclosure - Segment and Revenue Information (Schedule Of Unallocated Items and Eliminations) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationSegmentAndRevenueInformationScheduleOfRevenueDisaggregationDetails" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationSegmentAndRevenueInformationScheduleOfRevenueDisaggregationDetails">
+        <link:definition>2429404 - Disclosure - Segment and Revenue Information Segment and Revenue Information (Schedule of Revenue Disaggregation) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentAndRevenueInformationTables" roleURI="http://www.boeing.com/role/SegmentAndRevenueInformationTables">
+        <link:definition>2329301 - Disclosure - Segment and Revenue Information (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangements" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangements">
+        <link:definition>2122100 - Disclosure - Share-Based Compensation And Other Compensation Arrangements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangementsNarrativeDetails" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangementsNarrativeDetails">
+        <link:definition>2422402 - Disclosure - Share-Based Compensation And Other Compensation Arrangements (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfAssumptionsUsedForFairValueOfStockOptionsGrantedDetails" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfAssumptionsUsedForFairValueOfStockOptionsGrantedDetails">
+        <link:definition>2422405 - Disclosure - Share-Based Compensation And Other Compensation Arrangements (Schedule Of Assumptions Used For Fair Value Of Stock Options Granted) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfPbrsusGrantFairValuesDetails" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfPbrsusGrantFairValuesDetails">
+        <link:definition>2422406 - Disclosure - Share-Based Compensation And Other Compensation Arrangements Schedule of PBRSUs Grant Fair Values (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfShareBasedPlansExpenseAndRelatedIncomeTaxBenefitDetails" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfShareBasedPlansExpenseAndRelatedIncomeTaxBenefitDetails">
+        <link:definition>2422403 - Disclosure - Share-Based Compensation And Other Compensation Arrangements (Schedule Of Share-Based Plans Expense And Related Income Tax Benefit) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfStockOptionActivityDetails" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfStockOptionActivityDetails">
+        <link:definition>2422404 - Disclosure - Share-Based Compensation And Other Compensation Arrangements (Schedule Of Stock Option Activity) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfStockUnitActivityDetails" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangementsScheduleOfStockUnitActivityDetails">
+        <link:definition>2422407 - Disclosure - Share-Based Compensation And Other Compensation Arrangements (Schedule Of Stock Unit Activity) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareBasedCompensationAndOtherCompensationArrangementsTables" roleURI="http://www.boeing.com/role/ShareBasedCompensationAndOtherCompensationArrangementsTables">
+        <link:definition>2322301 - Disclosure - Share-Based Compensation And Other Compensation Arrangements (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareholdersEquity" roleURI="http://www.boeing.com/role/ShareholdersEquity">
+        <link:definition>2123100 - Disclosure - Shareholders' Equity</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareholdersEquityAccumulatedOtherComprehensiveIncomeDetails" roleURI="http://www.boeing.com/role/ShareholdersEquityAccumulatedOtherComprehensiveIncomeDetails">
+        <link:definition>2423404 - Disclosure - Shareholders' Equity (Accumulated other comprehensive income) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareholdersEquityNarrativeDetails" roleURI="http://www.boeing.com/role/ShareholdersEquityNarrativeDetails">
+        <link:definition>2423402 - Disclosure - Shareholders' Equity (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareholdersEquityScheduleOfChangesInEachClassOfSharesDetails" roleURI="http://www.boeing.com/role/ShareholdersEquityScheduleOfChangesInEachClassOfSharesDetails">
+        <link:definition>2423403 - Disclosure - Shareholders' Equity (Schedule Of Changes In Each Class Of Shares) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ShareholdersEquityTables" roleURI="http://www.boeing.com/role/ShareholdersEquityTables">
+        <link:definition>2323301 - Disclosure - Shareholders' Equity (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfBusinessSegmentData" roleURI="http://www.boeing.com/role/SummaryOfBusinessSegmentData">
+        <link:definition>2101100 - Disclosure - Summary of Business Segment Data</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfBusinessSegmentDataDetails" roleURI="http://www.boeing.com/role/SummaryOfBusinessSegmentDataDetails">
+        <link:definition>2401402 - Disclosure - Summary Of Business Segment Data (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfBusinessSegmentDataTables" roleURI="http://www.boeing.com/role/SummaryOfBusinessSegmentDataTables">
+        <link:definition>2301301 - Disclosure - Summary of Business Segment Data (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfSignificantAccountingPolicies" roleURI="http://www.boeing.com/role/SummaryOfSignificantAccountingPolicies">
+        <link:definition>2102100 - Disclosure - Summary Of Significant Accounting Policies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfSignificantAccountingPoliciesNarrativeDetails" roleURI="http://www.boeing.com/role/SummaryOfSignificantAccountingPoliciesNarrativeDetails">
+        <link:definition>2402402 - Disclosure - Summary Of Significant Accounting Policies (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfSignificantAccountingPoliciesPolicy" roleURI="http://www.boeing.com/role/SummaryOfSignificantAccountingPoliciesPolicy">
+        <link:definition>2202203 - Disclosure - Summary Of Significant Accounting Policies (Policy)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SummaryOfSignificantAccountingPoliciesSummaryOfSignificantAccountingPoliciesTables" roleURI="http://www.boeing.com/role/SummaryOfSignificantAccountingPoliciesSummaryOfSignificantAccountingPoliciesTables">
+        <link:definition>2302301 - Disclosure - Summary Of Significant Accounting Policies Summary Of Significant Accounting Policies (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:element abstract="true" id="ba_A1.654.88duethrough2048Member" name="A1.654.88duethrough2048Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2016PBRSUMember" name="A2016PBRSUMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2017PBRSUMember" name="A2017PBRSUMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2017PerformanceAwardsMember" name="A2017PerformanceAwardsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2018PBRSUMember" name="A2018PBRSUMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2018PerformanceAwardMemberMember" name="A2018PerformanceAwardMemberMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2018ProgramMember" name="A2018ProgramMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2018performanceawardsMember" name="A2018performanceawardsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2019PBRSUMember" name="A2019PBRSUMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A2019performanceawardsMember" name="A2019performanceawardsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A5.806.88duethrough2043Member" name="A5.806.88duethrough2043Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A6.987.38notesduethrough2021Member" name="A6.987.38notesduethrough2021Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A7.258.75duethrough2043Member" name="A7.258.75duethrough2043Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_A737MAXcustomerconcessionsandotherconsiderationsliability" name="A737MAXcustomerconcessionsandotherconsiderationsliability" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_A737MAXcustomerconcessionsandotherconsiderationsliabilityTableTextBlock" name="A737MAXcustomerconcessionsandotherconsiderationsliabilityTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_A737MAXstoragepilottrainingandsoftwareupdatesDomain" name="A737MAXstoragepilottrainingandsoftwareupdatesDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_AbnormalProductioncost." name="AbnormalProductioncost." nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_Accrualfor737MAXcustomerconcessionsandotherconsiderationsliability" name="Accrualfor737MAXcustomerconcessionsandotherconsiderationsliability" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_AcquiredFiniteLivedIntangiblesNonCashInvestingAndFinancingTransactions" name="AcquiredFiniteLivedIntangiblesNonCashInvestingAndFinancingTransactions" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AcquisitionsandJointVenturesAbstract" name="AcquisitionsandJointVenturesAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AcquisitionsandJointVenturesDisclosureAbstract" name="AcquisitionsandJointVenturesDisclosureAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_Additionalexpensesasaresultofthe737MAXgrounding" name="Additionalexpensesasaresultofthe737MAXgrounding" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AdjustmentsAxis" name="AdjustmentsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AdjustmentsDomain" name="AdjustmentsDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AircraftConditionAdjustmentsMember" name="AircraftConditionAdjustmentsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_AircraftProgramCostsIncrease" name="AircraftProgramCostsIncrease" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_AircraftValuationPolicyTextBlock" name="AircraftValuationPolicyTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AircraftValuePublicationsMember" name="AircraftValuePublicationsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AirplaneProgram737Member" name="AirplaneProgram737Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AirplaneProgram777xMember" name="AirplaneProgram777xMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AirplaneProgram787Member" name="AirplaneProgram787Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_Allocationofdepreciationandamortizationfromcentrallymanagedassetstotheprimarybusinesssegmentsbasedonusageandoccupancy" name="Allocationofdepreciationandamortizationfromcentrallymanagedassetstotheprimarybusinesssegmentsbasedonusageandoccupancy" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_Amountpayableatendofthreeyearperformanceperiod3" name="Amountpayableatendofthreeyearperformanceperiod3" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AmountsReceivableMember" name="AmountsReceivableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AsiaOtherThanChinaMember" name="AsiaOtherThanChinaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AssetTypeAxis" name="AssetTypeAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_AssetTypeDomain" name="AssetTypeDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_AvailableforSaleSecuritiesGovernmentAgencies" name="AvailableforSaleSecuritiesGovernmentAgencies" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_AwardPayoutRange" name="AwardPayoutRange" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_B737NGStructurePickleforkMember" name="B737NGStructurePickleforkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_B747400aircraftMember" name="B747400aircraftMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_B7478Member" name="B7478Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_BBBCreditRatingMember" name="BBBCreditRatingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_BBCreditRatingMember" name="BBCreditRatingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_BCreditRatingMember" name="BCreditRatingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_BidAndProposalCostsMember" name="BidAndProposalCostsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_BoeingCapitalCorporationMember" name="BoeingCapitalCorporationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_BoeingDefenseSpaceSecuritySegmentMember" name="BoeingDefenseSpaceSecuritySegmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CCCCreditRatingMember" name="CCCCreditRatingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CapitalizedPrecontractCostsMember" name="CapitalizedPrecontractCostsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CashOnHandMember" name="CashOnHandMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ChangeInEarningsPerShareDueToChangeInAccountingEstimate" name="ChangeInEarningsPerShareDueToChangeInAccountingEstimate" nillable="true" substitutionGroup="xbrli:item" type="num:perShareItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAircraftCommitmentsAxis" name="CommercialAircraftCommitmentsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAircraftCommitmentsDomain" name="CommercialAircraftCommitmentsDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAircraftCommitmentsMember" name="CommercialAircraftCommitmentsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAircraftProgramsAxis" name="CommercialAircraftProgramsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAircraftProgramsDomain" name="CommercialAircraftProgramsDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAirplanesAccountsReceivableMember" name="CommercialAirplanesAccountsReceivableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAirplanesDefenseSpaceSecurityandGlobalServicesMember" name="CommercialAirplanesDefenseSpaceSecurityandGlobalServicesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialAirplanesSegmentMember" name="CommercialAirplanesSegmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialCrewMember" name="CommercialCrewMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommercialCustomersMember" name="CommercialCustomersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommitmentTypeAxis" name="CommitmentTypeAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommitmentTypeDomain" name="CommitmentTypeDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommodityContractsAxis" name="CommodityContractsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommodityContractsDomain" name="CommodityContractsDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CommonOrCollectiveOrPooledFundsMember" name="CommonOrCollectiveOrPooledFundsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ComponentsOfDeferredTaxAssetsNetOfDeferredTaxLiabilitiesTableTextBlock" name="ComponentsOfDeferredTaxAssetsNetOfDeferredTaxLiabilitiesTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ComponentsOfInvestmentInSalesTypeOrFinanceLeasesTableTextBlock" name="ComponentsOfInvestmentInSalesTypeOrFinanceLeasesTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_Concessionsandotherinkindconsiderationtocustomers" name="Concessionsandotherinkindconsiderationtocustomers" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ContingentRepurchaseCommitmentMember" name="ContingentRepurchaseCommitmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ContractPricingMember" name="ContractPricingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ContractValue" name="ContractValue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_ContractswithCustomersAbstract" name="ContractswithCustomersAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ContractwithCustomerAssetandClaimsTableTextBlock" name="ContractwithCustomerAssetandClaimsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ContributedDeltaLaunchInventoryMember" name="ContributedDeltaLaunchInventoryMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ControllingInterestOwnershipPercentageAfterAcquisition" name="ControllingInterestOwnershipPercentageAfterAcquisition" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CorporatedebtsecuritiesandotherMember" name="CorporatedebtsecuritiesandotherMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CreditFacilityTermAxis" name="CreditFacilityTermAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CreditFacilityTermDomain" name="CreditFacilityTermDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CustomerConcessionsMember" name="CustomerConcessionsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CustomerFinancingAbstract" name="CustomerFinancingAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_CustomerFinancingAssetImpairmentChargesTableTextBlock" name="CustomerFinancingAssetImpairmentChargesTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_CustomerFinancingBalance" name="CustomerFinancingBalance" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_CustomerFinancingCurrent" name="CustomerFinancingCurrent" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_CustomerFinancingLeaseReceivableMaturityTableTextBlock" name="CustomerFinancingLeaseReceivableMaturityTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CustomerFinancingLineItems" name="CustomerFinancingLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_CustomerFinancingMember" name="CustomerFinancingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_CustomerFinancingNoncurrent" name="CustomerFinancingNoncurrent" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_CustomerFinancingTable" name="CustomerFinancingTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_CustomerFinancingTextBlock" name="CustomerFinancingTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DefenseSpaceSecurityAccountsReceivableMember" name="DefenseSpaceSecurityAccountsReceivableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DeferredSupportAndProductionCostsMember" name="DeferredSupportAndProductionCostsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DeferredSupportCostsMember" name="DeferredSupportCostsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_DeferredTaxAssets737MAXcustomerconsiderations" name="DeferredTaxAssets737MAXcustomerconsiderations" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DeferredTaxAssetsOperatingLossTaxCreditandCapitalLossCarryforwardsNotSubjecttoExpiration" name="DeferredTaxAssetsOperatingLossTaxCreditandCapitalLossCarryforwardsNotSubjecttoExpiration" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DeferredTaxAssetsOperatingLossTaxCreditandCapitalLossCarryforwardsSubjecttoExpiration" name="DeferredTaxAssetsOperatingLossTaxCreditandCapitalLossCarryforwardsSubjecttoExpiration" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DeferredTaxLiabilitiesPropertyPlantandEquipmentIntangibleAssetsandGoodwillNetofValuationAllowance" name="DeferredTaxLiabilitiesPropertyPlantandEquipmentIntangibleAssetsandGoodwillNetofValuationAllowance" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_DeferredproductioncostsMember" name="DeferredproductioncostsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostInterestCreditingRatesForCashBalancePlans" name="DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostInterestCreditingRatesForCashBalancePlans" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DefinedBenefitPlanByPlanAssetCategoriesSecondaryAxis" name="DefinedBenefitPlanByPlanAssetCategoriesSecondaryAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearFive1" name="DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearFive1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearFour1" name="DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearFour1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearOne" name="DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearOne" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearThereafter1" name="DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearThereafter1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearThree1" name="DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearThree1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearTwo1" name="DefinedBenefitPlanExpectedFutureGrossBenefitPaymentsInYearTwo1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DefinedBenefitPlanPlanAssetsMeasuredatNetAssetValue" name="DefinedBenefitPlanPlanAssetsMeasuredatNetAssetValue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_DefinedBenefitPlanSettlementCurtailmentDispositions1" name="DefinedBenefitPlanSettlementCurtailmentDispositions1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DefinedbenefitplanbyplanassetcategoriessecondaryDomain" name="DefinedbenefitplanbyplanassetcategoriessecondaryDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DerivativeAssetsMember" name="DerivativeAssetsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DerivativeLiabilitiesMember" name="DerivativeLiabilitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_DerivativeNotionalAmountForEquityAndCurrencyOverlayAsPercentageOfTotalPlanAssets" name="DerivativeNotionalAmountForEquityAndCurrencyOverlayAsPercentageOfTotalPlanAssets" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_DerivativeNotionalAmountForFixedIncomeAsPercentageOfTotalPlanAssets" name="DerivativeNotionalAmountForFixedIncomeAsPercentageOfTotalPlanAssets" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_DilutedWeightedAverageSharesOutstanding" name="DilutedWeightedAverageSharesOutstanding" nillable="true" substitutionGroup="xbrli:item" type="xbrli:sharesItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DocumentAndEntityInformationAbstract" name="DocumentAndEntityInformationAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_DueThroughTwoThousandThirtyfourMember" name="DueThroughTwoThousandThirtyfourMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_EarlyIssueSalesConsiderationMember" name="EarlyIssueSalesConsiderationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_EffectiveIncomeTaxRateReconciliationImpactoftaxreformlegislationAmount" name="EffectiveIncomeTaxRateReconciliationImpactoftaxreformlegislationAmount" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_Eliminationsandotherunallocateditems" name="Eliminationsandotherunallocateditems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_EstimatedProceedsfromCollateralorRecourse1" name="EstimatedProceedsfromCollateralorRecourse1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_ExternalCustomersMember" name="ExternalCustomersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_FASCASServiceCostAdjustment" name="FASCASServiceCostAdjustment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_FairValueOfAssetsAndLiabilitiesMeasuredOnNonrecurringBasisValuationTechniquesMedian" name="FairValueOfAssetsAndLiabilitiesMeasuredOnNonrecurringBasisValuationTechniquesMedian" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_FinancingCommitmentMember" name="FinancingCommitmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_FinancingCommitmentsTable" name="FinancingCommitmentsTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_FiscalYearAxis" name="FiscalYearAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_FiscalYearDomain" name="FiscalYearDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_FiveYearCreditFacilityMember" name="FiveYearCreditFacilityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_FiveYearExpirationMember" name="FiveYearExpirationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_FleetSupportPolicyTextBlock" name="FleetSupportPolicyTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ForeignexchangecontractsAxis" name="ForeignexchangecontractsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ForeignexchangecontractsDomain" name="ForeignexchangecontractsDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_FundingSourceAxis" name="FundingSourceAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_FundingSourceDomain" name="FundingSourceDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_GlobalServicesAccountsReceivableMember" name="GlobalServicesAccountsReceivableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_GlobalServicesMember" name="GlobalServicesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_GovernmentCustomersMember" name="GovernmentCustomersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_GrossCustomerFinancingAssets" name="GrossCustomerFinancingAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_ImpairedFinancingReceivablesAxis" name="ImpairedFinancingReceivablesAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ImpairedFinancingReceivablesDomain" name="ImpairedFinancingReceivablesDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_IncentiveProgramPerformanceBasedRestrictedStockUnitsMember" name="IncentiveProgramPerformanceBasedRestrictedStockUnitsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_IncentiveProgramRestrictedStockUnitsMember" name="IncentiveProgramRestrictedStockUnitsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_IncomeLossfromInvestments" name="IncomeLossfromInvestments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_IncreaseDecreaseinEarningsfromoperationsduetochangeinaccountingestimate." name="IncreaseDecreaseinEarningsfromoperationsduetochangeinaccountingestimate." nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_IncreaseDecreaseinRevenueduetochangeinaccountingestimate" name="IncreaseDecreaseinRevenueduetochangeinaccountingestimate" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_IncreaseOrDecreaseinCustomerFinancing1" name="IncreaseOrDecreaseinCustomerFinancing1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_IndefiniteLivedResearchandDevelopment" name="IndefiniteLivedResearchandDevelopment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_InitialPBRSUvaluepercentageofvalueitcannotexceed" name="InitialPBRSUvaluepercentageofvalueitcannotexceed" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element id="ba_InitialValueOfPerformanceAwards2" name="InitialValueOfPerformanceAwards2" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_InventoriesIncludedInContributedAssets" name="InventoriesIncludedInContributedAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_InventoriesSubjectToInventorySupplyAgreement" name="InventoriesSubjectToInventorySupplyAgreement" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_InventoryCommercialAircraftPrograms" name="InventoryCommercialAircraftPrograms" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_JointVentureContingentTerminationFee" name="JointVentureContingentTerminationFee" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_JointventureMember" name="JointventureMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_KBYuzhnoyeMember" name="KBYuzhnoyeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_KC390Member" name="KC390Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_KC46ATankerMember" name="KC46ATankerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_KLXInc.Member" name="KLXInc.Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_LeaseIncentiveReceivableMember" name="LeaseIncentiveReceivableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_LeasepolicyPolicyTextBlock" name="LeasepolicyPolicyTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_LesseeOperatingLeaseLeaseNotyetCommencedValue" name="LesseeOperatingLeaseLeaseNotyetCommencedValue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="ba_LoansTakenToCoverLifeInsurancePolicy" name="LoansTakenToCoverLifeInsurancePolicy" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_LongTermContractsOrProgramsByCustomerAxis" name="LongTermContractsOrProgramsByCustomerAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_LongTermContractsOrProgramsByCustomerDomain" name="LongTermContractsOrProgramsByCustomerDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_LongTermContractsOrProgramsByTypeAxis" name="LongTermContractsOrProgramsByTypeAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_LongTermContractsOrProgramsByTypeDomain" name="LongTermContractsOrProgramsByTypeDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_MD80AircraftMember" name="MD80AircraftMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_MQ25Member" name="MQ25Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_Marketrelatedvalueofplanassetslessthanfairmarketvalueofassets1" name="Marketrelatedvalueofplanassetslessthanfairmarketvalueofassets1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_MortgagebackedandassetbackedsecuritiesMember" name="MortgagebackedandassetbackedsecuritiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_MortgagebackedassetbackandothersecuritiesMember" name="MortgagebackedassetbackandothersecuritiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_NetAmountsPayableToCustomersRelatedToProbableContractualTradeInCommitmentsMember" name="NetAmountsPayableToCustomersRelatedToProbableContractualTradeInCommitmentsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_NetFairValueOfAssetsMeasuredOnNonrecurringBasisValuationTechniques" name="NetFairValueOfAssetsMeasuredOnNonrecurringBasisValuationTechniques" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_NetIncomeLossAvailableToCommonStockholdersBasicAndDiluted" name="NetIncomeLossAvailableToCommonStockholdersBasicAndDiluted" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_NonUnitedStatesCommonAndPreferredStockMember" name="NonUnitedStatesCommonAndPreferredStockMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_NoncontrollingInterestOwnershipPercentageAfterAcquisition" name="NoncontrollingInterestOwnershipPercentageAfterAcquisition" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_NotesReceivableFuturePaymentsReceivable" name="NotesReceivableFuturePaymentsReceivable" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_NotesReceivableFuturePaymentsReceivableDueInRollingAfterYearFive" name="NotesReceivableFuturePaymentsReceivableDueInRollingAfterYearFive" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_NotesReceivableFuturePaymentsReceivableDueInRollingYearFive" name="NotesReceivableFuturePaymentsReceivableDueInRollingYearFive" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_NotesReceivableFuturePaymentsReceivableDueInRollingYearFour" name="NotesReceivableFuturePaymentsReceivableDueInRollingYearFour" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_NotesReceivableFuturePaymentsReceivableDueInRollingYearThree" name="NotesReceivableFuturePaymentsReceivableDueInRollingYearThree" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_NotesReceivableFuturePaymentsReceivableDueInRollingYearTwo" name="NotesReceivableFuturePaymentsReceivableDueInRollingYearTwo" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_NotesReceivableFuturePaymentsReceivableNextRollingTwelveMonths" name="NotesReceivableFuturePaymentsReceivableNextRollingTwelveMonths" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_NotesReceivableNetRollingMaturityAbstract" name="NotesReceivableNetRollingMaturityAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OceaniaMember" name="OceaniaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_OffsettingCapitalLeaseObligationAndIrbAsset" name="OffsettingCapitalLeaseObligationAndIrbAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="ba_OperatingCycle1PolicyTextBlock" name="OperatingCycle1PolicyTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OperatingIncomeLossBeforeTaxesMember" name="OperatingIncomeLossBeforeTaxesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_OperatingIncomeLossExcludingUnallocatedPensionAndPostretirementAdjustments" name="OperatingIncomeLossExcludingUnallocatedPensionAndPostretirementAdjustments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OperatingLeaseEquipmentAndAssetsHeldForSaleOrReLeaseMember" name="OperatingLeaseEquipmentAndAssetsHeldForSaleOrReLeaseMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherAccountsReceivableMember" name="OtherAccountsReceivableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherAssetsLineItems" name="OtherAssetsLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherBoeingDebtMember" name="OtherBoeingDebtMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherBoeingMember" name="OtherBoeingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_OtherComprehensiveIncomeSettlementsAndCurtailmentsIncludedInNetIncomeNetOfTax" name="OtherComprehensiveIncomeSettlementsAndCurtailmentsIncludedInNetIncomeNetOfTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_OtherComprehensiveIncomeSettlementsAndCurtailmentsIncludedInNetIncomeTax" name="OtherComprehensiveIncomeSettlementsAndCurtailmentsIncludedInNetIncomeTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherDeltaContractsByActivityGivingRiseToPotentialExposureAxis" name="OtherDeltaContractsByActivityGivingRiseToPotentialExposureAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherDeltaContractsByActivityGivingRiseToPotentialExposureDomain" name="OtherDeltaContractsByActivityGivingRiseToPotentialExposureDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherDeltaContractsMember" name="OtherDeltaContractsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherMember" name="OtherMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherRestrictedStockUnitsMember" name="OtherRestrictedStockUnitsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_OtherassetsandAcquiredintangibleassetsMember" name="OtherassetsandAcquiredintangibleassetsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_POYuzhnoyeMashinostroitelnyZavodMember" name="POYuzhnoyeMashinostroitelnyZavodMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_PayablesMember" name="PayablesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_Paymentsmadetocustomers" name="Paymentsmadetocustomers" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_PensionAndPostRetirementBenefitsRelatedToOurEquityMethodInvestmentsTax" name="PensionAndPostRetirementBenefitsRelatedToOurEquityMethodInvestmentsTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_PensionAndPostretirementBenefitsRelatedToEquityMethodInvestmentsNetOfTax" name="PensionAndPostretirementBenefitsRelatedToEquityMethodInvestmentsNetOfTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_PercentageOfCreditDefaultRatesAppliedToCustomers" name="PercentageOfCreditDefaultRatesAppliedToCustomers" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element id="ba_PercentageOfOperatingAssetsLocatedOutsideUnitedStates" name="PercentageOfOperatingAssetsLocatedOutsideUnitedStates" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_PerformanceAwardPayoutAmountAggregate" name="PerformanceAwardPayoutAmountAggregate" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_PerformanceAwardsMember" name="PerformanceAwardsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_PerformanceBasedRestrictedStockUnitsPBRSUsMember" name="PerformanceBasedRestrictedStockUnitsPBRSUsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_PotentialTerminationLiabilitiesMember" name="PotentialTerminationLiabilitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_PotentiallyUnrecoverableCostsUnderContracts" name="PotentiallyUnrecoverableCostsUnderContracts" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ProbablecontractualtradeinvalueMember" name="ProbablecontractualtradeinvalueMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ProductKnowHowMember" name="ProductKnowHowMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ProgramAxis" name="ProgramAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ProgramDomain" name="ProgramDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_Propertyplantandequipmentadditionsnoncash" name="Propertyplantandequipmentadditionsnoncash" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="ba_RangeOfFairValueOfAssetsMeasuredOnNonrecurringBasisValuationTechniques" name="RangeOfFairValueOfAssetsMeasuredOnNonrecurringBasisValuationTechniques" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_RealAssetsMember" name="RealAssetsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_RealEstateAndRealAssetsMember" name="RealEstateAndRealAssetsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ReceivablesRelatedToFormerInvestmentInSeaLaunchVentureAxis" name="ReceivablesRelatedToFormerInvestmentInSeaLaunchVentureAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ReceivablesRelatedToFormerInvestmentInSeaLaunchVentureDomain" name="ReceivablesRelatedToFormerInvestmentInSeaLaunchVentureDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_RecoveredProductionCostsExcessRecoverableUnderExistingFirmOrders" name="RecoveredProductionCostsExcessRecoverableUnderExistingFirmOrders" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_ResearchAndDevelopmentTypeAxis" name="ResearchAndDevelopmentTypeAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ResearchAndDevelopmentTypeDomain" name="ResearchAndDevelopmentTypeDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_RevenueRemainingPerformanceObligationPercentRecognized" name="RevenueRemainingPerformanceObligationPercentRecognized" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element id="ba_RevenuefromContractwithCustomerexcludingassessedtaxPercentage" name="RevenuefromContractwithCustomerexcludingassessedtaxPercentage" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_SPKoroleyRocketAndSpaceCorporationEnergiaMember" name="SPKoroleyRocketAndSpaceCorporationEnergiaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_SalesTypeandDirectFinancingLeasesLeaseIncome" name="SalesTypeandDirectFinancingLeasesLeaseIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="ba_SalestypeDirectFinancingLeasesResidualValueofLeasedAsset" name="SalestypeDirectFinancingLeasesResidualValueofLeasedAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_ScheduleOfAccountingPoliciesTable" name="ScheduleOfAccountingPoliciesTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfActualAllocationsForPensionAssetsAndTargetAllocationsByAssetClassTableTextBlock" name="ScheduleOfActualAllocationsForPensionAssetsAndTargetAllocationsByAssetClassTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfCapitalExpendituresBySegmentTableTextBlock" name="ScheduleOfCapitalExpendituresBySegmentTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfCustomerFinancingCarryingValuesRelatedToMajorAircraftConcentrationsTableTextBlock" name="ScheduleOfCustomerFinancingCarryingValuesRelatedToMajorAircraftConcentrationsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfCustomerFinancingTableTextBlock" name="ScheduleOfCustomerFinancingTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleOfDebtInstrumentsDebtTable" name="ScheduleOfDebtInstrumentsDebtTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfDepreciationAndAmortizationBySegmentTableTextBlock" name="ScheduleOfDepreciationAndAmortizationBySegmentTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfEnvironmentalRemediationActivityTableTextBlock" name="ScheduleOfEnvironmentalRemediationActivityTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfFinancingReceivableBalancesEvaluatedForImpairmentTableTextBlock" name="ScheduleOfFinancingReceivableBalancesEvaluatedForImpairmentTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfFutureMinimumRentalAndLeasePaymentsForOperatingAndCapitalLeasesTableTextBlock" name="ScheduleOfFutureMinimumRentalAndLeasePaymentsForOperatingAndCapitalLeasesTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleOfMaturitiesOfOperatingLeasesAbstract" name="ScheduleOfMaturitiesOfOperatingLeasesAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleOfQuarterlyFinancialInformationLineItems" name="ScheduleOfQuarterlyFinancialInformationLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleOfQuarterlyFinancialInformationTable" name="ScheduleOfQuarterlyFinancialInformationTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleOfSupplementalBalanceSheetInformationRelatedToLeasesTableTextBlock" name="ScheduleOfSupplementalBalanceSheetInformationRelatedToLeasesTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleofContractAssetsandClaimsLineItems" name="ScheduleofContractAssetsandClaimsLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleofContractAssetsandClaimsTable" name="ScheduleofContractAssetsandClaimsTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleofInvestmentsTableTextBlock" name="ScheduleofInvestmentsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleofPerformanceBasedRestrictedStockUnitsAwardGrantFairValuesTableTextBlock" name="ScheduleofPerformanceBasedRestrictedStockUnitsAwardGrantFairValuesTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleofPerformanceBasedRestrictedStockUnitsGrantDateFairvaluesLineItems" name="ScheduleofPerformanceBasedRestrictedStockUnitsGrantDateFairvaluesLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ScheduleofPerformanceBasedRestrictedStockUnitsGrantDateFairvaluesTable" name="ScheduleofPerformanceBasedRestrictedStockUnitsGrantDateFairvaluesTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ScheduleofperformancebasedrestrictedstockunitsawardactivityTableTextBlock" name="ScheduleofperformancebasedrestrictedstockunitsawardactivityTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_SeaLaunchPartnerAxis" name="SeaLaunchPartnerAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_SeaLaunchReceivablesMember" name="SeaLaunchReceivablesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_SegmentandRevenueInformationAbstract" name="SegmentandRevenueInformationAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_SettlementTypeDomain" name="SettlementTypeDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsDividendsInPeriod" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsDividendsInPeriod" nillable="true" substitutionGroup="xbrli:item" type="xbrli:sharesItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_StandardWarrantyOnSales" name="StandardWarrantyOnSales" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_StandardsIssuedNotYetImplementedDisclosureAbstract" name="StandardsIssuedNotYetImplementedDisclosureAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_SummaryOfBusinessSegmentDataTextBlock" name="SummaryOfBusinessSegmentDataTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_SummaryOfSignificantAccountingPoliciesLineItems" name="SummaryOfSignificantAccountingPoliciesLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_SupplierPenaltiesPolicyTextBlock" name="SupplierPenaltiesPolicyTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_T7ARedHawkMember" name="T7ARedHawkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_TaxAdjustmentsandSettlementsAxis" name="TaxAdjustmentsandSettlementsAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_TaxYear20132014Member" name="TaxYear20132014Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreeHundredAndSixtyFourDayRevolvingCreditFacilityMember" name="ThreeHundredAndSixtyFourDayRevolvingCreditFacilityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointEightTwoFivePercentdueonMarch12059Member" name="ThreePointEightTwoFivePercentdueonMarch12059Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointFivePercentdueonMarch12039MemberMember" name="ThreePointFivePercentdueonMarch12039MemberMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointNineFivePercentdueonAugust12059Member" name="ThreePointNineFivePercentdueonAugust12059Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointNinePercentDueMay12049Member" name="ThreePointNinePercentDueMay12049Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointOnePercentDueMay12026Member" name="ThreePointOnePercentDueMay12026Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointSevenFivePercentdueonFebruary12050Member" name="ThreePointSevenFivePercentdueonFebruary12050Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointSixPercentDueMay12034Member" name="ThreePointSixPercentDueMay12034Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointTwoFivePercentdueonFebruary12035Member" name="ThreePointTwoFivePercentdueonFebruary12035Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreePointTwoPercentdueonMarch12029Member" name="ThreePointTwoPercentdueonMarch12029Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreeYearCreditFacilityMember" name="ThreeYearCreditFacilityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ThreeYearExpirationMember" name="ThreeYearExpirationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_TotalFinancingReceivables" name="TotalFinancingReceivables" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_TotalcontractualtradeinvaluemaximumMember" name="TotalcontractualtradeinvaluemaximumMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_TwoPointEightPercentdueonMarch12024Member" name="TwoPointEightPercentdueonMarch12024Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_TwoPointNineFivePercentdueonFebruary12030Member" name="TwoPointNineFivePercentdueonFebruary12030Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_TwoPointSevenPercentdueonFebruary12027Member" name="TwoPointSevenPercentdueonFebruary12027Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_TwoPointSevenPercentdueonMay12022Member" name="TwoPointSevenPercentdueonMay12022Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_TwoPointThreePercentdueonAugust12021Member" name="TwoPointThreePercentdueonAugust12021Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_USGovernmentContractsMember" name="USGovernmentContractsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_UlaMember" name="UlaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_UnallocateditemseliminationsandotherMember" name="UnallocateditemseliminationsandotherMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="ba_UnamortizedTooling" name="UnamortizedTooling" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="ba_UnitedLaunchAllianceMember" name="UnitedLaunchAllianceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_UnitedStatesCommonAndPreferredStockMember" name="UnitedStatesCommonAndPreferredStockMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_UnobservableInputAxis" name="UnobservableInputAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_UnobservableInputDomain" name="UnobservableInputDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_ValuationAllowancePropertyPlantandEquipmentIntangiblesandGoodwillMember" name="ValuationAllowancePropertyPlantandEquipmentIntangiblesandGoodwillMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_WithinNext4FiscalYearsMember" name="WithinNext4FiscalYearsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="ba_WithinNextfiscalYearMember" name="WithinNextfiscalYearMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+</xsd:schema>

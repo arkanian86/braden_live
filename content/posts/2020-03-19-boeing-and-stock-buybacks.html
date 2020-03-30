@@ -1,0 +1,135 @@
+---
+title: Boeing and stock buybacks
+author: Braden
+date: '2020-03-19'
+slug: boeing-and-stock-buybacks
+categories:
+  - Business Strategy
+tags:
+  - capital structure
+  - corporate finance
+  - equity
+  - debt
+draft: no
+---
+
+
+
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages ---------------------------------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.0     v purrr   0.3.3
+## v tibble  2.1.3     v dplyr   0.8.4
+## v tidyr   1.0.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.4.0</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(tidyquant)</code></pre>
+<pre><code>## Warning: package &#39;tidyquant&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## Loading required package: lubridate</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lubridate&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     date</code></pre>
+<pre><code>## Loading required package: PerformanceAnalytics</code></pre>
+<pre><code>## Warning: package &#39;PerformanceAnalytics&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## Loading required package: xts</code></pre>
+<pre><code>## Warning: package &#39;xts&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## Loading required package: zoo</code></pre>
+<pre><code>## Warning: package &#39;zoo&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;zoo&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.Date, as.Date.numeric</code></pre>
+<pre><code>## 
+## Attaching package: &#39;xts&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     first, last</code></pre>
+<pre><code>## 
+## Attaching package: &#39;PerformanceAnalytics&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     legend</code></pre>
+<pre><code>## Loading required package: quantmod</code></pre>
+<pre><code>## Warning: package &#39;quantmod&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## Loading required package: TTR</code></pre>
+<pre><code>## Warning: package &#39;TTR&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;quantmod&#39;:
+##   method            from
+##   as.zoo.data.frame zoo</code></pre>
+<pre><code>## Version 0.4-0 included new data defaults. See ?getSymbols.</code></pre>
+<pre><code>## == Need to Learn tidyquant? ===========================================================================================================
+## Business Science offers a 1-hour course - Learning Lab #9: Performance Analysis &amp; Portfolio Optimization with tidyquant!
+## &lt;/&gt; Learn more at: https://university.business-science.io/p/learning-labs-pro &lt;/&gt;</code></pre>
+<pre class="r"><code>library(janitor)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;janitor&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     chisq.test, fisher.test</code></pre>
+<pre class="r"><code>library(googlesheets4)</code></pre>
+<pre><code>## Warning: package &#39;googlesheets4&#39; was built under R version 3.6.3</code></pre>
+<pre class="r"><code>library(finreportr)</code></pre>
+<pre><code>## Warning: package &#39;finreportr&#39; was built under R version 3.6.3</code></pre>
+<pre class="r"><code>when &lt;- c(&quot;beg&quot;, &quot;end&quot;)
+
+prices &lt;- tq_get(&quot;BA&quot;, from=&quot;2008-01-01&quot;, to = &quot;2020-03-19&quot;) %&gt;%
+  select(date, close) %&gt;%
+  mutate(year = year(date)) %&gt;%
+  group_by(year) %&gt;%
+  slice(c(1, n())) %&gt;%
+  ungroup() %&gt;%
+  cbind(., when) %&gt;%
+  pivot_wider(., 
+              id_cols = &quot;year&quot;, 
+              names_from = &quot;when&quot;, 
+              values_from = &quot;close&quot;
+              )
+
+sheets_deauth()
+boeing &lt;- read_sheet(&#39;https://docs.google.com/spreadsheets/d/16DFYPHO8TwvhRf2zWf8zvX-v7_-gd6iJivYW6uMQdYw/edit?usp=sharing&#39;)</code></pre>
+<pre><code>## Reading from &#39;Boeing&#39;</code></pre>
+<pre><code>## </code></pre>
+<pre class="r"><code>boeing &lt;- left_join(boeing, prices, by = &quot;year&quot;)</code></pre>
+<pre class="r"><code>boeing &lt;- boeing %&gt;%
+  mutate(fcf = cffo - capex,
+         liabilities = assets - equity,
+         market_cap = (beg+end)/2*shares_common) %&gt;%
+  mutate(date = as.Date(ISOdate(year, 1, 1)))</code></pre>
+<pre class="r"><code>ggplot(boeing, aes(x=date)) +
+  geom_line(aes(y = market_cap), color = &quot;#AA0000&quot;) +
+  geom_line(aes(y = buybacks*10), color = &quot;blue&quot;) +
+  scale_y_continuous(sec.axis = sec_axis(~./10, name = &quot;Share Buybacks ($M)&quot;)) +
+  labs(y = &quot;Market Cap ($M)&quot;,
+       x = &quot;Year&quot;)</code></pre>
+<p><img src="/posts/2020-03-19-boeing-and-stock-buybacks_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(boeing, aes(x=date)) +
+  geom_area(aes(y=fcf), color = &quot;#AA0000&quot;, fill = &quot;#AA0000&quot;) +
+  geom_area(aes(y=buybacks), color = &quot;blue&quot;, fill = &quot;blue&quot;)</code></pre>
+<p><img src="/posts/2020-03-19-boeing-and-stock-buybacks_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>head(GetIncome(&quot;BA&quot;, 2015), 20)</code></pre>
+<pre><code>##                          Metric Units      Amount  startDate    endDate
+## 1     Sales Revenue, Goods, Net   usd 71234000000 2012-01-01 2012-12-31
+## 2     Sales Revenue, Goods, Net   usd 76792000000 2013-01-01 2013-12-31
+## 3     Sales Revenue, Goods, Net   usd 80688000000 2014-01-01 2014-12-31
+## 4  Sales Revenue, Services, Net   usd 10464000000 2012-01-01 2012-12-31
+## 5  Sales Revenue, Services, Net   usd  9831000000 2013-01-01 2013-12-31
+## 6  Sales Revenue, Services, Net   usd 10074000000 2014-01-01 2014-12-31
+## 7                      Revenues   usd 81698000000 2012-01-01 2012-12-31
+## 8                      Revenues   usd 18893000000 2013-01-01 2013-03-31
+## 9                      Revenues   usd 21815000000 2013-04-01 2013-06-30
+## 10                     Revenues   usd 22130000000 2013-07-01 2013-09-30
+## 11                     Revenues   usd 23785000000 2013-10-01 2013-12-31
+## 12                     Revenues   usd 86623000000 2013-01-01 2013-12-31
+## 13                     Revenues   usd 20465000000 2014-01-01 2014-03-31
+## 14                     Revenues   usd 22045000000 2014-04-01 2014-06-30
+## 15                     Revenues   usd 23784000000 2014-07-01 2014-09-30
+## 16                     Revenues   usd 24468000000 2014-10-01 2014-12-31
+## 17                     Revenues   usd 90762000000 2014-01-01 2014-12-31
+## 18           Cost of Goods Sold   usd 60309000000 2012-01-01 2012-12-31
+## 19           Cost of Goods Sold   usd 65640000000 2013-01-01 2013-12-31
+## 20           Cost of Goods Sold   usd 68551000000 2014-01-01 2014-12-31</code></pre>

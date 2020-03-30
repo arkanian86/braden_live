@@ -18,7 +18,11 @@ library(tidyverse)
 library(tidyquant)
 library(janitor)
 library(googlesheets4)
-library(finreportr)
+library(XBRL)
+library(rvest)
+library(kableExtra)
+library(data.table)
+library(janitor)
 ```
 
 ```{r bring in all the data}
@@ -45,53 +49,119 @@ boeing <- left_join(boeing, prices, by = "year")
 ```
 
 
-```{r}
+```{r basic boeing stuff}
 boeing <- boeing %>%
   mutate(fcf = cffo - capex,
          liabilities = assets - equity,
          market_cap = (beg+end)/2*shares_common) %>%
   mutate(date = as.Date(ISOdate(year, 1, 1)))
-```
 
-```{r}
 ggplot(boeing, aes(x=date)) +
   geom_line(aes(y = market_cap), color = "#AA0000") +
   geom_line(aes(y = buybacks*10), color = "blue") +
   scale_y_continuous(sec.axis = sec_axis(~./10, name = "Share Buybacks ($M)")) +
   labs(y = "Market Cap ($M)",
        x = "Year")
-```
 
-```{r}
 ggplot(boeing, aes(x=date)) +
   geom_area(aes(y=fcf), color = "#AA0000", fill = "#AA0000") +
   geom_area(aes(y=buybacks), color = "blue", fill = "blue")
 ```
 
-```{r}
-head(GetIncome("BA", 2015), 20)
+```{r trying out XBRL}
+# inst <-  "https://www.sec.gov/Archives/edgar/data/21344/000002134413000050/ko-20130927.xml"
+# options(stringsAsFactors = FALSE)
+# xbrl.vars <- xbrlDoAll(inst, cache.dir = "XBRLcache", prefix.out = NULL)
+# 
+# str(xbrl.vars, max.level = 1)
+```
+
+```{r trying out rvest}
+
+
+abbvie_foo <- read_html("https://www.sec.gov/Archives/edgar/data/1551152/000155115220000007/abbv-20191231x10k.htm#s1A5C13CF39625F559F9C1D6032DD6E5B")
+
+tables <- abbvie_foo %>%
+  html_nodes("table")
+
+head(tables)
+
+head(tables) %>%
+  html_table(fill = TRUE)
+```
+
+```{r following the research note}
+
+url <- "https://www.sec.gov/Archives/edgar/data/1551152/000155115220000007/abbv-20191231x10k.htm"
+
+tenkreport_html <- read_html(url)
+
+balance_sheet_html <- html_nodes(tenkreport_html, xpath = '//html//body//div//div//div//table')
+
+balance_sheet_list <- html_table(balance_sheet_html[[1]])
+
+balance_sheet_table <- balance_sheet_list[[1]]
 
 ```
 
+```{r}
+url <- "https://www.sec.gov/cgi-bin/viewer?action=view&cik=12927&accession_number=0000012927-20-000014&xbrl_type=v#"
+
+foo <- url %>%
+  read_html() %>%
+  html_nodes(xpath = '/html/body/div[5]/table') %>%
+  html_table()
+
+foo[[1]] %>%
+  kable()
+
+# //*[@id="idp6870690048"]
+# /html/body/div[5]/table/tbody/tr[2]/td[2]/div/table
+
+# %>%
+#   html_table()
+
+# foo[[1]]
+
+foo2 <- url %>%
+  read_html()
+```
 
 
+```{r}
+url <- "https://www.sec.gov/Archives/edgar/data/12927/000001292720000014/a201912dec3110k.htm#s0139E18066BB5529B99F926C01099091"
+
+foo <- url %>%
+  read_html() %>%
+  html_nodes(xpath = '/html/body/div/div[727]/div/table') %>%
+  html_table(fill = FALSE, trim = TRUE)
+
+foo[[1]] %>%
+  remove_empty() %>%
+  data.table()
+
+```
+
+```{r}
+url <- "https://www.sec.gov/Archives/edgar/data/12927/000001292719000010/a201812dec3110k.htm#sF0EDA49B4694567BB1182389160E3B90"
+
+foo <- url %>%
+  read_html() %>%
+  html_nodes(xpath = '/html/body/div/div[727]/div/table') %>%
+  html_table(fill = FALSE, trim = TRUE)
+
+foo[[1]] %>%
+  remove_empty() %>%
+  data.table()
 
 
+# /html/body/div[703]/div/table
+```
+```{r}
+inst <- "http://edgar.sec.gov/Archives/edgar/data/21344/000002134414000008/ko-20131231.xml"
+options(stringsAsFactors = FALSE)
+xbrl.vars <- xbrlDoAll(inst, cache.dir = "XBRLcache", prefix.out = NULL)
+str(xbrl.vars, max.level = 1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
