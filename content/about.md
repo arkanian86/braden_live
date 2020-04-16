@@ -14,5 +14,4 @@ I graduated cum laude with a degree in aerospace engineering from the University
 
 I love solving problems! As an EOD officer, I have to solve unique problems every day using both technology and creativity. Now, having immersed myself in the startup and venture capital world while at Kellogg, I'm excited about bringing what I've learned to bear on innovation within the Navy.
 
-*The views expressed on www.bradenlive.com are my own, and do not necessarily reflect the official policy or position of the Department of the Navy.*
-
+*The views expressed on www.bradenlive.com are my own and do not necessarily reflect the official policy or position of the Department of Defense, the Navy, or any other government entity.*
