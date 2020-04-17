@@ -13,15 +13,19 @@ tags:
   - COVID
   - coronavirus
   - crisis
+  - crozier
+  - guam
 draft: no
 
 images:
--  /posts/2020-03-12-unstable-equilibria_files/figure-html/unnamed-chunk-3-1.png
+-  /posts/2020-04-16-leadership-through-the-uss-teddy-roosevelt-saga_files/uss-theodore-roosevelt-guam-2.jpg
 ---
 
-:warning: *This post began as an email to a group of fellow MBA candidates at the Kellogg School of Management as the coronavirus saga aboard the USS THEODORE ROOSEVELT unfolded in Guam in late March and early April 2020. I thought it could be useful to post it, in order to help those not immersed in Navy culture understand the events and their implications.*
+*This post began as an email to a group of fellow MBA candidates at the Kellogg School of Management as the coronavirus saga aboard the USS THEODORE ROOSEVELT unfolded in Guam in late March and early April 2020. I thought it could be useful to post it, in order to help those not immersed in Navy culture understand the events and their implications.*
 
-*As mentioned on my [About](https://www.bradenlive.com/about/) page, The views expressed here are my own and do not reflect those of the Department of Defense, the Navy, or any other government entity.*
+:warning: *As mentioned on my [About](https://www.bradenlive.com/about/) page, The views expressed here are my own and do not reflect those of the Department of Defense, the Navy, or any other government entity.*
+
+![](/posts/2020-04-16-leadership-through-the-uss-teddy-roosevelt-saga_files/uss-theodore-roosevelt-guam-2.jpg)
 
 ***
 
@@ -43,9 +47,10 @@ Let me give you my personal views on three characters in this story who exhibite
 
 Instead, the Navy chain of command created an atmosphere where leaders will hesitate to put their careers on the line when their people may be at risk. This wasn't leadership - it was abdication.
 
-***
-
 Maybe I took Harry's request for more information on this whole saga too seriously - regardless, I hope this is helpful to you all! I spent the past week in varying combinations of fascination and horror as it all played out. Ideally, we can all learn from this and be brave leaders who take care of our people first instead of protecting reputations or careers.
 
 Sincerely,
+
 Braden
+
+***
