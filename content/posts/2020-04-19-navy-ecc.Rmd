@@ -1,0 +1,45 @@
+---
+title: Enterprise Cognitive Computing in the U.S. Navy
+author: Braden
+date: '2020-04-19'
+description: ECC requires a set of skills for proper implementation, of which the Navy only possesses a subset.
+slug: navy-ecc
+categories:
+  - Kellogg papers
+tags:
+  - AI
+  - Navy
+  - ecc
+  - data science
+  - intelligence
+  - kellogg
+  - strategy
+images:
+-  /posts/2020-04-19-navy-ecc_files/dod-jedi.png
+---
+<center>
+![](/posts/2020-04-19-navy-ecc_files/dod-jedi.png){width=80%}
+*The Department of Defense's [JEDI cloud strategy](https://breakingdefense.com/2020/03/pentagon-will-not-split-jedi-award-exclusive/)*
+</center>
+
+The U.S. Navy is not ready for enterprise cognitive computing. ECC is defined as “the use of [artificial intelligence] to enhance business operations”^[https://sloanreview.mit.edu/article/using-ai-to-enhance-business-operations/], and it requires a set of skills for proper implementation, of which the Navy only possesses a subset. 
+
+Writing in the [MIT Sloan Management Review](https://sloanreview.mit.edu/article/using-ai-to-enhance-business-operations/), Tarafdar et al argue that in order for organizations to successfully create value through ECC applications, they need five key capabilities:
+
+* Business domain proficiency
+* An operational IT backbone
+* Data science competence
+* Digital inquisitiveness
+* Enterprise architecture expertise
+
+### Businesss domain proficiency
+For ECC to be implemented at an operationally relevant pace, these capabilities should be integrated at the [lowest](http://www.datascience-pm.com/centralized-vs-decentralized-data-science-teams/) organizational level possible. Unfortunately, the hierarchical nature of the Navy makes it impossible for those with business domain proficiency to effectively leverage IT resources for ECC. Centralized offices within the Navy like OPNAV N16 - Command Information Office and Technology Management Division work to create solutions, but an estimated five to ten levels of bureaucracy on average separate these offices from the operators and slow the pace of innovation. Multiple ECC efforts like talent management platforms [wait in purgatory](https://blog.usni.org/posts/2019/08/20/the-navy-is-strangling-its-most-promising-talent-management-initiatives).
+
+### Operational IT backbone
+The Navy lacks an operational IT backbone on which to build ECC. A major challenge of ECC is getting data into the right format^[https://eprints.lancs.ac.uk/id/eprint/87023/1/ECC_OppChallenges_Final.pdf], and much of the Navy’s data and institutional knowledge resides inside the heads of practitioners or in non-machine-readable formats like Powerpoint slides. The Navy has no enterprise knowledge management platform in wide use. Finally, those data stores that do exist are disparate and beholden to an array of bureaucratic restrictions on who may access, maintain, and update them.
+
+### Data science competence
+Related to both points above, data science competency [does not exist widely](https://warontherocks.com/2020/02/make-data-science-accessible-for-the-pentagon/) in the Navy - both because those who hold the keys to data stores and those who regulate that data are centrally located. The lack of usable data currently obviates the need for data science, and those who argue for ECC solutions must first explain why data science is needed. Military leaders have an [“unknown unknowns”](https://en.wikipedia.org/wiki/There_are_known_knowns) problem - a lack of familiarity with data and data science [precludes them](https://www.forbes.com/sites/brentdykes/2019/10/10/data-curiosity-how-to-cultivate-an-inquisitive-workforce/#51f5eefc5471) from fostering digital inquisitiveness.
+
+### The way forward
+There is hope on the horizon. As the Department of Defense slowly moves forward with the [JEDI program](https://www.geekwire.com/2019/jedi-explaining-10b-military-cloud-contract-microsoft-just-won-amazon/), enterprise architecture developed by Microsoft will be widely adopted across the department. With that adoption, enterprise architecture expertise should follow as organizations adapt the solutions to fit their needs. The future IT backbone that is the vision of JEDI will also lead to increased data science competency and digital inquisitiveness. The Navy has spent the last decade avoiding transformational change that would be required to take advantage of artificial intelligence and ECC - hopefully, the next few years will be different.
