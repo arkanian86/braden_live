@@ -1,0 +1,20 @@
+---
+title: ai-defense
+author: Braden
+date: '2020-06-02'
+description: 
+slug: ai-defense
+categories:
+  - Kellogg papers
+tags:
+  - AI
+  - future
+  - defense
+  - JAIC
+  - predictions
+  - DoD
+  - navy
+images:
+-  /posts/2020-04-19-navy-ecc_files/dod-jedi.png
+---
+
