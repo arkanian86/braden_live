@@ -18,3 +18,17 @@ images:
 -  /posts/2020-04-19-navy-ecc_files/dod-jedi.png
 ---
 
+*Disclosure: My next job after graduating from Kellogg will be working as a product manager at the Department of Defense's new epicenter for artificial intelligence, [the Joint Artificial Intelligence Center (JAIC)](www.ai.mil).*
+
+:warning: *As mentioned on my [About](https://www.bradenlive.com/about/) page, The views expressed here are my own and do not reflect those of the Department of Defense, the Navy, or any other government entity.*
+
+***
+
+The United States Department of Defense (DoD) intends to harness the power of artificial intelligence (AI) to both transform its business processes as well as the application of force on the battlefield. The last two presidents have directed the DoD to shift focus from counter-insurgency operations to [near-peer competition](https://www.defense.gov/Explore/News/Article/Article/2107397/near-peer-threats-at-highest-point-since-cold-war-dod-official-says/). DoD is investing in AI technology in order to stay relevant and ahead of near-peer militaries in spending (particularly [China](https://www.technologyreview.com/2019/12/05/65019/china-us-ai-military-spending/)).
+
+
+
+1. Ethics
+2. Infrastructure (JCF)
+3. Future of work changes
+4. Future of warfare changes
