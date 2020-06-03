@@ -1,21 +1,22 @@
 ---
-title: ai-defense
-author: Braden
+title: "ai-defense"
+author: "Braden"
 date: '2020-06-02'
-description: 
+output:
+  html_document:
+    df_print: paged
+images: /posts/2020-04-19-navy-ecc_files/dod-jedi.png
+description: null
 slug: ai-defense
-categories:
-  - Kellogg papers
 tags:
-  - AI
-  - future
-  - defense
-  - JAIC
-  - predictions
-  - DoD
-  - navy
-images:
--  /posts/2020-04-19-navy-ecc_files/dod-jedi.png
+- AI
+- future
+- defense
+- JAIC
+- predictions
+- DoD
+- navy
+categories: Kellogg papers
 ---
 
 *Disclosure: My next job after graduating from Kellogg will be working as a product manager at the Department of Defense's new epicenter for artificial intelligence, [the Joint Artificial Intelligence Center (JAIC)](www.ai.mil).*
@@ -26,9 +27,50 @@ images:
 
 The United States Department of Defense (DoD) intends to harness the power of artificial intelligence (AI) to both transform its business processes as well as the application of force on the battlefield. The last two presidents have directed the DoD to shift focus from counter-insurgency operations to [near-peer competition](https://www.defense.gov/Explore/News/Article/Article/2107397/near-peer-threats-at-highest-point-since-cold-war-dod-official-says/). DoD is investing in AI technology in order to stay relevant and ahead of near-peer militaries in spending (particularly [China](https://www.technologyreview.com/2019/12/05/65019/china-us-ai-military-spending/)).
 
-
+Statement about the future of AI goes here!
 
 1. Ethics
 2. Infrastructure (JCF)
 3. Future of work changes
 4. Future of warfare changes
+
+## Ethics Principles
+
+In 2019, the Defense Innovation Board (DIB) released, and the DoD subsequently adopted, the [following principles](https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF) for the ethical use of AI:
+
+>AI should be:  
+>
+>* Responsible
+* Equitable
+* Traceable
+* Reliable
+* Governable
+
+These principles clearly were informed by the consensus forming around Principled AI. The Berkman Klein Center for Internet & Society at Harvard [conducted an analysis](https://cyber.harvard.edu/publication/2020/principled-ai) of the various sets of AI principles released over the last 5+ years and showed the prevalence of eight key themes for principled AI:
+
+>* Privacy
+* Accountability
+* Safety and Security
+* Transparency and Explainability
+* Fairness and non-discrimination
+* Human control of technology
+* Professional Responsibility
+* Promotion of Human Values
+
+It should be noted that the DoD's AI principles are "aligned with DoD's mission to deter war and protect our nation. Further, these principles are consistent with existing policy frameworks, the Law of War, domestic law, such as Title 10 of the U.S. Code, and enduring ethical norms that reflect democratic values." ^[https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF] It is fair to say that in fact, due to its position as an organ of government, DoD must implement AI to a higher ethical standard than companies in the private sector, which are less restricted by policy. While this higher standard has the purpose of ensuring all DoD AI applications maintain an ethical standing, it also implies that AI in the Department will evolve at a slower pace than in the private sector, due to increased friction. Moving forward, it will be imperative for DoD to maintain connections with the private sector innovators in AI in order to keep pace.
+
+## Infrastructure
+
+The environment for development of AI technology has only developed in the last few years with the proliferation of cloud services, providing both the engine (distributed computing) and fuel (data) for AI algorithms:
+
+![](/posts/2020-06-02-ai-defense_files/statistic_id273818_public-cloud-services_-market-size-2009-2022.png){width=80%}
+
+
+
+
+
+
+
+
+
+
