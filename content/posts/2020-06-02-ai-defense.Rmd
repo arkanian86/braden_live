@@ -1,11 +1,12 @@
 ---
-title: "ai-defense"
+title: "The Future of Artificial Intelligence in the Department of Defense"
 author: "Braden"
 date: '2020-06-02'
 output:
   html_document:
     df_print: paged
-images: 
+  pdf_document: default
+images: null
 description: null
 slug: ai-defense
 tags:
@@ -19,20 +20,24 @@ tags:
 categories: Kellogg papers
 ---
 
-*Disclosure: My next job after graduating from Kellogg will be working as a product manager at the Department of Defense's new epicenter for artificial intelligence, [the Joint Artificial Intelligence Center (JAIC)](www.ai.mil).*
+*Disclosure: My next job after graduating from Kellogg will be working as a product manager at the Department of Defense's new epicenter for artificial intelligence, the [Joint Artificial Intelligence Center (JAIC)](www.ai.mil).*
 
 :warning: *As mentioned on my [About](https://www.bradenlive.com/about/) page, The views expressed here are my own and do not reflect those of the Department of Defense, the Navy, or any other government entity.*
 
 ***
 
-The United States Department of Defense (DoD) intends to harness the power of artificial intelligence (AI) to both transform its business processes as well as the application of force on the battlefield. The last two presidents have directed the DoD to shift focus from counter-insurgency operations to [near-peer competition](https://www.defense.gov/Explore/News/Article/Article/2107397/near-peer-threats-at-highest-point-since-cold-war-dod-official-says/). DoD is investing in AI technology in order to stay relevant and ahead of near-peer militaries in spending (particularly [China](https://www.technologyreview.com/2019/12/05/65019/china-us-ai-military-spending/)).
+In 2015, The [Defense Business Board](https://dbb.defense.gov/) published a [report](https://dbb.defense.gov/Portals/35/Documents/Meetings/2015/2015-01/CBP%20Task%20Group%20Out-brief%20Slides_FINAL.pdf), "Transforming DoD's Core Business Processes for Revolutionary Change". The report detailed inefficiencies in the Department of Defense's (DoD) business processes to the tune of **$125 billion.** One of the report's key takeaways was that "significant legacy technology obsolescence must be addressed to achieve agility and innovation going forward" in order to reduce these inefficiencies.
 
-Statement about the future of AI goes here!
+At the same time, the last two presidents have directed the DoD to shift focus from counter-insurgency operations to [near-peer competition](https://www.defense.gov/Explore/News/Article/Article/2107397/near-peer-threats-at-highest-point-since-cold-war-dod-official-says/). Part of this shift has entailed understanding the gains that potential adversaries like Russia and China have made in cutting the United States' technological advantage, [making investments](https://www.defense.gov/Explore/News/Article/Article/1557052/us-must-act-now-to-maintain-military-technological-advantage-vice-chairman-says/) to ensure the U.S. maintains a competitive edge.
 
-1. Ethics
-2. Infrastructure (JCF)
-3. Future of work changes
-4. Future of warfare changes
+Serving both these ends, in 2018 the DoD released its [Artificial Intelligence Strategy](https://media.defense.gov/2019/Feb/12/2002088963/-1/-1/1/SUMMARY-OF-DOD-AI-STRATEGY.PDF). Two of the goals of the AI Strategy are to 1) "create an efficient and streamlined organization" and 2) "protect our country and safeguard our citizens." In short, the DoD intends to harness the power of artificial intelligence (AI) to both transform its business processes as well as the application of force on the battlefield. This strategy has major implications for the future of work within DoD as well as the future of warfare. Many employees will become more effective at their jobs due to efficiencies realized through AI. On the other hand, the vast bureaucracy that is the DoD ensures that some jobs will simply become redundant and be completely eliminated. The nature of warfare has the potential to vastly change as well. AI will speed up human decision-making, make new applications of weapon systems possible, and revolutionize military strategy and tactics.
+
+Before DoD can take advantage of AI, however, it must implement two frameworks upon which AI applications can be built:
+
+1. Ethical standards for the use of AI
+2. Information Technology (IT) infrastructure built to handle AI
+
+DoD has made progress on both. We'll examine these and then look at some of the AI solutions that will potentially change the way DoD runs, both in business and in warfare, over the next few years.
 
 ## Ethics Principles
 
@@ -57,7 +62,7 @@ These principles clearly were informed by the consensus forming around Principle
 * Professional Responsibility
 * Promotion of Human Values
 
-It should be noted that the DoD's AI principles are "aligned with DoD's mission to deter war and protect our nation. Further, these principles are consistent with existing policy frameworks, the Law of War, domestic law, such as Title 10 of the U.S. Code, and enduring ethical norms that reflect democratic values." ^[https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF] It is fair to say that in fact, due to its position as an organ of government, DoD must implement AI to a higher ethical standard than companies in the private sector, which are less restricted by policy. While this higher standard has the purpose of ensuring all DoD AI applications maintain an ethical standing, it also implies that AI in the Department will evolve at a slower pace than in the private sector, due to increased friction. Moving forward, it will be imperative for DoD to maintain connections with the private sector innovators in AI in order to keep pace.
+It should be noted that the DoD's AI principles are "aligned with DoD's mission to deter war and protect our nation. Further, these principles are consistent with existing policy frameworks, the Law of War, domestic law, such as Title 10 of the U.S. Code, and enduring ethical norms that reflect democratic values."^[https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF] It is fair to say that in fact, due to its position as an organ of government, DoD must implement AI to a higher ethical standard than companies in the private sector, which are less restricted by policy. While this higher standard has the purpose of ensuring all DoD AI applications maintain an ethical standing, it also implies that AI in the Department will evolve at a slower pace than in the private sector, due to increased friction. Moving forward, it will be imperative for DoD to maintain connections with the private sector innovators in AI in order to keep pace.
 
 ## Infrastructure
 
@@ -72,11 +77,21 @@ The DoD's [cloud strategy](https://media.defense.gov/2019/Feb/04/2002085866/-1/-
 
 DoD has not kept up with the private sector in building up infrastracture that seeds AI capabilities. This is set to change over the next few years, as [Project JEDI](https://en.wikipedia.org/wiki/Joint_Enterprise_Defense_Infrastructure), once it clears litigation from Amazon and other cloud providers, is designed to bring all DoD IT systems onto a single cloud-based structure. JEDI will put both data storage and distributed compute resources at the fingertips of users across the DoD.
 
-The JAIC's [Joint Common Foundation (JCF)](https://www.ai.mil/blog_03_25_20-developing_the_jcf_dhodges.html) will build on this cloud infrastructure to "provide the development, test, and runtime environment and the collaboration, tools, reusable assets, and data that military services need to build, refine, test, and field AI applications." ^[https://www.ai.mil/blog_03_25_20-developing_the_jcf_dhodges.html] The JCF will reduce technical barriers to AI adoption, create standardized tools for AI development, and encourage efficiencies by finding repeatable and scalable processes for AI development within DoD.
+The JAIC's [Joint Common Foundation (JCF)](https://www.ai.mil/blog_03_25_20-developing_the_jcf_dhodges.html) will build on this cloud infrastructure to "provide the development, test, and runtime environment and the collaboration, tools, reusable assets, and data that military services need to build, refine, test, and field AI applications."^[https://www.ai.mil/blog_03_25_20-developing_the_jcf_dhodges.html] The JCF will reduce technical barriers to AI adoption, create standardized tools for AI development, and encourage efficiencies by finding repeatable and scalable processes for AI development within DoD.
 
-Project JEDI, and the JCF layered on top of it^[in the last few weeks, it has become clear that the JCF will instead be layered on top of a different cloud from the Air Force called [CloudONE](https://breakingdefense.com/2020/05/joint-ai-center-turns-to-air-force-cloudone-as-jedi-stalls/). The benefits will be the same, and ultimately the JCF will be transitioned to JEDI after the litigation is resolved.], set the conditions for DoD to rapidly develop AI solutions across the Department. Up until now, AI procurement has been through the traditional contracting process to outside firms. Soon, AI will be produced by users for users, bringing DoD up to speed rapidly. 
+Project JEDI, and the JCF layered on top of it^[In the last few weeks, it has become clear that the JCF will instead be layered on top of a different cloud from the Air Force called [CloudONE](https://breakingdefense.com/2020/05/joint-ai-center-turns-to-air-force-cloudone-as-jedi-stalls/). The benefits will be similar, and ultimately the JCF will be transitioned to JEDI after the litigation is resolved.], set the conditions for DoD to rapidly develop AI solutions across the Department. Up until now, AI procurement has been through the traditional contracting process to outside firms. Soon, AI will be produced by users for users, bringing DoD up to speed rapidly. 
 
-## AI's impact on the future of work within DoD
+## The future of work within DoD
+
+Currently, centralized offices manage the flow of people within the various military professional fields to and from the roles for which they're eligible. For example, the Navy Explosive Ordnance Disposal (EOD) officer community of about 500 officers is managed by a single person working in the Navy's Bureau of Naval Personnel. Artisanally-crafted Excel spreadsheets and whiteboards have been the tools of the trade for the last 20+ years for the EOD detailer to 
+
+
+The Navy's Explosive Ordnance Disposal (EOD) officer community has a new tool, known as the Jetstream Detailing Marketplace. 
+
+Currently, all military personnel are assigned their roles via a centralized office - in the Navy, for example, this is known as the Bureau of Naval Personnel (BUPERS). Within BUPERS, individual servicemembers are controlled by "detailers" within their professional field. These detailers manage the flow of the servicemembers for whom they are responsible to and from the various job assignments around the world 
+
+
+## The future of warfare
 
 
 
