@@ -3,11 +3,11 @@ title: "The Future of Artificial Intelligence in the Department of Defense"
 author: "Braden"
 date: '2020-06-02'
 output:
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
 images: null
-description: null
+description: "The future of work in DoD stands to substantially change in both the near and long terms due to the adoption of AI."
 slug: ai-defense
 tags:
 - AI
@@ -20,7 +20,7 @@ tags:
 categories: Kellogg papers
 ---
 
-*Disclosure: My next job after graduating from Kellogg will be working as a product manager at the Department of Defense's new epicenter for artificial intelligence, the [Joint Artificial Intelligence Center (JAIC)](www.ai.mil).*
+*Disclosure: My next assignment after graduating from Kellogg will be working as a product manager at the Department of Defense's new epicenter for artificial intelligence, the [Joint Artificial Intelligence Center (JAIC)](www.ai.mil). I wrote this post as an assignment for a class at Kellogg, "Artificial Intelligence and the Future of Work." All information used here is publicly available.*
 
 :warning: *As mentioned on my [About](https://www.bradenlive.com/about/) page, The views expressed here are my own and do not reflect those of the Department of Defense, the Navy, or any other government entity.*
 
@@ -41,26 +41,23 @@ DoD has made progress on both. We'll examine these and then look at some of the 
 
 ## Ethics Principles
 
-In 2019, the Defense Innovation Board (DIB) released, and the DoD subsequently adopted, the [following principles](https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF) for the ethical use of AI:
+In 2019, the Defense Innovation Board (DIB) released, and the DoD subsequently adopted, the [following principles](https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF) for the ethical use of AI. These principles clearly were informed by the consensus forming around Principled AI. The Berkman Klein Center for Internet & Society at Harvard [conducted an analysis](https://cyber.harvard.edu/publication/2020/principled-ai) of the various sets of AI principles released over the last 5+ years and showed the prevalence of eight key themes for principled AI:
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(gt)
 
->AI should be:  
->
->* Responsible
-* Equitable
-* Traceable
-* Reliable
-* Governable
+dib <- c("Responsible", "Equitable", "Traceable", "Reliable", "Governable", "", "", "")
+bkc <- c("Privacy", "Accountability", "Safety and Security", "Transparency and Explainability", "Fariness and Non-Discrimination", "Human Control of Technology", "Professional Responbility", "Promotion of Human Values")
 
-These principles clearly were informed by the consensus forming around Principled AI. The Berkman Klein Center for Internet & Society at Harvard [conducted an analysis](https://cyber.harvard.edu/publication/2020/principled-ai) of the various sets of AI principles released over the last 5+ years and showed the prevalence of eight key themes for principled AI:
-
->* Privacy
-* Accountability
-* Safety and Security
-* Transparency and Explainability
-* Fairness and non-discrimination
-* Human control of technology
-* Professional Responsibility
-* Promotion of Human Values
+cbind(dib,bkc) %>%
+  gt() %>%
+  cols_label(dib = md("**DoD**"), bkc = md("**Berkman Klein Center**")) %>%
+  cols_align(align = "center") %>%
+  tab_options(
+    table.width = pct(80)
+  )
+  
+```
 
 It should be noted that the DoD's AI principles are "aligned with DoD's mission to deter war and protect our nation. Further, these principles are consistent with existing policy frameworks, the Law of War, domestic law, such as Title 10 of the U.S. Code, and enduring ethical norms that reflect democratic values."^[https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF] It is fair to say that in fact, due to its position as an organ of government, DoD must implement AI to a higher ethical standard than companies in the private sector, which are less restricted by policy. While this higher standard has the purpose of ensuring all DoD AI applications maintain an ethical standing, it also implies that AI in the Department will evolve at a slower pace than in the private sector, due to increased friction. Moving forward, it will be imperative for DoD to maintain connections with the private sector innovators in AI in order to keep pace.
 
