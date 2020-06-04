@@ -1,0 +1,563 @@
+---
+title: "The Future of Artificial Intelligence in the Department of Defense"
+author: "Braden"
+date: '2020-06-02'
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+images: null
+description: "The future of work in DoD stands to substantially change in both the near and long terms due to the adoption of AI."
+slug: ai-defense
+tags:
+- AI
+- future
+- defense
+- JAIC
+- predictions
+- DoD
+- navy
+categories: Kellogg papers
+---
+
+
+
+<p><em>Disclosure: My next assignment after graduating from Kellogg will be working as a product manager at the Department of Defense’s new epicenter for artificial intelligence, the <a href="www.ai.mil">Joint Artificial Intelligence Center (JAIC)</a>. I wrote this post as an assignment for a class at Kellogg, “Artificial Intelligence and the Future of Work.” All information used here is publicly available.</em></p>
+<p>:warning: <em>As mentioned on my <a href="https://www.bradenlive.com/about/">About</a> page, The views expressed here are my own and do not reflect those of the Department of Defense, the Navy, or any other government entity.</em></p>
+<hr />
+<p>In 2015, The <a href="https://dbb.defense.gov/">Defense Business Board</a> published a <a href="https://dbb.defense.gov/Portals/35/Documents/Meetings/2015/2015-01/CBP%20Task%20Group%20Out-brief%20Slides_FINAL.pdf">report</a>, “Transforming DoD’s Core Business Processes for Revolutionary Change”. The report detailed inefficiencies in the Department of Defense’s (DoD) business processes to the tune of <strong>$125 billion.</strong> One of the report’s key takeaways was that “significant legacy technology obsolescence must be addressed to achieve agility and innovation going forward” in order to reduce these inefficiencies.</p>
+<p>At the same time, the last two presidents have directed the DoD to shift focus from counter-insurgency operations to <a href="https://www.defense.gov/Explore/News/Article/Article/2107397/near-peer-threats-at-highest-point-since-cold-war-dod-official-says/">near-peer competition</a>. Part of this shift has entailed understanding the gains that potential adversaries like Russia and China have made in cutting the United States’ technological advantage, <a href="https://www.defense.gov/Explore/News/Article/Article/1557052/us-must-act-now-to-maintain-military-technological-advantage-vice-chairman-says/">making investments</a> to ensure the U.S. maintains a competitive edge.</p>
+<p>Serving both these ends, in 2018 the DoD released its <a href="https://media.defense.gov/2019/Feb/12/2002088963/-1/-1/1/SUMMARY-OF-DOD-AI-STRATEGY.PDF">Artificial Intelligence Strategy</a>. Two of the goals of the AI Strategy are to 1) “create an efficient and streamlined organization” and 2) “protect our country and safeguard our citizens.” In short, the DoD intends to harness the power of artificial intelligence (AI) to both transform its business processes as well as the application of force on the battlefield. This strategy has major implications for the future of work within DoD as well as the future of warfare. Many employees will become more effective at their jobs due to efficiencies realized through AI. On the other hand, the vast bureaucracy that is the DoD ensures that some jobs will simply become redundant and be completely eliminated. The nature of warfare has the potential to vastly change as well. AI will speed up human decision-making, make new applications of weapon systems possible, and revolutionize military strategy and tactics.</p>
+<p>Before DoD can take advantage of AI, however, it must implement two frameworks upon which AI applications can be built:</p>
+<ol style="list-style-type: decimal">
+<li>Ethical standards for the use of AI</li>
+<li>Information Technology (IT) infrastructure built to handle AI</li>
+</ol>
+<p>DoD has made progress on both. We’ll examine these and then look at some of the AI solutions that will potentially change the way DoD runs, both in business and in warfare, over the next few years.</p>
+<div id="ethics-principles" class="section level2">
+<h2>Ethics Principles</h2>
+<p>In 2019, the Defense Innovation Board (DIB) released, and the DoD subsequently adopted, the <a href="https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF">following principles</a> for the ethical use of AI. These principles clearly were informed by the consensus forming around Principled AI. The Berkman Klein Center for Internet &amp; Society at Harvard <a href="https://cyber.harvard.edu/publication/2020/principled-ai">conducted an analysis</a> of the various sets of AI principles released over the last 5+ years and showed the prevalence of eight key themes for principled AI:
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#wdbrsvlugm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  /* table.margin.left */
+  margin-right: auto;
+  /* table.margin.right */
+  color: #333333;
+  font-size: 16px;
+  /* table.font.size */
+  background-color: #FFFFFF;
+  /* table.background.color */
+  width: 80%;
+  /* table.width */
+  border-top-style: solid;
+  /* table.border.top.style */
+  border-top-width: 2px;
+  /* table.border.top.width */
+  border-top-color: #A8A8A8;
+  /* table.border.top.color */
+  border-bottom-style: solid;
+  /* table.border.bottom.style */
+  border-bottom-width: 2px;
+  /* table.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* table.border.bottom.color */
+}
+
+#wdbrsvlugm .gt_heading {
+  background-color: #FFFFFF;
+  /* heading.background.color */
+  border-bottom-color: #FFFFFF;
+  /* table.background.color */
+  border-left-style: hidden;
+  /* heading.border.lr.style */
+  border-left-width: 1px;
+  /* heading.border.lr.width */
+  border-left-color: #D3D3D3;
+  /* heading.border.lr.color */
+  border-right-style: hidden;
+  /* heading.border.lr.style */
+  border-right-width: 1px;
+  /* heading.border.lr.width */
+  border-right-color: #D3D3D3;
+  /* heading.border.lr.color */
+}
+
+#wdbrsvlugm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  /* heading.title.font.size */
+  font-weight: initial;
+  /* heading.title.font.weight */
+  padding-top: 4px;
+  /* heading.top.padding - not yet used */
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  /* table.background.color */
+  border-bottom-width: 0;
+}
+
+#wdbrsvlugm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  /* heading.subtitle.font.size */
+  font-weight: initial;
+  /* heading.subtitle.font.weight */
+  padding-top: 0;
+  padding-bottom: 4px;
+  /* heading.bottom.padding - not yet used */
+  border-top-color: #FFFFFF;
+  /* table.background.color */
+  border-top-width: 0;
+}
+
+#wdbrsvlugm .gt_bottom_border {
+  border-bottom-style: solid;
+  /* heading.border.bottom.style */
+  border-bottom-width: 2px;
+  /* heading.border.bottom.width */
+  border-bottom-color: #D3D3D3;
+  /* heading.border.bottom.color */
+}
+
+#wdbrsvlugm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wdbrsvlugm .gt_col_headings {
+  border-top-style: solid;
+  /* column_labels.border.top.style */
+  border-top-width: 2px;
+  /* column_labels.border.top.width */
+  border-top-color: #D3D3D3;
+  /* column_labels.border.top.color */
+  border-bottom-style: solid;
+  /* column_labels.border.bottom.style */
+  border-bottom-width: 2px;
+  /* column_labels.border.bottom.width */
+  border-bottom-color: #D3D3D3;
+  /* column_labels.border.bottom.color */
+  border-left-style: none;
+  /* column_labels.border.lr.style */
+  border-left-width: 1px;
+  /* column_labels.border.lr.width */
+  border-left-color: #D3D3D3;
+  /* column_labels.border.lr.color */
+  border-right-style: none;
+  /* column_labels.border.lr.style */
+  border-right-width: 1px;
+  /* column_labels.border.lr.width */
+  border-right-color: #D3D3D3;
+  /* column_labels.border.lr.color */
+}
+
+#wdbrsvlugm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  /* column_labels.background.color */
+  font-size: 100%;
+  /* column_labels.font.size */
+  font-weight: normal;
+  /* column_labels.font.weight */
+  text-transform: inherit;
+  /* column_labels.text_transform */
+  vertical-align: middle;
+  padding: 5px;
+  margin: 10px;
+  overflow-x: hidden;
+}
+
+#wdbrsvlugm .gt_sep_right {
+  border-right: 5px solid #FFFFFF;
+}
+
+#wdbrsvlugm .gt_group_heading {
+  padding: 8px;
+  /* row_group.padding */
+  color: #333333;
+  background-color: #FFFFFF;
+  /* row_group.background.color */
+  font-size: 100%;
+  /* row_group.font.size */
+  font-weight: initial;
+  /* row_group.font.weight */
+  text-transform: inherit;
+  /* row_group.text_transform */
+  border-top-style: solid;
+  /* row_group.border.top.style */
+  border-top-width: 2px;
+  /* row_group.border.top.width */
+  border-top-color: #D3D3D3;
+  /* row_group.border.top.color */
+  border-bottom-style: solid;
+  /* row_group.border.bottom.style */
+  border-bottom-width: 2px;
+  /* row_group.border.bottom.width */
+  border-bottom-color: #D3D3D3;
+  /* row_group.border.bottom.color */
+  border-left-style: none;
+  /* row_group.border.left.style */
+  border-left-width: 1px;
+  /* row_group.border.left.width */
+  border-left-color: #D3D3D3;
+  /* row_group.border.left.color */
+  border-right-style: none;
+  /* row_group.border.right.style */
+  border-right-width: 1px;
+  /* row_group.border.right.width */
+  border-right-color: #D3D3D3;
+  /* row_group.border.right.color */
+  vertical-align: middle;
+}
+
+#wdbrsvlugm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  /* row_group.background.color */
+  font-size: 100%;
+  /* row_group.font.size */
+  font-weight: initial;
+  /* row_group.font.weight */
+  border-top-style: solid;
+  /* row_group.border.top.style */
+  border-top-width: 2px;
+  /* row_group.border.top.width */
+  border-top-color: #D3D3D3;
+  /* row_group.border.top.color */
+  border-bottom-style: solid;
+  /* row_group.border.bottom.style */
+  border-bottom-width: 2px;
+  /* row_group.border.bottom.width */
+  border-bottom-color: #D3D3D3;
+  /* row_group.border.bottom.color */
+  vertical-align: middle;
+}
+
+#wdbrsvlugm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+  /* row.striping.background_color */
+}
+
+#wdbrsvlugm .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wdbrsvlugm .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wdbrsvlugm .gt_row {
+  padding-top: 8px;
+  /* data_row.padding */
+  padding-bottom: 8px;
+  /* data_row.padding */
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  /* table_body.hlines.style */
+  border-top-width: 1px;
+  /* table_body.hlines.width */
+  border-top-color: #D3D3D3;
+  /* table_body.hlines.color */
+  border-left-style: none;
+  /* table_body.vlines.style */
+  border-left-width: 1px;
+  /* table_body.vlines.width */
+  border-left-color: #D3D3D3;
+  /* table_body.vlines.color */
+  border-right-style: none;
+  /* table_body.vlines.style */
+  border-right-width: 1px;
+  /* table_body.vlines.width */
+  border-right-color: #D3D3D3;
+  /* table_body.vlines.color */
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wdbrsvlugm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  /* stub.background.color */
+  font-weight: initial;
+  /* stub.font.weight */
+  text-transform: inherit;
+  /* stub.text_transform */
+  border-right-style: solid;
+  /* stub.border.style */
+  border-right-width: 2px;
+  /* stub.border.width */
+  border-right-color: #D3D3D3;
+  /* stub.border.color */
+  padding-left: 12px;
+}
+
+#wdbrsvlugm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  /* summary_row.background.color */
+  text-transform: inherit;
+  /* summary_row.text_transform */
+  padding-top: 8px;
+  /* summary_row.padding */
+  padding-bottom: 8px;
+  /* summary_row.padding */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wdbrsvlugm .gt_first_summary_row {
+  padding-top: 8px;
+  /* summary_row.padding */
+  padding-bottom: 8px;
+  /* summary_row.padding */
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  /* summary_row.border.style */
+  border-top-width: 2px;
+  /* summary_row.border.width */
+  border-top-color: #D3D3D3;
+  /* summary_row.border.color */
+}
+
+#wdbrsvlugm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  /* grand_summary_row.background.color */
+  text-transform: inherit;
+  /* grand_summary_row.text_transform */
+  padding-top: 8px;
+  /* grand_summary_row.padding */
+  padding-bottom: 8px;
+  /* grand_summary_row.padding */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wdbrsvlugm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  /* grand_summary_row.padding */
+  padding-bottom: 8px;
+  /* grand_summary_row.padding */
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  /* grand_summary_row.border.style */
+  border-top-width: 6px;
+  /* grand_summary_row.border.width */
+  border-top-color: #D3D3D3;
+  /* grand_summary_row.border.color */
+}
+
+#wdbrsvlugm .gt_table_body {
+  border-top-style: solid;
+  /* table_body.border.top.style */
+  border-top-width: 2px;
+  /* table_body.border.top.width */
+  border-top-color: #D3D3D3;
+  /* table_body.border.top.color */
+  border-bottom-style: solid;
+  /* table_body.border.bottom.style */
+  border-bottom-width: 2px;
+  /* table_body.border.bottom.width */
+  border-bottom-color: #D3D3D3;
+  /* table_body.border.bottom.color */
+}
+
+#wdbrsvlugm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  /* footnotes.background.color */
+  border-bottom-style: none;
+  /* footnotes.border.bottom.style */
+  border-bottom-width: 2px;
+  /* footnotes.border.bottom.width */
+  border-bottom-color: #D3D3D3;
+  /* footnotes.border.bottom.color */
+  border-left-style: none;
+  /* footnotes.border.lr.color */
+  border-left-width: 2px;
+  /* footnotes.border.lr.color */
+  border-left-color: #D3D3D3;
+  /* footnotes.border.lr.color */
+  border-right-style: none;
+  /* footnotes.border.lr.color */
+  border-right-width: 2px;
+  /* footnotes.border.lr.color */
+  border-right-color: #D3D3D3;
+  /* footnotes.border.lr.color */
+}
+
+#wdbrsvlugm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  /* footnotes.font.size */
+  padding: 4px;
+  /* footnotes.padding */
+}
+
+#wdbrsvlugm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  /* source_notes.background.color */
+  border-bottom-style: none;
+  /* source_notes.border.bottom.style */
+  border-bottom-width: 2px;
+  /* source_notes.border.bottom.width */
+  border-bottom-color: #D3D3D3;
+  /* source_notes.border.bottom.color */
+  border-left-style: none;
+  /* source_notes.border.lr.style */
+  border-left-width: 2px;
+  /* source_notes.border.lr.style */
+  border-left-color: #D3D3D3;
+  /* source_notes.border.lr.style */
+  border-right-style: none;
+  /* source_notes.border.lr.style */
+  border-right-width: 2px;
+  /* source_notes.border.lr.style */
+  border-right-color: #D3D3D3;
+  /* source_notes.border.lr.style */
+}
+
+#wdbrsvlugm .gt_sourcenote {
+  font-size: 90%;
+  /* source_notes.font.size */
+  padding: 4px;
+  /* source_notes.padding */
+}
+
+#wdbrsvlugm .gt_left {
+  text-align: left;
+}
+
+#wdbrsvlugm .gt_center {
+  text-align: center;
+}
+
+#wdbrsvlugm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wdbrsvlugm .gt_font_normal {
+  font-weight: normal;
+}
+
+#wdbrsvlugm .gt_font_bold {
+  font-weight: bold;
+}
+
+#wdbrsvlugm .gt_font_italic {
+  font-style: italic;
+}
+
+#wdbrsvlugm .gt_super {
+  font-size: 65%;
+}
+
+#wdbrsvlugm .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="wdbrsvlugm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>DoD</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"><strong>Berkman Klein Center</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_center">Responsible</td>
+      <td class="gt_row gt_center">Privacy</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center gt_striped">Equitable</td>
+      <td class="gt_row gt_center gt_striped">Accountability</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">Traceable</td>
+      <td class="gt_row gt_center">Safety and Security</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center gt_striped">Reliable</td>
+      <td class="gt_row gt_center gt_striped">Transparency and Explainability</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">Governable</td>
+      <td class="gt_row gt_center">Fariness and Non-Discrimination</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center gt_striped"></td>
+      <td class="gt_row gt_center gt_striped">Human Control of Technology</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center"></td>
+      <td class="gt_row gt_center">Professional Responbility</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center gt_striped"></td>
+      <td class="gt_row gt_center gt_striped">Promotion of Human Values</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div></p>
+<p>It should be noted that the DoD’s AI principles are “aligned with DoD’s mission to deter war and protect our nation. Further, these principles are consistent with existing policy frameworks, the Law of War, domestic law, such as Title 10 of the U.S. Code, and enduring ethical norms that reflect democratic values.”<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> It is fair to say that in fact, due to its position as an organ of government, DoD must implement AI to a higher ethical standard than companies in the private sector, which are less restricted by policy. While this higher standard has the purpose of ensuring all DoD AI applications maintain an ethical standing, it also implies that AI in the Department will evolve at a slower pace than in the private sector, due to increased friction. Moving forward, it will be imperative for DoD to maintain connections with the private sector innovators in AI in order to keep pace.</p>
+</div>
+<div id="infrastructure" class="section level2">
+<h2>Infrastructure</h2>
+<p>The environment for development of AI technology has only developed in the last decade with the proliferation of cloud services, providing both the engine (distributed computing) and fuel (data) for AI algorithms:</p>
+<p><img src="/posts/2020-06-02-ai-defense_files/statistic_id273818_public-cloud-services_-market-size-2009-2022.png" style="width:80.0%" /></p>
+<p>The DoD’s <a href="https://media.defense.gov/2019/Feb/04/2002085866/-1/-1/1/DOD-CLOUD-STRATEGY.PDF">cloud strategy</a> (as of 2018) stated:</p>
+<blockquote>
+<p>The Department of Defense (DoD) has multiple disjointed and stove-piped information systems distributed across modern and legacy infrastructure around the globe leading to a litany of problems that impact warfighters’, decision makers’, and DoD staff’s ability to organize, analyze, secure, scale, and ultimately, capitalize on critical information to make timely, data-driven decisions.</p>
+</blockquote>
+<p>DoD has not kept up with the private sector in building up infrastructure that seeds AI capabilities. This is set to change over the next few years, as <a href="https://en.wikipedia.org/wiki/Joint_Enterprise_Defense_Infrastructure">Project JEDI</a>, once it clears litigation from Amazon and other cloud providers, is designed to bring all DoD IT systems onto a single cloud-based structure. JEDI will put both data storage and distributed compute resources at the fingertips of users across the DoD.</p>
+<p>The JAIC’s <a href="https://www.ai.mil/blog_03_25_20-developing_the_jcf_dhodges.html">Joint Common Foundation (JCF)</a> will build on this cloud infrastructure to “provide the development, test, and runtime environment and the collaboration, tools, reusable assets, and data that military services need to build, refine, test, and field AI applications.”<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> The JCF will reduce technical barriers to AI adoption, create standardized tools for AI development, and encourage efficiencies by finding repeatable and scalable processes for AI development within DoD.</p>
+<p>Project JEDI, and the JCF layered on top of it<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, set the conditions for DoD to rapidly develop AI solutions across the Department. Up until now, AI procurement has been through the traditional contracting process to outside firms. Soon, AI will be produced by users for users, bringing DoD up to speed rapidly.</p>
+</div>
+<div id="future-of-work-in-dod-vignette-human-resources-management" class="section level2">
+<h2>Future of Work in DoD Vignette: Human Resources Management</h2>
+<p>Currently, all military personnel are assigned their roles via a centralized office - in the Navy, for example, this is known as the Bureau of Naval Personnel (BUPERS). Within BUPERS, individual servicemembers are controlled by “detailers” within their professional field. These detailers manage the flow of the servicemembers for whom they are responsible to and from various job assignments around the world. Major variables influencing to which jobs servicemembers are assigned include their seniority and rank, required career milestones, and especially timing. In the past, this has been managed by detailers using hand-crafted Excel spreadsheets and whiteboards (colloquially known as “Ouija boards” for their inscrutability). The detailers assess assignments in batches, finding open positions and then candidates who fit based on timing and the other previously mentioned variables. In general, the preferences of the servicemember fall subordinate to the “needs of the service” – practically speaking, this means that the servicemember has very little say in where they will be assigned. This process also results in inefficiencies, because detailers cannot plan more than one or two steps ahead, and ultimately have to make suboptimal assignments. Many servicemembers leave military service because they find this process frustrating and opaque.</p>
+<p>The Navy has recognized this problem, and over the past two years has built a <a href="https://news.usni.org/2018/11/13/38297">two-sided marketplace for detailing</a>. Another solution being piloted within the small Explosive Ordnance Disposal (EOD) officer field is known as the Jetstream Detailing Marketplace. Jetstream acts as a two-sided platform, allowing EOD officers to see all available postings with descriptions and requirements. They can enter their preferences and communicate with the detailer to ask questions. The detailer has an enhanced view of all available postings and can easily identify candidates for upcoming openings. Over time, this assignment data will be captured and used to build predictive models that will allow the EOD officer community to forecast personnel shortfalls, factors influencing the most popular job postings, and more. Currently, that data resides in the head of the detailer, and when the detailer himself is reassigned, most of the institutional knowledge is lost or must be re-learned by the next detailer.</p>
+<p>Although this is not a <a href="https://www.accenture.com/us-en/blogs/blogs-kishore-durg-crowdsourcing-digital-transformation">crowdsourced workforce</a> per se, once solutions like Jetstream are rolled out across the DoD, every single servicemember will experience greater agency over their career, improving morale in the short term and retention in the long term. The military will increase productivity due to better matching of talent and passion with available positions. In the very long term, the idea of two-sided matching could lead to a more distributed and horizontal organization chart within the military - still regimented as is required by the military profession and culture, but with some common characteristics of an <a href="https://en.wikipedia.org/wiki/Adhocracy">adhocracy</a>.</p>
+</div>
+<div id="future-of-warfare-vignette-computer-vision" class="section level2">
+<h2>Future of Warfare Vignette: Computer Vision</h2>
+<p>In military command and intelligence centers around the world, analysts pore over live video for hours at a time – working to identify objects on the screen or keeping an eye out for particular events to occur. <a href="https://www.theverge.com/2018/3/6/17086276/google-ai-military-drone-analysis-pentagon-project-maven-tensorfow">Project Maven</a>, a contract between the DoD and Google which ended in 2018, was meant to reduce the amount of hours spent on this mind-numbing and repetitive task. Since Project Maven ended<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, the JAIC has built upon the computer vision successes for several other uses.</p>
+<p>Together with a company called <a href="https://crowdai.com/">CrowdAI</a>, the JAIC built a product called <a href="https://arxiv.org/pdf/1910.06407.pdf">FireNet</a>, which uses computer vision to provide real-time segmentation of a forest fire perimeter from aerial full-motion infrared video. Previously, this task was completed manually, sapping hours of work and delaying first responders in reacting to the fire: “an analyst must manually point-and-click for hours-on-end to create a fire perimeter polygon, often while working around-the-clock shifts”<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. While this solution seems outside what may seem like typical military responsibilities, it actually is very relevant – the California Air National Guard is responsible for using aircraft to observe and respond to fires in that state. A similar <a href="https://spectrum.ieee.org/tech-talk/computing/software/defense-department-launches-disastrous-computer-vision-contest">AI application</a> being funded by the JAIC and the <a href="www.diu.mil">Defense Innovation Unit</a> will be used during military humanitarian assistance/disaster response missions to assess damage to structures after hurricanes, earthquakes, or fires.</p>
+<p>In both of these examples, the AI is performing repetitive and data-heavy tasks, relieving humans of the time and effort necessary to do so themselves. This is the perfect type of application for AI – freeing up humans to perform higher-level cognitive tasks; for instance, building missions based on intelligence collected by Project Maven, alerting first responders to high-priority fires, etc. Humans will always double-check that the has correctly labeled the true positives, so the systems are optimized to minimize false negatives. Therefore humans remain in the loop.</p>
+<p>Computer vision also has the potential to be used directly on the battlefield rather than through overhead imagery. A Israeli company called <a href="https://www.smart-shooter.com/products/">Smartshooter</a> has developed computerized rifle sights which are able to lock onto enemies in the sight’s view, and then help the operator make an accurate shot<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. Solutions like this would be used on the battlefield every day, making soldiers more accurate and helping to avoid hitting anything unintended. Additionally, U.S. forces overseas face a growing threat from drones, which enemy combatants have modified to drop grenades. These drones are extremely difficult to hit with rifles, but the computerized scope is able to <a href="https://www.thedrive.com/the-war-zone/33794/special-operators-in-syria-are-first-american-unit-to-use-computerized-sights-on-their-rifles">lock onto these drones</a> and make accurate shots. This reduces the threat to operators in combat. In the long term, tactics and strategy will evolve to include the value of computerized sights like the one from Smartshooter – for instance, placing a few computerized sights in each squad reduces the need for the squad to avoid areas where enemy drones are active, giving more freedom to troops on the ground.</p>
+</div>
+<div id="dod-leading-into-the-future" class="section level2">
+<h2>DoD Leading Into the Future</h2>
+<p>The two vignettes above highlight instances of a greater trend: AI is primed and ready to be utilized in applications across DoD. This revolution is already happening, and will transform the conduct of the Department in both business and warfare. Laying the groundwork for these revolutions, the JAIC and others have built the required ethics and IT infrastructures, which mirror the digital transformations happening in the private sector. Although the DoD AI Strategy holds a goal to “become a pioneer in scaling AI across a global enterprise,”<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> it remains to be seen if DoD will end up being a true leader in this area or continue to follow behind the leadership of other global enterprises (either states like Russia or China, or corporations like Microsoft or Google). Either way, the future of work in DoD stands to substantially change in both the near and long terms due to the adoption of AI.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF" class="uri">https://media.defense.gov/2019/Oct/31/2002204458/-1/-1/0/DIB_AI_PRINCIPLES_PRIMARY_DOCUMENT.PDF</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://www.ai.mil/blog_03_25_20-developing_the_jcf_dhodges.html" class="uri">https://www.ai.mil/blog_03_25_20-developing_the_jcf_dhodges.html</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>In the last few weeks, it has become clear that the JCF will instead be layered on top of a different cloud from the Air Force called <a href="https://breakingdefense.com/2020/05/joint-ai-center-turns-to-air-force-cloudone-as-jedi-stalls/">CloudONE</a>. The benefits will be similar, and ultimately the JCF will be transitioned to JEDI after the litigation is resolved.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Google employees successfully petitioned the company to not renew the Project Maven contract with DoD.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p><a href="https://www.vice.com/en_us/article/gyz35j/spotting-wildfires-is-slow-manual-work-ai-could-change-that" class="uri">https://www.vice.com/en_us/article/gyz35j/spotting-wildfires-is-slow-manual-work-ai-could-change-that</a><a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>I highly recommend watching <a href="https://www.youtube.com/watch?v=C41CAAMgnoo&amp;feature=emb_logo">this video</a> to fully understand how it works.<a href="#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p><a href="https://media.defense.gov/2019/Feb/12/2002088963/-1/-1/1/SUMMARY-OF-DOD-AI-STRATEGY.PDF" class="uri">https://media.defense.gov/2019/Feb/12/2002088963/-1/-1/1/SUMMARY-OF-DOD-AI-STRATEGY.PDF</a><a href="#fnref7" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
