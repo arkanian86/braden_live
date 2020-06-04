@@ -66,7 +66,7 @@ It should be noted that the DoD's AI principles are "aligned with DoD's mission 
 The environment for development of AI technology has only developed in the last decade with the proliferation of cloud services, providing both the engine (distributed computing) and fuel (data) for AI algorithms:
 
 
-![](/posts/2020-06-02-ai-defense_files/statistic_id273818_public-cloud-services_-market-size-2009-2022.png)
+![](/posts/2020-06-02-ai-defense_files/statistic_id273818_public-cloud-services_-market-size-2009-2022.png){width=80%}
 
 The DoD's [cloud strategy](https://media.defense.gov/2019/Feb/04/2002085866/-1/-1/1/DOD-CLOUD-STRATEGY.PDF) (as of 2018) stated:
 
